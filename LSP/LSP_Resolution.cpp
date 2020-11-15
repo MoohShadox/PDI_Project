@@ -28,29 +28,34 @@ void printForEveryClient(IloArray<IloNumVarArray> &v){
 LSP_Resolution::LSP_Resolution(PRP &p1, IloEnv &env1){
     prp = &p1;
     env = &env1;
-
     model = new IloModel(*env);
-    obj= IloAdd(*model, IloMaximize(*env, 0.0));
+    obj= IloAdd(*model, IloMinimize(*env, 0.0));
     contraintes = new IloRangeArray(*env);
-
-
     p = new IloNumVarArray(*env, prp->l,0.0,prp->C);
     y = new IloIntVarArray(*env, prp->l,0,1);
-    q = new IloArray<IloNumVarArray>(*env,prp->n+1);
+    q = new IloArray<IloNumVarArray>(*env,prp->n);
     I = new IloArray<IloNumVarArray>(*env,prp->n+1);
     // Boucle sur les clients + 1 (Fournisseur)
     IloArray<IloNumVarArray> &qr = *q;
     IloArray<IloNumVarArray> &Ir = *I;
-    for (unsigned i=0; i<prp->n+1; i++){
+
+    for (unsigned i=0; i<prp->n; i++){
         IloNumVarArray QR(*env, prp->l,0.0,prp->C);
         //Les quantités initiales sont fixes ! 
-        IloNumVarArray IR(*env,prp->l,0.0,prp->L[i]);
         qr[i] = QR;
+    }
+
+    for (unsigned i=0; i<prp->n+1; i++){
+        IloNumVarArray IR(*env,prp->l,0.0,prp->L[i]);
         Ir[i] = IR;
     }
+
+    //Les quantités initiales sont fixes ! 
     for (unsigned i=0; i<prp->n+1;i++){
         Ir[i][0].setBounds(prp->L0[i],prp->L0[i]);
     }
+
+
     ostringstream varname;
     for(int i = 0; i < prp->l; i++) {
         varname.str("");
@@ -61,11 +66,13 @@ LSP_Resolution::LSP_Resolution(PRP &p1, IloEnv &env1){
         p->operator[](i).setName(varname.str().c_str());
         for (int t=0; t< prp->n+1; t++){
             varname.str("");
-            varname<<"q_"<<t<<"_"<<i;
-            qr[t][i].setName(varname.str().c_str());
-            varname.str("");
             varname<<"I_"<<t<<"_"<<i;
             Ir[t][i].setName(varname.str().c_str());
+        }
+        for (int t=0; t< prp->n; t++){
+            varname.str("");
+            varname<<"q_"<<t<<"_"<<i;
+            qr[t][i].setName(varname.str().c_str());
         }
   }
 
@@ -79,10 +86,6 @@ void LSP_Resolution::generateConstraints(){
     IloNumVarArray &I0 = I->operator[](0);
     IloArray<IloNumVarArray> &qr = *q;
     IloRangeArray CC(*env);
-    std::cout << "L = " << prp->l << std::endl;
-    std::cout << "QR size = " << qr.getSize() << std::endl;
-    std::cout << "P size = " << pr.getSize() << std::endl;
-    std::cout << "I0 size = " << I0.getSize() << std::endl;
     ostringstream varname;
     /*
     Ajout des contraintes de concervations des flots au niveau du fournisseur : 
@@ -92,8 +95,9 @@ void LSP_Resolution::generateConstraints(){
         IloExpr e(*env);
         varname.str("");
         varname<<"A[t="<<t<<"]";
+        std::cout << "added : " << varname.str() << std::endl;
         IloRange cst(*env, 0, I0[t-1] + pr[t] - e - I0[t], 0, varname.str().c_str() );
-        for (unsigned i=0; i<prp->n+1; i++){
+        for (unsigned i=0; i<prp->n; i++){
             e = e + qr[i][t];
         }
         CC.add(cst);
@@ -101,12 +105,13 @@ void LSP_Resolution::generateConstraints(){
     /*
     I[i,t−1] + q[i,t] = d[i,t] + I[i,t]
     */
-    for(unsigned i=0;i<prp->n+1;i++){
-        IloNumVarArray &In =  I->operator[](i);
+    for(unsigned i=1;i<prp->n;i++){
         for(unsigned t=1;t<prp->l;t++){
-            IloNum var(prp->d[t][i]);
+            IloNumVarArray &In =  I->operator[](i);
+            IloNum var(prp->d[i][t]);
             varname.str("");
             varname<<"B[I="<<i<<";t="<<t<<"]";
+            std::cout << "added : " << varname.str() << std::endl;
             IloRange cst(*env, 0, In[t-1] + q->operator[](i)[t]-var-In[t], 0, varname.str().c_str() );
             CC.add(cst);
         }
@@ -118,31 +123,29 @@ void LSP_Resolution::generateConstraints(){
    for(unsigned t=1;t<prp->l;t++){
         varname.str("");
         varname<<"C[t="<<t<<"]";
+        std::cout << "added : " << varname.str() << std::endl;
         IloRange cst(*env, -IloInfinity, p->operator[](t)- C_var*y->operator[](t) , 0, varname.str().c_str() );
         CC.add(cst);
     }
     for(unsigned t=1;t<prp->l;t++){
         varname.str("");
         varname<<"D[t="<<t<<"]";
+        std::cout << "added : " << varname.str() << std::endl;
         IloRange cst(*env, -IloInfinity,I->operator[](0)[t-1]- prp->L[0], 0, varname.str().c_str() );
         CC.add(cst);
     }
-    for(unsigned i=1;i<prp->n+1;i++){
+    for(unsigned i=1;i<prp->n;i++){
         IloNumVarArray &In =  I->operator[](i);
         for(unsigned t=1;t<prp->l;t++){
             IloNum var(prp->d[t][i]);
             varname.str("");
             varname<<"D[I="<<i<<";t="<<t<<"]";
+            std::cout << "added : " << varname.str() << std::endl;
             IloRange cst(*env, -IloInfinity,In[t-1] + q->operator[](i)[t]-prp->L[i], 0, varname.str().c_str() );
             CC.add(cst);
         }
     }
     contraintes = &CC;
-    std::cout << "Constraints : " << std::endl;
-    for (unsigned i=0; i<CC.getSize(); i++){
-        std::cout << contraintes->operator[](i) << std::endl;
-        std::cout << "============" << std::endl;
-    }
     model->add(CC);
 }
 
@@ -160,6 +163,52 @@ void LSP_Resolution::createObjectif(){
     std::cout << "Objectif : " << obj << std::endl;
 }
 
+void LSP_Resolution::addDistanceToObjectif()
+{
+    IloRangeArray CC(*env);
+    ostringstream varname;
+    z = new IloArray<IloIntVarArray>(*env,prp->n);
+    IloArray<IloIntVarArray> &zr = *z;
+    //Ajout de variables 
+    for (unsigned i=0; i<prp->n; i++){
+        IloIntVarArray QR(*env, prp->l,0,1);
+        //Les quantités initiales sont fixes ! 
+        zr[i] = QR;
+    }
+
+    //Et on nomme la variable 
+    for(int i = 0; i < prp->l; i++) {
+        for (int t=0; t< prp->n; t++){
+            varname.str("");
+            varname<<"z_"<<t<<"_"<<i;
+            zr[t][i].setName(varname.str().c_str());
+        }
+  }
+
+    //Contraintes couplantes : 
+    for(unsigned i=1;i<prp->n;i++){
+        for(unsigned t=1;t<prp->l;t++){
+            varname.str("");
+            varname<<"Z[I="<<i<<";t="<<t<<"]";
+            std::cout << "added : " << varname.str() << std::endl;
+            IloNum var(INT16_MAX);
+            IloRange cst(*env, -IloInfinity, q->operator[](i)[t]-zr[i][t]*var, 0, varname.str().c_str() );
+            CC.add(cst);
+        }
+    }
+    model->add(CC);
+    //On fixe les coefficients 
+    float dist;
+    for(int i = 0; i < prp->n; i++) {
+        //Distance entre l'entrepot et le client i
+        dist = 2*prp->getCost(i);
+        for (int t=0; t< prp->l; t++){
+            obj.setLinearCoef(zr[i][t],dist);
+        }
+  }
+}
+
+
 void LSP_Resolution::solve(){
     IloRangeArray &cstr = *contraintes; 
     IloCplex cplex(*model);
@@ -170,10 +219,12 @@ void LSP_Resolution::solve(){
     }
     env->out() << "Solution status = " << cplex.getStatus() << endl;
     env->out() << "Solution value  = " << cplex.getObjValue() << endl;
+    cplex.exportModel("sortie.lp");
+    cplx = &cplex;
 }
 
 
-void LSP_Resolution::printVariables(){
+void LSP_Resolution::printDecisionVariables(){
     std::cout << "Environnement : " << env << std::endl;
     std::cout << "P variables are in number : " << p->getSize() << std::endl;
     printNumVarArray(*p);
@@ -186,4 +237,10 @@ void LSP_Resolution::printVariables(){
     std::cout << "PRP : " << std::endl;
     prp->write_screen_txt();
     std::cout << "======================" << std::endl;
+}
+
+
+
+void LSP_Resolution::printVariables(){
+     cplx->writeSolution("sol.txt");
 }

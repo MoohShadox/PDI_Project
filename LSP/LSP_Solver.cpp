@@ -12,16 +12,18 @@
 using namespace std;
 
 int main(){
-    ifstream fic("/home/mohamed/Bureau/MAOA_Project/PRP_instances/A_014_ABS1_15_1.prp");
+    ifstream fic("/home/mohamed/Bureau/MAOA_Project/PRP_instances/A_014_ABS1_15_4.prp");
     if (!fic){
-    cerr<<"file "<<"/home/mohamed/Bureau/MAOA_Project/PRP_instances/A_014_ABS1_15_1.prp"<<" not found"<<endl;
-    return 1;
+        cerr<<"file "<<"/home/mohamed/Bureau/MAOA_Project/PRP_instances/A_014_ABS1_15_4.prp"<<" not found"<<endl;
+        return 1;
     }
     PRP I(fic);
+    I.write_screen_txt();
     IloEnv   env;
     LSP_Resolution LRSP(I,env);
     LRSP.generateConstraints();
     LRSP.createObjectif();
+    LRSP.addDistanceToObjectif();
     LRSP.solve();
-    //LRSP.printVariables();
+    LRSP.printVariables();
 }
