@@ -1,0 +1,67 @@
+[35m[1mScanning dependencies of target cvrp[0m
+[ 10%] [32mBuilding CXX object CMakeFiles/cvrp.dir/src/utils.cpp.o[0m
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:[m[K In function ‘[01m[Kstd::vector<Vehicle> run_instance(PRP, std::__cxx11::string)[m[K’:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:246:7:[m[K [01;31m[Kerror: [m[K‘[01m[KGreedySolution[m[K’ was not declared in this scope
+       [01;31m[KGreedySolution[m[K vrp(p);
+       [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:246:7:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[K_ZTI8Solution[m[K’
+       [01;36m[KGreedySolution[m[K vrp(p);
+       [01;36m[K^~~~~~~~~~~~~~[m[K
+       [32m[K_ZTI8Solution[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:247:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kvrp[m[K’ was not declared in this scope
+       [01;31m[Kvrp[m[K.Solve();
+       [01;31m[K^~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:247:7:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kprp[m[K’
+       [01;36m[Kvrp[m[K.Solve();
+       [01;36m[K^~~[m[K
+       [32m[Kprp[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:252:7:[m[K [01;31m[Kerror: [m[K‘[01m[KLocalSearchIntraSolution[m[K’ was not declared in this scope
+       [01;31m[KLocalSearchIntraSolution[m[K vrp(p);
+       [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:253:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kvrp[m[K’ was not declared in this scope
+       [01;31m[Kvrp[m[K.Solve();
+       [01;31m[K^~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:253:7:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kprp[m[K’
+       [01;36m[Kvrp[m[K.Solve();
+       [01;36m[K^~~[m[K
+       [32m[Kprp[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:258:7:[m[K [01;31m[Kerror: [m[K‘[01m[KLocalSearchInterIntraSolution[m[K’ was not declared in this scope
+       [01;31m[KLocalSearchInterIntraSolution[m[K vrp(p);
+       [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:259:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kvrp[m[K’ was not declared in this scope
+       [01;31m[Kvrp[m[K.Solve();
+       [01;31m[K^~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:259:7:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kprp[m[K’
+       [01;36m[Kvrp[m[K.Solve();
+       [01;36m[K^~~[m[K
+       [32m[Kprp[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:264:7:[m[K [01;31m[Kerror: [m[K‘[01m[KTabuSearchSolution[m[K’ was not declared in this scope
+       [01;31m[KTabuSearchSolution[m[K vrp(p, 10);
+       [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:265:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kvrp[m[K’ was not declared in this scope
+       [01;31m[Kvrp[m[K.Solve();
+       [01;31m[K^~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:265:7:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kprp[m[K’
+       [01;36m[Kvrp[m[K.Solve();
+       [01;36m[K^~~[m[K
+       [32m[Kprp[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:270:7:[m[K [01;31m[Kerror: [m[K‘[01m[KSimulatedAnnealingSolution[m[K’ was not declared in this scope
+       [01;31m[KSimulatedAnnealingSolution[m[K vrp(p, 5000000, 5000, 0.9999);
+       [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:271:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kvrp[m[K’ was not declared in this scope
+       [01;31m[Kvrp[m[K.Solve();
+       [01;31m[K^~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:271:7:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kprp[m[K’
+       [01;36m[Kvrp[m[K.Solve();
+       [01;36m[K^~~[m[K
+       [32m[Kprp[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:[m[K At global scope:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:284:1:[m[K [01;31m[Kerror: [m[Kexpected declaration before ‘[01m[K}[m[K’ token
+ [01;31m[K}[m[K
+ [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/cvrp.dir/src/utils.cpp.o] Error 1
+CMakeFiles/cvrp.dir/build.make:166: recipe for target 'CMakeFiles/cvrp.dir/src/utils.cpp.o' failed
+CMakeFiles/Makefile2:131: recipe for target 'CMakeFiles/cvrp.dir/all' failed
+make[1]: *** [CMakeFiles/cvrp.dir/all] Error 2
+Makefile:140: recipe for target 'all' failed
+make: *** [all] Error 2

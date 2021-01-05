@@ -1,0 +1,123 @@
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:10:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/local_search_inter_intra.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:231:44:[m[K [01;31m[Kerror: [m[K‘[01m[KString[m[K’ has not been declared
+ std::vector<Vehicle> run_instance(PRP prp, [01;31m[KString[m[K type);
+                                            [01;31m[K^~~~~~[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:10:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/greedy.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:231:44:[m[K [01;31m[Kerror: [m[K‘[01m[KString[m[K’ has not been declared
+ std::vector<Vehicle> run_instance(PRP prp, [01;31m[KString[m[K type);
+                                            [01;31m[K^~~~~~[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:10:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/local_search_intra.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:231:44:[m[K [01;31m[Kerror: [m[K‘[01m[KString[m[K’ has not been declared
+ std::vector<Vehicle> run_instance(PRP prp, [01;31m[KString[m[K type);
+                                            [01;31m[K^~~~~~[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:10:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/simulated_annealing.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:231:44:[m[K [01;31m[Kerror: [m[K‘[01m[KString[m[K’ has not been declared
+ std::vector<Vehicle> run_instance(PRP prp, [01;31m[KString[m[K type);
+                                            [01;31m[K^~~~~~[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:10:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/main.hpp:7[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/main.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:231:44:[m[K [01;31m[Kerror: [m[K‘[01m[KString[m[K’ has not been declared
+ std::vector<Vehicle> run_instance(PRP prp, [01;31m[KString[m[K type);
+                                            [01;31m[K^~~~~~[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:7:0[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:231:44:[m[K [01;31m[Kerror: [m[K‘[01m[KString[m[K’ has not been declared
+ std::vector<Vehicle> run_instance(PRP prp, [01;31m[KString[m[K type);
+                                            [01;31m[K^~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/main.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/main.cpp:25:28:[m[K [01;31m[Kerror: [m[Kinvalid conversion from ‘[01m[Kconst char*[m[K’ to ‘[01m[Kint[m[K’ [[01;31m[K-fpermissive[m[K]
+   run_instance(prp,"greedy"[01;31m[K)[m[K;
+                            [01;31m[K^[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:10:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/main.hpp:7[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/main.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:231:22:[m[K [01;36m[Knote: [m[K  initializing argument 2 of ‘[01m[Kstd::vector<Vehicle> run_instance(PRP, int)[m[K’
+ std::vector<Vehicle> [01;36m[Krun_instance[m[K(PRP prp, String type);
+                      [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:[m[K In function ‘[01m[Kstd::vector<Vehicle> run_instance(PRP, const string&)[m[K’:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:245:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kargc[m[K’ was not declared in this scope
+     rclcpp::init([01;31m[Kargc[m[K, argv);
+                  [01;31m[K^~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:245:18:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kerfc[m[K’
+     rclcpp::init([01;36m[Kargc[m[K, argv);
+                  [01;36m[K^~~~[m[K
+                  [32m[Kerfc[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:245:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kargv[m[K’ was not declared in this scope
+     rclcpp::init(argc, [01;31m[Kargv[m[K);
+                        [01;31m[K^~~~[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:10:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/genetic_algorithm.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:231:44:[m[K [01;31m[Kerror: [m[K‘[01m[KString[m[K’ has not been declared
+ std::vector<Vehicle> run_instance(PRP prp, [01;31m[KString[m[K type);
+                                            [01;31m[K^~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:251:15:[m[K [01;31m[Kerror: [m[Kswitch quantity not an integer
+   switch (type[01;31m[K)[m[K {
+               [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:252:10:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[K"greedy"[m[K’ from ‘[01m[Kconst char [7][m[K’ to ‘[01m[K<type error>[m[K’
+     case [01;31m[K"greedy"[m[K:
+          [01;31m[K^~~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:254:7:[m[K [01;31m[Kerror: [m[K‘[01m[KGreedySolution[m[K’ was not declared in this scope
+       [01;31m[KGreedySolution[m[K vrp(p);
+       [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:254:7:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[K_ZTI8Solution[m[K’
+       [01;36m[KGreedySolution[m[K vrp(p);
+       [01;36m[K^~~~~~~~~~~~~~[m[K
+       [32m[K_ZTI8Solution[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:255:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kvrp[m[K’ was not declared in this scope
+       [01;31m[Kvrp[m[K.Solve();
+       [01;31m[K^~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:255:7:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kprp[m[K’
+       [01;36m[Kvrp[m[K.Solve();
+       [01;36m[K^~~[m[K
+       [32m[Kprp[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:258:10:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[K"Local Search"[m[K’ from ‘[01m[Kconst char [13][m[K’ to ‘[01m[K<type error>[m[K’
+     case [01;31m[K"Local Search"[m[K:
+          [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:260:7:[m[K [01;31m[Kerror: [m[K‘[01m[KLocalSearchIntraSolution[m[K’ was not declared in this scope
+       [01;31m[KLocalSearchIntraSolution[m[K vrp(p);
+       [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:10:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/tabu_search.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:231:44:[m[K [01;31m[Kerror: [m[K‘[01m[KString[m[K’ has not been declared
+ std::vector<Vehicle> run_instance(PRP prp, [01;31m[KString[m[K type);
+                                            [01;31m[K^~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:264:10:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[K"Local Search AV"[m[K’ from ‘[01m[Kconst char [16][m[K’ to ‘[01m[K<type error>[m[K’
+     case [01;31m[K"Local Search AV"[m[K:
+          [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:266:7:[m[K [01;31m[Kerror: [m[K‘[01m[KLocalSearchInterIntraSolution[m[K’ was not declared in this scope
+       [01;31m[KLocalSearchInterIntraSolution[m[K vrp(p);
+       [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:270:10:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[K"Tabu"[m[K’ from ‘[01m[Kconst char [5][m[K’ to ‘[01m[K<type error>[m[K’
+     case [01;31m[K"Tabu"[m[K:
+          [01;31m[K^~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:272:7:[m[K [01;31m[Kerror: [m[K‘[01m[KTabuSearchSolution[m[K’ was not declared in this scope
+       [01;31m[KTabuSearchSolution[m[K vrp(p, 10);
+       [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:276:10:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[K"Annealing"[m[K’ from ‘[01m[Kconst char [10][m[K’ to ‘[01m[K<type error>[m[K’
+     case [01;31m[K"Annealing"[m[K:
+          [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:278:7:[m[K [01;31m[Kerror: [m[K‘[01m[KSimulatedAnnealingSolution[m[K’ was not declared in this scope
+       [01;31m[KSimulatedAnnealingSolution[m[K vrp(p, 5000000, 5000, 0.9999);
+       [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:287:12:[m[K [01;31m[Kerror: [m[K‘[01m[Kvrp[m[K’ was not declared in this scope
+     return [01;31m[Kvrp[m[K.vehicles_;
+            [01;31m[K^~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:287:12:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kprp[m[K’
+     return [01;36m[Kvrp[m[K.vehicles_;
+            [01;36m[K^~~[m[K
+            [32m[Kprp[m[K
+make[2]: *** [CMakeFiles/cvrp.dir/src/local_search_inter_intra.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[2]: *** [CMakeFiles/cvrp.dir/src/greedy.cpp.o] Error 1
+make[2]: *** [CMakeFiles/cvrp.dir/src/local_search_intra.cpp.o] Error 1
+make[2]: *** [CMakeFiles/cvrp.dir/src/simulated_annealing.cpp.o] Error 1
+make[2]: *** [CMakeFiles/cvrp.dir/src/main.cpp.o] Error 1
+make[2]: *** [CMakeFiles/cvrp.dir/src/tabu_search.cpp.o] Error 1
+make[2]: *** [CMakeFiles/cvrp.dir/src/genetic_algorithm.cpp.o] Error 1
+make[2]: *** [CMakeFiles/cvrp.dir/src/utils.cpp.o] Error 1
+make[1]: *** [CMakeFiles/cvrp.dir/all] Error 2
+make: *** [all] Error 2

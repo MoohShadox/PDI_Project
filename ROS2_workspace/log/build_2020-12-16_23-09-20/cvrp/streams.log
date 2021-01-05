@@ -1,0 +1,36 @@
+[0.020s] Invoking command in '/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/build/cvrp': CONDA_PROMPT_MODIFIER=(py36) /usr/local/bin/cmake /home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp -DCMAKE_INSTALL_PREFIX=/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/install/cvrp
+[0.133s] -- The C compiler identification is GNU 7.5.0
+[0.225s] -- The CXX compiler identification is GNU 7.5.0
+[0.247s] -- Check for working C compiler: /usr/bin/cc
+[0.313s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.317s] -- Detecting C compiler ABI info
+[0.385s] -- Detecting C compiler ABI info - done
+[0.461s] -- Detecting C compile features
+[0.463s] -- Detecting C compile features - done
+[0.476s] -- Check for working CXX compiler: /usr/bin/c++
+[0.549s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.556s] -- Detecting CXX compiler ABI info
+[0.638s] -- Detecting CXX compiler ABI info - done
+[0.717s] -- Detecting CXX compile features
+[0.720s] -- Detecting CXX compile features - done
+[0.723s] -- VISUALIZE set to ON. Please run rviz2 in another terminal
+[0.735s] CMake Error at CMakeLists.txt:14 (find_package):
+[0.735s]   By not providing "Findament_cmake.cmake" in CMAKE_MODULE_PATH this project
+[0.735s]   has asked CMake to find a package configuration file provided by
+[0.735s]   "ament_cmake", but CMake did not find one.
+[0.735s] 
+[0.735s]   Could not find a package configuration file provided by "ament_cmake" with
+[0.736s]   any of the following names:
+[0.736s] 
+[0.736s]     ament_cmakeConfig.cmake
+[0.736s]     ament_cmake-config.cmake
+[0.736s] 
+[0.736s]   Add the installation prefix of "ament_cmake" to CMAKE_PREFIX_PATH or set
+[0.736s]   "ament_cmake_DIR" to a directory containing one of the above files.  If
+[0.736s]   "ament_cmake" provides a separate development package or SDK, be sure it
+[0.736s]   has been installed.
+[0.736s] 
+[0.736s] 
+[0.738s] -- Configuring incomplete, errors occurred!
+[0.738s] See also "/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/build/cvrp/CMakeFiles/CMakeOutput.log".
+[0.743s] Invoked command in '/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/build/cvrp' returned '1': CONDA_PROMPT_MODIFIER=(py36) /usr/local/bin/cmake /home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp -DCMAKE_INSTALL_PREFIX=/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/install/cvrp

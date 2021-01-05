@@ -1,0 +1,49 @@
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:[m[K In function ‘[01m[Kstd::vector<Vehicle> run_instance(PRP, std::__cxx11::string)[m[K’:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:244:15:[m[K [01;31m[Kerror: [m[Kswitch quantity not an integer
+   switch (type[01;31m[K)[m[K {
+               [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:245:10:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[K"greedy"[m[K’ from ‘[01m[Kconst char [7][m[K’ to ‘[01m[K<type error>[m[K’
+     case [01;31m[K"greedy"[m[K:
+          [01;31m[K^~~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:247:7:[m[K [01;31m[Kerror: [m[K‘[01m[KGreedySolution[m[K’ was not declared in this scope
+       [01;31m[KGreedySolution[m[K vrp(p);
+       [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:247:7:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[K_ZTI8Solution[m[K’
+       [01;36m[KGreedySolution[m[K vrp(p);
+       [01;36m[K^~~~~~~~~~~~~~[m[K
+       [32m[K_ZTI8Solution[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:248:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kvrp[m[K’ was not declared in this scope
+       [01;31m[Kvrp[m[K.Solve();
+       [01;31m[K^~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:248:7:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kprp[m[K’
+       [01;36m[Kvrp[m[K.Solve();
+       [01;36m[K^~~[m[K
+       [32m[Kprp[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:251:10:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[K"Local Search"[m[K’ from ‘[01m[Kconst char [13][m[K’ to ‘[01m[K<type error>[m[K’
+     case [01;31m[K"Local Search"[m[K:
+          [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:253:7:[m[K [01;31m[Kerror: [m[K‘[01m[KLocalSearchIntraSolution[m[K’ was not declared in this scope
+       [01;31m[KLocalSearchIntraSolution[m[K vrp(p);
+       [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:257:10:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[K"Local Search AV"[m[K’ from ‘[01m[Kconst char [16][m[K’ to ‘[01m[K<type error>[m[K’
+     case [01;31m[K"Local Search AV"[m[K:
+          [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:259:7:[m[K [01;31m[Kerror: [m[K‘[01m[KLocalSearchInterIntraSolution[m[K’ was not declared in this scope
+       [01;31m[KLocalSearchInterIntraSolution[m[K vrp(p);
+       [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:263:10:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[K"Tabu"[m[K’ from ‘[01m[Kconst char [5][m[K’ to ‘[01m[K<type error>[m[K’
+     case [01;31m[K"Tabu"[m[K:
+          [01;31m[K^~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:265:7:[m[K [01;31m[Kerror: [m[K‘[01m[KTabuSearchSolution[m[K’ was not declared in this scope
+       [01;31m[KTabuSearchSolution[m[K vrp(p, 10);
+       [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:269:10:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[K"Annealing"[m[K’ from ‘[01m[Kconst char [10][m[K’ to ‘[01m[K<type error>[m[K’
+     case [01;31m[K"Annealing"[m[K:
+          [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:271:7:[m[K [01;31m[Kerror: [m[K‘[01m[KSimulatedAnnealingSolution[m[K’ was not declared in this scope
+       [01;31m[KSimulatedAnnealingSolution[m[K vrp(p, 5000000, 5000, 0.9999);
+       [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/cvrp.dir/src/utils.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[1]: *** [CMakeFiles/cvrp.dir/all] Error 2
+make: *** [all] Error 2

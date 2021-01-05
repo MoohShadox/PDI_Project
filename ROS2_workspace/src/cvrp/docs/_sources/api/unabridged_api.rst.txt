@@ -1,0 +1,149 @@
+
+Full API
+--------
+
+
+Classes and Structs
+*******************
+
+
+.. toctree::
+   :maxdepth: 5
+
+   structVectorHash.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classGASolution.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classGreedySolution.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classLocalSearchInterIntraSolution.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classLocalSearchIntraSolution.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classMinimalPublisher.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classNode.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classProblem.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classRoute.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classSimulatedAnnealingSolution.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classSolution.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classTabuSearchSolution.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   classVehicle.rst
+
+Functions
+*********
+
+
+.. toctree::
+   :maxdepth: 5
+
+   function_main_8hpp_1a0ddf1224851353fc92bfbff6f499fa97.rst
+
+Variables
+*********
+
+
+.. toctree::
+   :maxdepth: 5
+
+   variable_utils_8hpp_1a65877b1c0625d571f1e969d8bcbd8d64.rst
+
+Directories
+***********
+
+
+.. toctree::
+   :maxdepth: 5
+
+   dir_inc.rst
+
+Files
+*****
+
+
+.. toctree::
+   :maxdepth: 5
+
+   file_inc_genetic_algorithm.hpp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_inc_greedy.hpp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_inc_local_search_inter_intra.hpp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_inc_local_search_intra.hpp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_inc_main.hpp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_README.md.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_inc_simulated_annealing.hpp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_inc_tabu_search.hpp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_inc_utils.hpp.rst

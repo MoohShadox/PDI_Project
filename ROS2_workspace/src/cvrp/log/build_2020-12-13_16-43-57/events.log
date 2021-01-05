@@ -1,0 +1,73 @@
+[0.000000] (-) TimerEvent: {}
+[0.000161] (cvrp) JobQueued: {'identifier': 'cvrp', 'dependencies': OrderedDict()}
+[0.000217] (cvrp) JobStarted: {'identifier': 'cvrp'}
+[0.099107] (-) TimerEvent: {}
+[0.161692] (cvrp) JobProgress: {'identifier': 'cvrp', 'progress': 'cmake'}
+[0.162099] (cvrp) Command: {'cmd': ['/usr/local/bin/cmake', '/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp', '-DCMAKE_INSTALL_PREFIX=/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp/install/cvrp'], 'cwd': '/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp/build/cvrp', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('CONDA_PROMPT_MODIFIER', '(base)'), ('J2SDKDIR', '/usr/lib/jvm/java-8-oracle'), ('USER', 'steags'), ('LANGUAGE', 'en_CA:en'), ('TEXTDOMAIN', 'im-config'), ('XDG_SEAT', 'seat0'), ('SSH_AGENT_PID', '4205'), ('XDG_SESSION_TYPE', 'x11'), ('LD_LIBRARY_PATH', ':/lib'), ('J2REDIR', '/usr/lib/jvm/java-8-oracle/jre'), ('SHLVL', '1'), ('CONDA_SHLVL', '1'), ('QT4_IM_MODULE', 'xim'), ('HOME', '/home/steags'), ('DESKTOP_SESSION', 'ubuntu'), ('GRB_LICENSE_FILE', '/home/steags/gurobi.lic'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '3596'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=f72a326ccc5d0815dea1d3b85fd63611'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('IM_CONFIG_PHASE', '2'), ('LOGNAME', 'steags'), ('GTK_IM_MODULE', 'ibus'), ('JOURNAL_STREAM', '9:40653'), ('_', '/usr/bin/colcon'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('USERNAME', 'steags'), ('XDG_SESSION_ID', '2'), ('TERM', 'xterm-256color'), ('_CE_CONDA', ''), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('WINDOWPATH', '2'), ('PATH', '/bin:/home/steags/anaconda3/bin:/home/steags/anaconda3/condabin:/home/steags/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin'), ('INVOCATION_ID', '29426effb8e54a2a90df3695ce606f99'), ('DERBY_HOME', '/usr/lib/jvm/java-8-oracle/db'), ('SESSION_MANAGER', 'local/steags:@/tmp/.ICE-unix/4102,unix/steags:/tmp/.ICE-unix/4102'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/8c2ae9a1_1326_40ee_bb41_167f84ebefe1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('ZEITGEIST_DATA_PATH', '/home/steags/.local/share/zeitgeist'), ('LANG', 'en_CA.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XMODIFIERS', '@im=ibus'), ('GNOME_TERMINAL_SERVICE', ':1.84'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('CONDA_PYTHON_EXE', '/home/steags/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CONDA_DEFAULT_ENV', 'base'), ('TEXTDOMAINDIR', '/usr/share/locale/'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('XDG_VTNR', '2'), ('QT_IM_MODULE', 'ibus'), ('JAVA_HOME', '/usr/lib/jvm/java-8-oracle'), ('PWD', '/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp/build/cvrp'), ('CLUTTER_IM_MODULE', 'xim'), ('CONDA_EXE', '/home/steags/anaconda3/bin/conda'), ('GUROBI_HOME', '/opt/gurobi900/linux64'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=f72a326ccc5d0815dea1d3b85fd63611'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_PREFIX', '/home/steags/anaconda3'), ('COLCON', '1'), ('PATHTUTOMIP', '/home/steags/Documents/Jussieu/M2/MAOA/software'), ('VTE_VERSION', '5202')]), 'shell': False}
+[0.199373] (-) TimerEvent: {}
+[0.300035] (-) TimerEvent: {}
+[0.400381] (-) TimerEvent: {}
+[0.500794] (-) TimerEvent: {}
+[0.601130] (-) TimerEvent: {}
+[0.701518] (-) TimerEvent: {}
+[0.772245] (cvrp) StdoutLine: {'line': b'-- The C compiler identification is GNU 7.5.0\n'}
+[0.801626] (-) TimerEvent: {}
+[0.901943] (-) TimerEvent: {}
+[1.002331] (-) TimerEvent: {}
+[1.102780] (-) TimerEvent: {}
+[1.203272] (-) TimerEvent: {}
+[1.303751] (-) TimerEvent: {}
+[1.404387] (-) TimerEvent: {}
+[1.505001] (-) TimerEvent: {}
+[1.605341] (-) TimerEvent: {}
+[1.705675] (-) TimerEvent: {}
+[1.806109] (-) TimerEvent: {}
+[1.906416] (-) TimerEvent: {}
+[1.970674] (cvrp) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 7.5.0\n'}
+[2.006527] (-) TimerEvent: {}
+[2.105905] (cvrp) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[2.106613] (-) TimerEvent: {}
+[2.206869] (-) TimerEvent: {}
+[2.263901] (cvrp) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[2.276134] (cvrp) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[2.307007] (-) TimerEvent: {}
+[2.373800] (cvrp) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[2.407121] (-) TimerEvent: {}
+[2.452394] (cvrp) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[2.454604] (cvrp) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[2.478231] (cvrp) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[2.507228] (-) TimerEvent: {}
+[2.555317] (cvrp) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[2.560273] (cvrp) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[2.607360] (-) TimerEvent: {}
+[2.650501] (cvrp) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[2.707448] (-) TimerEvent: {}
+[2.729815] (cvrp) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[2.732488] (cvrp) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[2.734735] (cvrp) StdoutLine: {'line': b'-- VISUALIZE set to ON. Please run rviz2 in another terminal\n'}
+[2.807579] (-) TimerEvent: {}
+[2.907878] (-) TimerEvent: {}
+[2.940878] (cvrp) StderrLine: {'line': b'CMake Error at CMakeLists.txt:14 (find_package):\n'}
+[2.941083] (cvrp) StderrLine: {'line': b'  By not providing "Findament_cmake.cmake" in CMAKE_MODULE_PATH this project\n'}
+[2.941188] (cvrp) StderrLine: {'line': b'  has asked CMake to find a package configuration file provided by\n'}
+[2.941284] (cvrp) StderrLine: {'line': b'  "ament_cmake", but CMake did not find one.\n'}
+[2.941374] (cvrp) StderrLine: {'line': b'\n'}
+[2.941464] (cvrp) StderrLine: {'line': b'  Could not find a package configuration file provided by "ament_cmake" with\n'}
+[2.941553] (cvrp) StderrLine: {'line': b'  any of the following names:\n'}
+[2.941641] (cvrp) StderrLine: {'line': b'\n'}
+[2.941738] (cvrp) StderrLine: {'line': b'    ament_cmakeConfig.cmake\n'}
+[2.941842] (cvrp) StderrLine: {'line': b'    ament_cmake-config.cmake\n'}
+[2.941939] (cvrp) StderrLine: {'line': b'\n'}
+[2.942123] (cvrp) StderrLine: {'line': b'  Add the installation prefix of "ament_cmake" to CMAKE_PREFIX_PATH or set\n'}
+[2.942211] (cvrp) StderrLine: {'line': b'  "ament_cmake_DIR" to a directory containing one of the above files.  If\n'}
+[2.942287] (cvrp) StderrLine: {'line': b'  "ament_cmake" provides a separate development package or SDK, be sure it\n'}
+[2.942360] (cvrp) StderrLine: {'line': b'  has been installed.\n'}
+[2.942431] (cvrp) StderrLine: {'line': b'\n'}
+[2.942502] (cvrp) StderrLine: {'line': b'\n'}
+[2.942573] (cvrp) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[2.942649] (cvrp) StdoutLine: {'line': b'See also "/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp/build/cvrp/CMakeFiles/CMakeOutput.log".\n'}
+[2.945692] (cvrp) CommandEnded: {'returncode': 1}
+[3.008035] (-) TimerEvent: {}
+[3.108559] (-) TimerEvent: {}
+[3.172889] (cvrp) JobEnded: {'identifier': 'cvrp', 'rc': 1}
+[3.183748] (-) EventReactorShutdown: {}
