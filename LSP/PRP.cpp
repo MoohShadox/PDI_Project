@@ -112,6 +112,19 @@ float PRP::getCost(int client){
   }
 }
 
+float PRP::getDistance(int i, int j){
+  float x_dist = xy[i].first - xy[j].first;
+  float y_dist = xy[i].second - xy[j].second;
+  if(dist){
+    //INT((SQRT((X(I)-X(J))**2+(Y(I)-Y(J))**2))+.5)
+    return (int) (sqrt(x_dist*x_dist + y_dist*y_dist)+0.5);
+  }else{
+    // kilometric cost par la distance euclidienne
+    return sqrt(x_dist*x_dist + y_dist*y_dist) * mc;
+  }
+}
+
+
 PRP::PRP(istream &fic){
   string r;
   int i,t;

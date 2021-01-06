@@ -13,6 +13,7 @@ class PRP{
   float u;  // unit production cost
   float f;   // fixed production setup cost
   float C;   // production capacity
+  
   float Q;   // vehicle capacity
   int k;     // number of vehicles
 
@@ -37,5 +38,6 @@ class PRP{
   void write_screen_txt();
   void write_instance_file(string);
   float getCost(int client);
+  float getDistance(int i, int j);
 
 };

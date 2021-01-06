@@ -50,17 +50,30 @@ CCLNFLAGS = -lconcert -lilocplex -lcplex -lemon -lm -lpthread
 
 CCFLAGS = $(CCOPT) -I$(CPLEXINCDIR) -I$(CONCERTINCDIR) -I$(LEMONINCDIR)
 
+SRC= $(wildcard *.cpp)
+OBJ= $(SRC:.cpp=.o)
+HDRS = $(SRC:.cpp=.h)
+
+
 all: LSP
 
-PRP.o: PRP.cpp PRP.h
-	g++ -c PRP.cpp
 
-LSP_Resolution.o : LSP_Resolution.cpp LSP_Resolution.h
-	$(CCC) -o LSP_Resolution.o -c $(CCFLAGS) $(CCLNDIRS) LSP_Resolution.cpp 
 
-LSP.o : LSP_Solver.cpp PRP.h LSP_Resolution.h
+%.o: %.cpp %.h
+	$(CCC) -o $@ -c $(CCFLAGS) $(CCLNDIRS) $<
+
+
+LSP.o : LSP_Solver.cpp $(HDRS)
 	$(CCC) -o LSP.o -c $(CCFLAGS) $(CCLNDIRS) LSP_Solver.cpp 
 
-LSP: LSP.o PRP.o LSP_Resolution.o
-	$(CCC) $(CCFLAGS) $(CCLNDIRS) LSP.o PRP.o LSP_Resolution.o -o LSP $(CCLNFLAGS)
+
+
+LSP: $(OBJ)
+	$(CCC) $(CCFLAGS) $(CCLNDIRS) $(OBJ) -o LSP $(CCLNFLAGS)
+
+clean:
+	rm -rf *.o
+
+mrproper: clean
+	rm -rf $(EXEC)
 
