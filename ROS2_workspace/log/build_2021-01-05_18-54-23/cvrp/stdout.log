@@ -1,0 +1,12 @@
+[35m[1mScanning dependencies of target cvrp[0m
+[ 10%] [32mBuilding CXX object CMakeFiles/cvrp.dir/src/main.cpp.o[0m
+[ 20%] [32mBuilding CXX object CMakeFiles/cvrp.dir/src/genetic_algorithm.cpp.o[0m
+[ 30%] [32mBuilding CXX object CMakeFiles/cvrp.dir/src/greedy.cpp.o[0m
+[ 40%] [32mBuilding CXX object CMakeFiles/cvrp.dir/src/simulated_annealing.cpp.o[0m
+[ 60%] [32mBuilding CXX object CMakeFiles/cvrp.dir/src/tabu_search.cpp.o[0m
+[ 60%] [32mBuilding CXX object CMakeFiles/cvrp.dir/src/local_search_intra.cpp.o[0m
+[ 70%] [32mBuilding CXX object CMakeFiles/cvrp.dir/src/local_search_inter_intra.cpp.o[0m
+[ 80%] [32mBuilding CXX object CMakeFiles/cvrp.dir/src/utils.cpp.o[0m
+CMakeFiles/cvrp.dir/build.make:166: recipe for target 'CMakeFiles/cvrp.dir/src/utils.cpp.o' failed
+CMakeFiles/Makefile2:131: recipe for target 'CMakeFiles/cvrp.dir/all' failed
+Makefile:140: recipe for target 'all' failed

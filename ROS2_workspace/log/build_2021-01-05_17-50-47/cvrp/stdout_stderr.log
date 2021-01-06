@@ -1,0 +1,21 @@
+[35m[1mScanning dependencies of target cvrp[0m
+[ 20%] [32mBuilding CXX object CMakeFiles/cvrp.dir/src/main.cpp.o[0m
+[ 20%] [32mBuilding CXX object CMakeFiles/cvrp.dir/src/utils.cpp.o[0m
+[ 30%] [32m[1mLinking CXX executable cvrp[0m
+[100%] Built target cvrp
+-- Install configuration: "Release"
+-- Installing: /home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/install/cvrp/lib/cvrp/cvrp
+-- Set runtime path of "/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/install/cvrp/lib/cvrp/cvrp" to ""
+-- Up-to-date: /home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/install/cvrp/share/ament_index/resource_index/package_run_dependencies/cvrp
+-- Up-to-date: /home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/install/cvrp/share/ament_index/resource_index/parent_prefix_path/cvrp
+-- Up-to-date: /home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/install/cvrp/share/cvrp/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/install/cvrp/share/cvrp/environment/path.dsv
+-- Up-to-date: /home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/install/cvrp/share/cvrp/local_setup.bash
+-- Up-to-date: /home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/install/cvrp/share/cvrp/local_setup.sh
+-- Up-to-date: /home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/install/cvrp/share/cvrp/local_setup.zsh
+-- Up-to-date: /home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/install/cvrp/share/cvrp/local_setup.dsv
+-- Installing: /home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/install/cvrp/share/cvrp/package.dsv
+-- Up-to-date: /home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/install/cvrp/share/ament_index/resource_index/packages/cvrp
+-- Up-to-date: /home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/install/cvrp/share/cvrp/cmake/cvrpConfig.cmake
+-- Up-to-date: /home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/install/cvrp/share/cvrp/cmake/cvrpConfig-version.cmake
+-- Up-to-date: /home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/install/cvrp/share/cvrp/package.xml

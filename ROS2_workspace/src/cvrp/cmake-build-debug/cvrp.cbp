@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="cvrp"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cvrp">
+				<Option output="/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp/cmake-build-debug/cvrp" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp/inc"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp/cmake-build-debug/Makefile&quot;  VERBOSE=1 cvrp"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cvrp/fast">
+				<Option output="/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp/cmake-build-debug/cvrp" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp/inc"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp/cmake-build-debug/Makefile&quot;  VERBOSE=1 cvrp/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp/inc/PRP.hpp">
+			<Option target="cvrp"/>
+		</Unit>
+		<Unit filename="/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp/inc/genetic_algorithm.hpp">
+			<Option target="cvrp"/>
+		</Unit>
+		<Unit filename="/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp/inc/greedy.hpp">
+			<Option target="cvrp"/>
+		</Unit>
+		<Unit filename="/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp/inc/local_search_inter_intra.hpp">
+			<Option target="cvrp"/>
+		</Unit>
+		<Unit filename="/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp/inc/local_search_intra.hpp">
+			<Option target="cvrp"/>
+		</Unit>
+		<Unit filename="/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp/inc/main.hpp">
+			<Option target="cvrp"/>
+		</Unit>
+		<Unit filename="/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp/inc/simulated_annealing.hpp">
+			<Option target="cvrp"/>
+		</Unit>
+		<Unit filename="/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp/inc/tabu_search.hpp">
+			<Option target="cvrp"/>
+		</Unit>
+		<Unit filename="/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp/inc/utils.hpp">
+			<Option target="cvrp"/>
+		</Unit>
+		<Unit filename="/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp/src/PRP.cpp">
+			<Option target="cvrp"/>
+		</Unit>
+		<Unit filename="/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp/src/genetic_algorithm.cpp">
+			<Option target="cvrp"/>
+		</Unit>
+		<Unit filename="/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp/src/greedy.cpp">
+			<Option target="cvrp"/>
+		</Unit>
+		<Unit filename="/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp/src/local_search_inter_intra.cpp">
+			<Option target="cvrp"/>
+		</Unit>
+		<Unit filename="/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp/src/local_search_intra.cpp">
+			<Option target="cvrp"/>
+		</Unit>
+		<Unit filename="/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp/src/main.cpp">
+			<Option target="cvrp"/>
+		</Unit>
+		<Unit filename="/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp/src/simulated_annealing.cpp">
+			<Option target="cvrp"/>
+		</Unit>
+		<Unit filename="/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp/src/tabu_search.cpp">
+			<Option target="cvrp"/>
+		</Unit>
+		<Unit filename="/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp/src/utils.cpp">
+			<Option target="cvrp"/>
+		</Unit>
+		<Unit filename="/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/cvrp/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

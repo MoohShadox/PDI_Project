@@ -1,0 +1,1520 @@
+[35m[1mScanning dependencies of target cvrp[0m
+[ 10%] [32mBuilding CXX object CMakeFiles/cvrp.dir/src/genetic_algorithm.cpp.o[0m
+[ 40%] [32mBuilding CXX object CMakeFiles/cvrp.dir/src/local_search_inter_intra.cpp.o[0m
+[ 40%] [32mBuilding CXX object CMakeFiles/cvrp.dir/src/main.cpp.o[0m
+[ 40%] [32mBuilding CXX object CMakeFiles/cvrp.dir/src/greedy.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/cvrp.dir/src/local_search_intra.cpp.o[0m
+[ 70%] [32mBuilding CXX object CMakeFiles/cvrp.dir/src/utils.cpp.o[0m
+[ 70%] [32mBuilding CXX object CMakeFiles/cvrp.dir/src/tabu_search.cpp.o[0m
+[ 80%] [32mBuilding CXX object CMakeFiles/cvrp.dir/src/simulated_annealing.cpp.o[0m
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:30:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:10[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/genetic_algorithm.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:12:37:[m[K [01;31m[Kerror: [m[Kexpected class-name before ‘[01m[K{[m[K’ token
+ class GreedySolution:public Solution[01;31m[K{[m[K
+                                     [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:22:30:[m[K [01;31m[Kerror: [m[K‘[01m[KNode[m[K’ was not declared in this scope
+   GreedySolution(std::vector<[01;31m[KNode[m[K> nodes,
+                              [01;31m[K^~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:22:30:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kmodf[m[K’
+   GreedySolution(std::vector<[01;36m[KNode[m[K> nodes,
+                              [01;36m[K^~~~[m[K
+                              [32m[Kmodf[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:22:34:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   GreedySolution(std::vector<Node[01;31m[K>[m[K nodes,
+                                  [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:22:34:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:23:30:[m[K [01;31m[Kerror: [m[K‘[01m[KVehicle[m[K’ was not declared in this scope
+                  std::vector<[01;31m[KVehicle[m[K> vehicles,
+                              [01;31m[K^~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:23:30:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kexecle[m[K’
+                  std::vector<[01;36m[KVehicle[m[K> vehicles,
+                              [01;36m[K^~~~~~~[m[K
+                              [32m[Kexecle[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:23:37:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+                  std::vector<Vehicle[01;31m[K>[m[K vehicles,
+                                     [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:23:37:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:32:26:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kp[m[K’
+   GreedySolution(Problem [01;31m[Kp[m[K);
+                          [01;31m[K^[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:31:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:10[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/genetic_algorithm.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:12:49:[m[K [01;31m[Kerror: [m[Kexpected class-name before ‘[01m[K{[m[K’ token
+ class LocalSearchIntraSolution : public Solution[01;31m[K{[m[K
+                                                 [01;31m[K^[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:31:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:10[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/genetic_algorithm.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:22:40:[m[K [01;31m[Kerror: [m[K‘[01m[KNode[m[K’ was not declared in this scope
+   LocalSearchIntraSolution(std::vector<[01;31m[KNode[m[K> nodes,
+                                        [01;31m[K^~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:22:40:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kmodf[m[K’
+   LocalSearchIntraSolution(std::vector<[01;36m[KNode[m[K> nodes,
+                                        [01;36m[K^~~~[m[K
+                                        [32m[Kmodf[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:22:44:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   LocalSearchIntraSolution(std::vector<Node[01;31m[K>[m[K nodes,
+                                            [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:22:44:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:23:40:[m[K [01;31m[Kerror: [m[K‘[01m[KVehicle[m[K’ was not declared in this scope
+                            std::vector<[01;31m[KVehicle[m[K> vehicles,
+                                        [01;31m[K^~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:23:40:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kexecle[m[K’
+                            std::vector<[01;36m[KVehicle[m[K> vehicles,
+                                        [01;36m[K^~~~~~~[m[K
+                                        [32m[Kexecle[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:23:47:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+                            std::vector<Vehicle[01;31m[K>[m[K vehicles,
+                                               [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:23:47:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:32:36:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kp[m[K’
+   LocalSearchIntraSolution(Problem [01;31m[Kp[m[K);
+                                    [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:40:37:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Ks[m[K’
+   LocalSearchIntraSolution(Solution [01;31m[Ks[m[K);
+                                     [01;31m[K^[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:32:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:10[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/genetic_algorithm.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:12:54:[m[K [01;31m[Kerror: [m[Kexpected class-name before ‘[01m[K{[m[K’ token
+ class LocalSearchInterIntraSolution : public Solution[01;31m[K{[m[K
+                                                      [01;31m[K^[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:29:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:10[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/simulated_annealing.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:13:35:[m[K [01;31m[Kerror: [m[Kexpected class-name before ‘[01m[K{[m[K’ token
+ class GASolution : public Solution[01;31m[K{[m[K
+                                   [01;31m[K^[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:29:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:13:35:[m[K [01;31m[Kerror: [m[Kexpected class-name before ‘[01m[K{[m[K’ token
+ class GASolution : public Solution[01;31m[K{[m[K
+                                   [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:25:26:[m[K [01;31m[Kerror: [m[K‘[01m[KNode[m[K’ was not declared in this scope
+   GASolution(std::vector<[01;31m[KNode[m[K> nodes,
+                          [01;31m[K^~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:22:45:[m[K [01;31m[Kerror: [m[K‘[01m[KNode[m[K’ was not declared in this scope
+   LocalSearchInterIntraSolution(std::vector<[01;31m[KNode[m[K> nodes,
+                                             [01;31m[K^~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:25:26:[m[K [01;31m[Kerror: [m[K‘[01m[KNode[m[K’ was not declared in this scope
+   GASolution(std::vector<[01;31m[KNode[m[K> nodes,
+                          [01;31m[K^~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:25:26:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kmodf[m[K’
+   GASolution(std::vector<[01;36m[KNode[m[K> nodes,
+                          [01;36m[K^~~~[m[K
+                          [32m[Kmodf[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:25:30:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   GASolution(std::vector<Node[01;31m[K>[m[K nodes,
+                              [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:25:30:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:26:26:[m[K [01;31m[Kerror: [m[K‘[01m[KVehicle[m[K’ was not declared in this scope
+              std::vector<[01;31m[KVehicle[m[K> vehicles,
+                          [01;31m[K^~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:22:45:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kmodf[m[K’
+   LocalSearchInterIntraSolution(std::vector<[01;36m[KNode[m[K> nodes,
+                                             [01;36m[K^~~~[m[K
+                                             [32m[Kmodf[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:22:49:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   LocalSearchInterIntraSolution(std::vector<Node[01;31m[K>[m[K nodes,
+                                                 [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:22:49:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:23:45:[m[K [01;31m[Kerror: [m[K‘[01m[KVehicle[m[K’ was not declared in this scope
+                                 std::vector<[01;31m[KVehicle[m[K> vehicles,
+                                             [01;31m[K^~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:26:26:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kexecle[m[K’
+              std::vector<[01;36m[KVehicle[m[K> vehicles,
+                          [01;36m[K^~~~~~~[m[K
+                          [32m[Kexecle[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:26:33:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+              std::vector<Vehicle[01;31m[K>[m[K vehicles,
+                                 [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:26:33:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:38:23:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kp[m[K’
+    GASolution(Problem [01;31m[Kp[m[K,
+                       [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:50:24:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Ks[m[K’
+    GASolution(Solution [01;31m[Ks[m[K,
+                        [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:23:45:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kexecle[m[K’
+                                 std::vector<[01;36m[KVehicle[m[K> vehicles,
+                                             [01;36m[K^~~~~~~[m[K
+                                             [32m[Kexecle[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:23:52:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+                                 std::vector<Vehicle[01;31m[K>[m[K vehicles,
+                                                    [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:23:52:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:32:41:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kp[m[K’
+   LocalSearchInterIntraSolution(Problem [01;31m[Kp[m[K);
+                                         [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:40:42:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Ks[m[K’
+   LocalSearchInterIntraSolution(Solution [01;31m[Ks[m[K);
+                                          [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:25:26:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kmodf[m[K’
+   GASolution(std::vector<[01;36m[KNode[m[K> nodes,
+                          [01;36m[K^~~~[m[K
+                          [32m[Kmodf[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:25:30:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   GASolution(std::vector<Node[01;31m[K>[m[K nodes,
+                              [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:25:30:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:26:26:[m[K [01;31m[Kerror: [m[K‘[01m[KVehicle[m[K’ was not declared in this scope
+              std::vector<[01;31m[KVehicle[m[K> vehicles,
+                          [01;31m[K^~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:26:26:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kexecle[m[K’
+              std::vector<[01;36m[KVehicle[m[K> vehicles,
+                          [01;36m[K^~~~~~~[m[K
+                          [32m[Kexecle[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:26:33:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+              std::vector<Vehicle[01;31m[K>[m[K vehicles,
+                                 [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:26:33:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:33:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:10[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/genetic_algorithm.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:33:43:[m[K [01;31m[Kerror: [m[Kexpected class-name before ‘[01m[K{[m[K’ token
+ class TabuSearchSolution : public Solution[01;31m[K{[m[K
+                                           [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:44:34:[m[K [01;31m[Kerror: [m[K‘[01m[KNode[m[K’ was not declared in this scope
+   TabuSearchSolution(std::vector<[01;31m[KNode[m[K> nodes,
+                                  [01;31m[K^~~~[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:30:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:12:37:[m[K [01;31m[Kerror: [m[Kexpected class-name before ‘[01m[K{[m[K’ token
+ class GreedySolution:public Solution[01;31m[K{[m[K
+                                     [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:22:30:[m[K [01;31m[Kerror: [m[K‘[01m[KNode[m[K’ was not declared in this scope
+   GreedySolution(std::vector<[01;31m[KNode[m[K> nodes,
+                              [01;31m[K^~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:44:34:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kmodf[m[K’
+   TabuSearchSolution(std::vector<[01;36m[KNode[m[K> nodes,
+                                  [01;36m[K^~~~[m[K
+                                  [32m[Kmodf[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:38:23:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kp[m[K’
+    GASolution(Problem [01;31m[Kp[m[K,
+                       [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:44:38:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   TabuSearchSolution(std::vector<Node[01;31m[K>[m[K nodes,
+                                      [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:50:24:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Ks[m[K’
+    GASolution(Solution [01;31m[Ks[m[K,
+                        [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:44:38:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:45:34:[m[K [01;31m[Kerror: [m[K‘[01m[KVehicle[m[K’ was not declared in this scope
+                      std::vector<[01;31m[KVehicle[m[K> vehicles,
+                                  [01;31m[K^~~~~~~[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:29:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:10[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/greedy.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:13:35:[m[K [01;31m[Kerror: [m[Kexpected class-name before ‘[01m[K{[m[K’ token
+ class GASolution : public Solution[01;31m[K{[m[K
+                                   [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:25:26:[m[K [01;31m[Kerror: [m[K‘[01m[KNode[m[K’ was not declared in this scope
+   GASolution(std::vector<[01;31m[KNode[m[K> nodes,
+                          [01;31m[K^~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:25:26:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kmodf[m[K’
+   GASolution(std::vector<[01;36m[KNode[m[K> nodes,
+                          [01;36m[K^~~~[m[K
+                          [32m[Kmodf[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:25:30:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   GASolution(std::vector<Node[01;31m[K>[m[K nodes,
+                              [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:25:30:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:26:26:[m[K [01;31m[Kerror: [m[K‘[01m[KVehicle[m[K’ was not declared in this scope
+              std::vector<[01;31m[KVehicle[m[K> vehicles,
+                          [01;31m[K^~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:45:34:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kexecle[m[K’
+                      std::vector<[01;36m[KVehicle[m[K> vehicles,
+                                  [01;36m[K^~~~~~~[m[K
+                                  [32m[Kexecle[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:45:41:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+                      std::vector<Vehicle[01;31m[K>[m[K vehicles,
+                                         [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:45:41:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:55:30:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kp[m[K’
+   TabuSearchSolution(Problem [01;31m[Kp[m[K,
+                              [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:65:31:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Ks[m[K’
+   TabuSearchSolution(Solution [01;31m[Ks[m[K,
+                               [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:26:26:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kexecle[m[K’
+              std::vector<[01;36m[KVehicle[m[K> vehicles,
+                          [01;36m[K^~~~~~~[m[K
+                          [32m[Kexecle[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:26:33:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+              std::vector<Vehicle[01;31m[K>[m[K vehicles,
+                                 [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:26:33:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:38:23:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kp[m[K’
+    GASolution(Problem [01;31m[Kp[m[K,
+                       [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:50:24:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Ks[m[K’
+    GASolution(Solution [01;31m[Ks[m[K,
+                        [01;31m[K^[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:30:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:10[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/simulated_annealing.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:12:37:[m[K [01;31m[Kerror: [m[Kexpected class-name before ‘[01m[K{[m[K’ token
+ class GreedySolution:public Solution[01;31m[K{[m[K
+                                     [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:22:30:[m[K [01;31m[Kerror: [m[K‘[01m[KNode[m[K’ was not declared in this scope
+   GreedySolution(std::vector<[01;31m[KNode[m[K> nodes,
+                              [01;31m[K^~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:22:30:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kmodf[m[K’
+   GreedySolution(std::vector<[01;36m[KNode[m[K> nodes,
+                              [01;36m[K^~~~[m[K
+                              [32m[Kmodf[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:22:34:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   GreedySolution(std::vector<Node[01;31m[K>[m[K nodes,
+                                  [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:22:34:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:23:30:[m[K [01;31m[Kerror: [m[K‘[01m[KVehicle[m[K’ was not declared in this scope
+                  std::vector<[01;31m[KVehicle[m[K> vehicles,
+                              [01;31m[K^~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:23:30:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kexecle[m[K’
+                  std::vector<[01;36m[KVehicle[m[K> vehicles,
+                              [01;36m[K^~~~~~~[m[K
+                              [32m[Kexecle[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:23:37:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+                  std::vector<Vehicle[01;31m[K>[m[K vehicles,
+                                     [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:23:37:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:32:26:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kp[m[K’
+   GreedySolution(Problem [01;31m[Kp[m[K);
+                          [01;31m[K^[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:31:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:10[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/simulated_annealing.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:12:49:[m[K [01;31m[Kerror: [m[Kexpected class-name before ‘[01m[K{[m[K’ token
+ class LocalSearchIntraSolution : public Solution[01;31m[K{[m[K
+                                                 [01;31m[K^[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:31:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:10[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/simulated_annealing.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:22:40:[m[K [01;31m[Kerror: [m[K‘[01m[KNode[m[K’ was not declared in this scope
+   LocalSearchIntraSolution(std::vector<[01;31m[KNode[m[K> nodes,
+                                        [01;31m[K^~~~[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:31:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:10[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/greedy.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:12:49:[m[K [01;31m[Kerror: [m[Kexpected class-name before ‘[01m[K{[m[K’ token
+ class LocalSearchIntraSolution : public Solution[01;31m[K{[m[K
+                                                 [01;31m[K^[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:31:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:10[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/greedy.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:22:40:[m[K [01;31m[Kerror: [m[K‘[01m[KNode[m[K’ was not declared in this scope
+   LocalSearchIntraSolution(std::vector<[01;31m[KNode[m[K> nodes,
+                                        [01;31m[K^~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:22:40:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kmodf[m[K’
+   LocalSearchIntraSolution(std::vector<[01;36m[KNode[m[K> nodes,
+                                        [01;36m[K^~~~[m[K
+                                        [32m[Kmodf[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:22:44:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   LocalSearchIntraSolution(std::vector<Node[01;31m[K>[m[K nodes,
+                                            [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:22:44:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:23:40:[m[K [01;31m[Kerror: [m[K‘[01m[KVehicle[m[K’ was not declared in this scope
+                            std::vector<[01;31m[KVehicle[m[K> vehicles,
+                                        [01;31m[K^~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:22:40:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kmodf[m[K’
+   LocalSearchIntraSolution(std::vector<[01;36m[KNode[m[K> nodes,
+                                        [01;36m[K^~~~[m[K
+                                        [32m[Kmodf[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:22:44:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   LocalSearchIntraSolution(std::vector<Node[01;31m[K>[m[K nodes,
+                                            [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:22:44:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:23:40:[m[K [01;31m[Kerror: [m[K‘[01m[KVehicle[m[K’ was not declared in this scope
+                            std::vector<[01;31m[KVehicle[m[K> vehicles,
+                                        [01;31m[K^~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:22:30:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kmodf[m[K’
+   GreedySolution(std::vector<[01;36m[KNode[m[K> nodes,
+                              [01;36m[K^~~~[m[K
+                              [32m[Kmodf[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:22:34:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   GreedySolution(std::vector<Node[01;31m[K>[m[K nodes,
+                                  [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:22:34:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:23:30:[m[K [01;31m[Kerror: [m[K‘[01m[KVehicle[m[K’ was not declared in this scope
+                  std::vector<[01;31m[KVehicle[m[K> vehicles,
+                              [01;31m[K^~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:23:40:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kexecle[m[K’
+                            std::vector<[01;36m[KVehicle[m[K> vehicles,
+                                        [01;36m[K^~~~~~~[m[K
+                                        [32m[Kexecle[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:23:47:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+                            std::vector<Vehicle[01;31m[K>[m[K vehicles,
+                                               [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:23:47:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:32:36:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kp[m[K’
+   LocalSearchIntraSolution(Problem [01;31m[Kp[m[K);
+                                    [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:40:37:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Ks[m[K’
+   LocalSearchIntraSolution(Solution [01;31m[Ks[m[K);
+                                     [01;31m[K^[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:32:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:10[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/greedy.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:12:54:[m[K [01;31m[Kerror: [m[Kexpected class-name before ‘[01m[K{[m[K’ token
+ class LocalSearchInterIntraSolution : public Solution[01;31m[K{[m[K
+                                                      [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:22:45:[m[K [01;31m[Kerror: [m[K‘[01m[KNode[m[K’ was not declared in this scope
+   LocalSearchInterIntraSolution(std::vector<[01;31m[KNode[m[K> nodes,
+                                             [01;31m[K^~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:23:30:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kexecle[m[K’
+                  std::vector<[01;36m[KVehicle[m[K> vehicles,
+                              [01;36m[K^~~~~~~[m[K
+                              [32m[Kexecle[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:23:37:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+                  std::vector<Vehicle[01;31m[K>[m[K vehicles,
+                                     [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:23:37:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:32:26:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kp[m[K’
+   GreedySolution(Problem [01;31m[Kp[m[K);
+                          [01;31m[K^[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:31:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:12:49:[m[K [01;31m[Kerror: [m[Kexpected class-name before ‘[01m[K{[m[K’ token
+ class LocalSearchIntraSolution : public Solution[01;31m[K{[m[K
+                                                 [01;31m[K^[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:31:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:22:40:[m[K [01;31m[Kerror: [m[K‘[01m[KNode[m[K’ was not declared in this scope
+   LocalSearchIntraSolution(std::vector<[01;31m[KNode[m[K> nodes,
+                                        [01;31m[K^~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:22:45:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kmodf[m[K’
+   LocalSearchInterIntraSolution(std::vector<[01;36m[KNode[m[K> nodes,
+                                             [01;36m[K^~~~[m[K
+                                             [32m[Kmodf[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:22:49:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   LocalSearchInterIntraSolution(std::vector<Node[01;31m[K>[m[K nodes,
+                                                 [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:22:49:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:23:45:[m[K [01;31m[Kerror: [m[K‘[01m[KVehicle[m[K’ was not declared in this scope
+                                 std::vector<[01;31m[KVehicle[m[K> vehicles,
+                                             [01;31m[K^~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:22:40:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kmodf[m[K’
+   LocalSearchIntraSolution(std::vector<[01;36m[KNode[m[K> nodes,
+                                        [01;36m[K^~~~[m[K
+                                        [32m[Kmodf[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:22:44:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   LocalSearchIntraSolution(std::vector<Node[01;31m[K>[m[K nodes,
+                                            [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:22:44:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:23:40:[m[K [01;31m[Kerror: [m[K‘[01m[KVehicle[m[K’ was not declared in this scope
+                            std::vector<[01;31m[KVehicle[m[K> vehicles,
+                                        [01;31m[K^~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:23:45:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kexecle[m[K’
+                                 std::vector<[01;36m[KVehicle[m[K> vehicles,
+                                             [01;36m[K^~~~~~~[m[K
+                                             [32m[Kexecle[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:23:52:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+                                 std::vector<Vehicle[01;31m[K>[m[K vehicles,
+                                                    [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:23:52:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:32:41:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kp[m[K’
+   LocalSearchInterIntraSolution(Problem [01;31m[Kp[m[K);
+                                         [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:40:42:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Ks[m[K’
+   LocalSearchInterIntraSolution(Solution [01;31m[Ks[m[K);
+                                          [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:23:40:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kexecle[m[K’
+                            std::vector<[01;36m[KVehicle[m[K> vehicles,
+                                        [01;36m[K^~~~~~~[m[K
+                                        [32m[Kexecle[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:23:47:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+                            std::vector<Vehicle[01;31m[K>[m[K vehicles,
+                                               [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:23:47:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:32:36:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kp[m[K’
+   LocalSearchIntraSolution(Problem [01;31m[Kp[m[K);
+                                    [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:40:37:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Ks[m[K’
+   LocalSearchIntraSolution(Solution [01;31m[Ks[m[K);
+                                     [01;31m[K^[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:32:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:12:54:[m[K [01;31m[Kerror: [m[Kexpected class-name before ‘[01m[K{[m[K’ token
+ class LocalSearchInterIntraSolution : public Solution[01;31m[K{[m[K
+                                                      [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:22:45:[m[K [01;31m[Kerror: [m[K‘[01m[KNode[m[K’ was not declared in this scope
+   LocalSearchInterIntraSolution(std::vector<[01;31m[KNode[m[K> nodes,
+                                             [01;31m[K^~~~[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:33:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:10[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/greedy.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:33:43:[m[K [01;31m[Kerror: [m[Kexpected class-name before ‘[01m[K{[m[K’ token
+ class TabuSearchSolution : public Solution[01;31m[K{[m[K
+                                           [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:44:34:[m[K [01;31m[Kerror: [m[K‘[01m[KNode[m[K’ was not declared in this scope
+   TabuSearchSolution(std::vector<[01;31m[KNode[m[K> nodes,
+                                  [01;31m[K^~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:22:45:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kmodf[m[K’
+   LocalSearchInterIntraSolution(std::vector<[01;36m[KNode[m[K> nodes,
+                                             [01;36m[K^~~~[m[K
+                                             [32m[Kmodf[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:22:49:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   LocalSearchInterIntraSolution(std::vector<Node[01;31m[K>[m[K nodes,
+                                                 [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:22:49:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:23:45:[m[K [01;31m[Kerror: [m[K‘[01m[KVehicle[m[K’ was not declared in this scope
+                                 std::vector<[01;31m[KVehicle[m[K> vehicles,
+                                             [01;31m[K^~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:44:34:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kmodf[m[K’
+   TabuSearchSolution(std::vector<[01;36m[KNode[m[K> nodes,
+                                  [01;36m[K^~~~[m[K
+                                  [32m[Kmodf[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:44:38:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   TabuSearchSolution(std::vector<Node[01;31m[K>[m[K nodes,
+                                      [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:44:38:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:45:34:[m[K [01;31m[Kerror: [m[K‘[01m[KVehicle[m[K’ was not declared in this scope
+                      std::vector<[01;31m[KVehicle[m[K> vehicles,
+                                  [01;31m[K^~~~~~~[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:34:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:10[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/genetic_algorithm.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:12:51:[m[K [01;31m[Kerror: [m[Kexpected class-name before ‘[01m[K{[m[K’ token
+ class SimulatedAnnealingSolution : public Solution[01;31m[K{[m[K
+                                                   [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:25:42:[m[K [01;31m[Kerror: [m[K‘[01m[KNode[m[K’ was not declared in this scope
+   SimulatedAnnealingSolution(std::vector<[01;31m[KNode[m[K> nodes,
+                                          [01;31m[K^~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:23:45:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kexecle[m[K’
+                                 std::vector<[01;36m[KVehicle[m[K> vehicles,
+                                             [01;36m[K^~~~~~~[m[K
+                                             [32m[Kexecle[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:23:52:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+                                 std::vector<Vehicle[01;31m[K>[m[K vehicles,
+                                                    [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:23:52:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:25:42:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kmodf[m[K’
+   SimulatedAnnealingSolution(std::vector<[01;36m[KNode[m[K> nodes,
+                                          [01;36m[K^~~~[m[K
+                                          [32m[Kmodf[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:25:46:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   SimulatedAnnealingSolution(std::vector<Node[01;31m[K>[m[K nodes,
+                                              [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:25:46:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:26:42:[m[K [01;31m[Kerror: [m[K‘[01m[KVehicle[m[K’ was not declared in this scope
+                              std::vector<[01;31m[KVehicle[m[K> vehicles,
+                                          [01;31m[K^~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:45:34:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kexecle[m[K’
+                      std::vector<[01;36m[KVehicle[m[K> vehicles,
+                                  [01;36m[K^~~~~~~[m[K
+                                  [32m[Kexecle[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:45:41:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+                      std::vector<Vehicle[01;31m[K>[m[K vehicles,
+                                         [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:45:41:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:55:30:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kp[m[K’
+   TabuSearchSolution(Problem [01;31m[Kp[m[K,
+                              [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:65:31:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Ks[m[K’
+   TabuSearchSolution(Solution [01;31m[Ks[m[K,
+                               [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:23:40:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kexecle[m[K’
+                            std::vector<[01;36m[KVehicle[m[K> vehicles,
+                                        [01;36m[K^~~~~~~[m[K
+                                        [32m[Kexecle[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:23:47:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+                            std::vector<Vehicle[01;31m[K>[m[K vehicles,
+                                               [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:23:47:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:32:36:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kp[m[K’
+   LocalSearchIntraSolution(Problem [01;31m[Kp[m[K);
+                                    [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:40:37:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Ks[m[K’
+   LocalSearchIntraSolution(Solution [01;31m[Ks[m[K);
+                                     [01;31m[K^[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:32:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:10[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/simulated_annealing.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:12:54:[m[K [01;31m[Kerror: [m[Kexpected class-name before ‘[01m[K{[m[K’ token
+ class LocalSearchInterIntraSolution : public Solution[01;31m[K{[m[K
+                                                      [01;31m[K^[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:29:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:10[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/local_search_intra.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:13:35:[m[K [01;31m[Kerror: [m[Kexpected class-name before ‘[01m[K{[m[K’ token
+ class GASolution : public Solution[01;31m[K{[m[K
+                                   [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:32:41:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kp[m[K’
+   LocalSearchInterIntraSolution(Problem [01;31m[Kp[m[K);
+                                         [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:25:26:[m[K [01;31m[Kerror: [m[K‘[01m[KNode[m[K’ was not declared in this scope
+   GASolution(std::vector<[01;31m[KNode[m[K> nodes,
+                          [01;31m[K^~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:40:42:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Ks[m[K’
+   LocalSearchInterIntraSolution(Solution [01;31m[Ks[m[K);
+                                          [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:26:42:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kexecle[m[K’
+                              std::vector<[01;36m[KVehicle[m[K> vehicles,
+                                          [01;36m[K^~~~~~~[m[K
+                                          [32m[Kexecle[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:26:49:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+                              std::vector<Vehicle[01;31m[K>[m[K vehicles,
+                                                 [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:26:49:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:41:38:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kp[m[K’
+   SimulatedAnnealingSolution(Problem [01;31m[Kp[m[K,
+                                      [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:55:39:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Ks[m[K’
+   SimulatedAnnealingSolution(Solution [01;31m[Ks[m[K,
+                                       [01;31m[K^[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:33:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:33:43:[m[K [01;31m[Kerror: [m[Kexpected class-name before ‘[01m[K{[m[K’ token
+ class TabuSearchSolution : public Solution[01;31m[K{[m[K
+                                           [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:44:34:[m[K [01;31m[Kerror: [m[K‘[01m[KNode[m[K’ was not declared in this scope
+   TabuSearchSolution(std::vector<[01;31m[KNode[m[K> nodes,
+                                  [01;31m[K^~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:25:26:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kmodf[m[K’
+   GASolution(std::vector<[01;36m[KNode[m[K> nodes,
+                          [01;36m[K^~~~[m[K
+                          [32m[Kmodf[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:25:30:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   GASolution(std::vector<Node[01;31m[K>[m[K nodes,
+                              [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:25:30:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:26:26:[m[K [01;31m[Kerror: [m[K‘[01m[KVehicle[m[K’ was not declared in this scope
+              std::vector<[01;31m[KVehicle[m[K> vehicles,
+                          [01;31m[K^~~~~~~[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:29:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:10[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/tabu_search.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:13:35:[m[K [01;31m[Kerror: [m[Kexpected class-name before ‘[01m[K{[m[K’ token
+ class GASolution : public Solution[01;31m[K{[m[K
+                                   [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:25:26:[m[K [01;31m[Kerror: [m[K‘[01m[KNode[m[K’ was not declared in this scope
+   GASolution(std::vector<[01;31m[KNode[m[K> nodes,
+                          [01;31m[K^~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:44:34:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kmodf[m[K’
+   TabuSearchSolution(std::vector<[01;36m[KNode[m[K> nodes,
+                                  [01;36m[K^~~~[m[K
+                                  [32m[Kmodf[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:44:38:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   TabuSearchSolution(std::vector<Node[01;31m[K>[m[K nodes,
+                                      [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:44:38:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:45:34:[m[K [01;31m[Kerror: [m[K‘[01m[KVehicle[m[K’ was not declared in this scope
+                      std::vector<[01;31m[KVehicle[m[K> vehicles,
+                                  [01;31m[K^~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:25:26:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kmodf[m[K’
+   GASolution(std::vector<[01;36m[KNode[m[K> nodes,
+                          [01;36m[K^~~~[m[K
+                          [32m[Kmodf[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:25:30:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   GASolution(std::vector<Node[01;31m[K>[m[K nodes,
+                              [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:25:30:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:26:26:[m[K [01;31m[Kerror: [m[K‘[01m[KVehicle[m[K’ was not declared in this scope
+              std::vector<[01;31m[KVehicle[m[K> vehicles,
+                          [01;31m[K^~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:26:26:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kexecle[m[K’
+              std::vector<[01;36m[KVehicle[m[K> vehicles,
+                          [01;36m[K^~~~~~~[m[K
+                          [32m[Kexecle[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:26:33:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+              std::vector<Vehicle[01;31m[K>[m[K vehicles,
+                                 [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:26:33:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:38:23:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kp[m[K’
+    GASolution(Problem [01;31m[Kp[m[K,
+                       [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:50:24:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Ks[m[K’
+    GASolution(Solution [01;31m[Ks[m[K,
+                        [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:45:34:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kexecle[m[K’
+                      std::vector<[01;36m[KVehicle[m[K> vehicles,
+                                  [01;36m[K^~~~~~~[m[K
+                                  [32m[Kexecle[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:45:41:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+                      std::vector<Vehicle[01;31m[K>[m[K vehicles,
+                                         [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:45:41:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:55:30:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kp[m[K’
+   TabuSearchSolution(Problem [01;31m[Kp[m[K,
+                              [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:65:31:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Ks[m[K’
+   TabuSearchSolution(Solution [01;31m[Ks[m[K,
+                               [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:26:26:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kexecle[m[K’
+              std::vector<[01;36m[KVehicle[m[K> vehicles,
+                          [01;36m[K^~~~~~~[m[K
+                          [32m[Kexecle[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:26:33:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+              std::vector<Vehicle[01;31m[K>[m[K vehicles,
+                                 [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:26:33:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:38:23:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kp[m[K’
+    GASolution(Problem [01;31m[Kp[m[K,
+                       [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:50:24:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Ks[m[K’
+    GASolution(Solution [01;31m[Ks[m[K,
+                        [01;31m[K^[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:30:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:10[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/local_search_intra.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:12:37:[m[K [01;31m[Kerror: [m[Kexpected class-name before ‘[01m[K{[m[K’ token
+ class GreedySolution:public Solution[01;31m[K{[m[K
+                                     [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:22:30:[m[K [01;31m[Kerror: [m[K‘[01m[KNode[m[K’ was not declared in this scope
+   GreedySolution(std::vector<[01;31m[KNode[m[K> nodes,
+                              [01;31m[K^~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:22:30:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kmodf[m[K’
+   GreedySolution(std::vector<[01;36m[KNode[m[K> nodes,
+                              [01;36m[K^~~~[m[K
+                              [32m[Kmodf[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:22:34:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   GreedySolution(std::vector<Node[01;31m[K>[m[K nodes,
+                                  [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:22:34:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:23:30:[m[K [01;31m[Kerror: [m[K‘[01m[KVehicle[m[K’ was not declared in this scope
+                  std::vector<[01;31m[KVehicle[m[K> vehicles,
+                              [01;31m[K^~~~~~~[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:30:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:10[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/tabu_search.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:12:37:[m[K [01;31m[Kerror: [m[Kexpected class-name before ‘[01m[K{[m[K’ token
+ class GreedySolution:public Solution[01;31m[K{[m[K
+                                     [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:22:30:[m[K [01;31m[Kerror: [m[K‘[01m[KNode[m[K’ was not declared in this scope
+   GreedySolution(std::vector<[01;31m[KNode[m[K> nodes,
+                              [01;31m[K^~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:22:30:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kmodf[m[K’
+   GreedySolution(std::vector<[01;36m[KNode[m[K> nodes,
+                              [01;36m[K^~~~[m[K
+                              [32m[Kmodf[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:22:34:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   GreedySolution(std::vector<Node[01;31m[K>[m[K nodes,
+                                  [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:22:34:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:23:30:[m[K [01;31m[Kerror: [m[K‘[01m[KVehicle[m[K’ was not declared in this scope
+                  std::vector<[01;31m[KVehicle[m[K> vehicles,
+                              [01;31m[K^~~~~~~[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:34:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:10[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/greedy.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:12:51:[m[K [01;31m[Kerror: [m[Kexpected class-name before ‘[01m[K{[m[K’ token
+ class SimulatedAnnealingSolution : public Solution[01;31m[K{[m[K
+                                                   [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:23:30:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kexecle[m[K’
+                  std::vector<[01;36m[KVehicle[m[K> vehicles,
+                              [01;36m[K^~~~~~~[m[K
+                              [32m[Kexecle[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:23:37:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+                  std::vector<Vehicle[01;31m[K>[m[K vehicles,
+                                     [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:22:45:[m[K [01;31m[Kerror: [m[K‘[01m[KNode[m[K’ was not declared in this scope
+   LocalSearchInterIntraSolution(std::vector<[01;31m[KNode[m[K> nodes,
+                                             [01;31m[K^~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:23:37:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:32:26:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kp[m[K’
+   GreedySolution(Problem [01;31m[Kp[m[K);
+                          [01;31m[K^[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:32:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:10[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/local_search_intra.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:12:54:[m[K [01;31m[Kerror: [m[Kexpected class-name before ‘[01m[K{[m[K’ token
+ class LocalSearchInterIntraSolution : public Solution[01;31m[K{[m[K
+                                                      [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:22:45:[m[K [01;31m[Kerror: [m[K‘[01m[KNode[m[K’ was not declared in this scope
+   LocalSearchInterIntraSolution(std::vector<[01;31m[KNode[m[K> nodes,
+                                             [01;31m[K^~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:22:45:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kmodf[m[K’
+   LocalSearchInterIntraSolution(std::vector<[01;36m[KNode[m[K> nodes,
+                                             [01;36m[K^~~~[m[K
+                                             [32m[Kmodf[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:22:49:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   LocalSearchInterIntraSolution(std::vector<Node[01;31m[K>[m[K nodes,
+                                                 [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:22:49:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:23:45:[m[K [01;31m[Kerror: [m[K‘[01m[KVehicle[m[K’ was not declared in this scope
+                                 std::vector<[01;31m[KVehicle[m[K> vehicles,
+                                             [01;31m[K^~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:22:45:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kmodf[m[K’
+   LocalSearchInterIntraSolution(std::vector<[01;36m[KNode[m[K> nodes,
+                                             [01;36m[K^~~~[m[K
+                                             [32m[Kmodf[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:22:49:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   LocalSearchInterIntraSolution(std::vector<Node[01;31m[K>[m[K nodes,
+                                                 [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:22:49:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:23:45:[m[K [01;31m[Kerror: [m[K‘[01m[KVehicle[m[K’ was not declared in this scope
+                                 std::vector<[01;31m[KVehicle[m[K> vehicles,
+                                             [01;31m[K^~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:23:30:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kexecle[m[K’
+                  std::vector<[01;36m[KVehicle[m[K> vehicles,
+                              [01;36m[K^~~~~~~[m[K
+                              [32m[Kexecle[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:23:37:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+                  std::vector<Vehicle[01;31m[K>[m[K vehicles,
+                                     [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:23:37:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:32:26:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kp[m[K’
+   GreedySolution(Problem [01;31m[Kp[m[K);
+                          [01;31m[K^[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:31:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:10[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/tabu_search.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:12:49:[m[K [01;31m[Kerror: [m[Kexpected class-name before ‘[01m[K{[m[K’ token
+ class LocalSearchIntraSolution : public Solution[01;31m[K{[m[K
+                                                 [01;31m[K^[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:31:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:10[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/tabu_search.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:22:40:[m[K [01;31m[Kerror: [m[K‘[01m[KNode[m[K’ was not declared in this scope
+   LocalSearchIntraSolution(std::vector<[01;31m[KNode[m[K> nodes,
+                                        [01;31m[K^~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:23:45:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kexecle[m[K’
+                                 std::vector<[01;36m[KVehicle[m[K> vehicles,
+                                             [01;36m[K^~~~~~~[m[K
+                                             [32m[Kexecle[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:23:52:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+                                 std::vector<Vehicle[01;31m[K>[m[K vehicles,
+                                                    [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:23:52:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:32:41:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kp[m[K’
+   LocalSearchInterIntraSolution(Problem [01;31m[Kp[m[K);
+                                         [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:40:42:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Ks[m[K’
+   LocalSearchInterIntraSolution(Solution [01;31m[Ks[m[K);
+                                          [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:22:40:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kmodf[m[K’
+   LocalSearchIntraSolution(std::vector<[01;36m[KNode[m[K> nodes,
+                                        [01;36m[K^~~~[m[K
+                                        [32m[Kmodf[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:22:44:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   LocalSearchIntraSolution(std::vector<Node[01;31m[K>[m[K nodes,
+                                            [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:22:44:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:23:40:[m[K [01;31m[Kerror: [m[K‘[01m[KVehicle[m[K’ was not declared in this scope
+                            std::vector<[01;31m[KVehicle[m[K> vehicles,
+                                        [01;31m[K^~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:23:45:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kexecle[m[K’
+                                 std::vector<[01;36m[KVehicle[m[K> vehicles,
+                                             [01;36m[K^~~~~~~[m[K
+                                             [32m[Kexecle[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:23:52:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+                                 std::vector<Vehicle[01;31m[K>[m[K vehicles,
+                                                    [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:23:52:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:32:41:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kp[m[K’
+   LocalSearchInterIntraSolution(Problem [01;31m[Kp[m[K);
+                                         [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:40:42:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Ks[m[K’
+   LocalSearchInterIntraSolution(Solution [01;31m[Ks[m[K);
+                                          [01;31m[K^[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:33:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:10[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/simulated_annealing.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:33:43:[m[K [01;31m[Kerror: [m[Kexpected class-name before ‘[01m[K{[m[K’ token
+ class TabuSearchSolution : public Solution[01;31m[K{[m[K
+                                           [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:44:34:[m[K [01;31m[Kerror: [m[K‘[01m[KNode[m[K’ was not declared in this scope
+   TabuSearchSolution(std::vector<[01;31m[KNode[m[K> nodes,
+                                  [01;31m[K^~~~[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:33:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:10[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/local_search_intra.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:33:43:[m[K [01;31m[Kerror: [m[Kexpected class-name before ‘[01m[K{[m[K’ token
+ class TabuSearchSolution : public Solution[01;31m[K{[m[K
+                                           [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:44:34:[m[K [01;31m[Kerror: [m[K‘[01m[KNode[m[K’ was not declared in this scope
+   TabuSearchSolution(std::vector<[01;31m[KNode[m[K> nodes,
+                                  [01;31m[K^~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:23:40:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kexecle[m[K’
+                            std::vector<[01;36m[KVehicle[m[K> vehicles,
+                                        [01;36m[K^~~~~~~[m[K
+                                        [32m[Kexecle[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:23:47:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+                            std::vector<Vehicle[01;31m[K>[m[K vehicles,
+                                               [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:23:47:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:32:36:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kp[m[K’
+   LocalSearchIntraSolution(Problem [01;31m[Kp[m[K);
+                                    [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:40:37:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Ks[m[K’
+   LocalSearchIntraSolution(Solution [01;31m[Ks[m[K);
+                                     [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:44:34:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kmodf[m[K’
+   TabuSearchSolution(std::vector<[01;36m[KNode[m[K> nodes,
+                                  [01;36m[K^~~~[m[K
+                                  [32m[Kmodf[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:44:38:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   TabuSearchSolution(std::vector<Node[01;31m[K>[m[K nodes,
+                                      [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:44:38:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:32:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:10[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/tabu_search.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:12:54:[m[K [01;31m[Kerror: [m[Kexpected class-name before ‘[01m[K{[m[K’ token
+ class LocalSearchInterIntraSolution : public Solution[01;31m[K{[m[K
+                                                      [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:45:34:[m[K [01;31m[Kerror: [m[K‘[01m[KVehicle[m[K’ was not declared in this scope
+                      std::vector<[01;31m[KVehicle[m[K> vehicles,
+                                  [01;31m[K^~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:22:45:[m[K [01;31m[Kerror: [m[K‘[01m[KNode[m[K’ was not declared in this scope
+   LocalSearchInterIntraSolution(std::vector<[01;31m[KNode[m[K> nodes,
+                                             [01;31m[K^~~~[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:34:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:12:51:[m[K [01;31m[Kerror: [m[Kexpected class-name before ‘[01m[K{[m[K’ token
+ class SimulatedAnnealingSolution : public Solution[01;31m[K{[m[K
+                                                   [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:44:34:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kmodf[m[K’
+   TabuSearchSolution(std::vector<[01;36m[KNode[m[K> nodes,
+                                  [01;36m[K^~~~[m[K
+                                  [32m[Kmodf[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:25:42:[m[K [01;31m[Kerror: [m[K‘[01m[KNode[m[K’ was not declared in this scope
+   SimulatedAnnealingSolution(std::vector<[01;31m[KNode[m[K> nodes,
+                                          [01;31m[K^~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:25:42:[m[K [01;31m[Kerror: [m[K‘[01m[KNode[m[K’ was not declared in this scope
+   SimulatedAnnealingSolution(std::vector<[01;31m[KNode[m[K> nodes,
+                                          [01;31m[K^~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:44:38:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   TabuSearchSolution(std::vector<Node[01;31m[K>[m[K nodes,
+                                      [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:44:38:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:45:34:[m[K [01;31m[Kerror: [m[K‘[01m[KVehicle[m[K’ was not declared in this scope
+                      std::vector<[01;31m[KVehicle[m[K> vehicles,
+                                  [01;31m[K^~~~~~~[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:30:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:10[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/main.hpp:7[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/main.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:12:37:[m[K [01;31m[Kerror: [m[Kexpected class-name before ‘[01m[K{[m[K’ token
+ class GreedySolution:public Solution[01;31m[K{[m[K
+                                     [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:22:30:[m[K [01;31m[Kerror: [m[K‘[01m[KNode[m[K’ was not declared in this scope
+   GreedySolution(std::vector<[01;31m[KNode[m[K> nodes,
+                              [01;31m[K^~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:22:45:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kmodf[m[K’
+   LocalSearchInterIntraSolution(std::vector<[01;36m[KNode[m[K> nodes,
+                                             [01;36m[K^~~~[m[K
+                                             [32m[Kmodf[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:22:49:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   LocalSearchInterIntraSolution(std::vector<Node[01;31m[K>[m[K nodes,
+                                                 [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:22:49:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:23:45:[m[K [01;31m[Kerror: [m[K‘[01m[KVehicle[m[K’ was not declared in this scope
+                                 std::vector<[01;31m[KVehicle[m[K> vehicles,
+                                             [01;31m[K^~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:25:42:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kmodf[m[K’
+   SimulatedAnnealingSolution(std::vector<[01;36m[KNode[m[K> nodes,
+                                          [01;36m[K^~~~[m[K
+                                          [32m[Kmodf[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:25:46:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   SimulatedAnnealingSolution(std::vector<Node[01;31m[K>[m[K nodes,
+                                              [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:25:46:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:26:42:[m[K [01;31m[Kerror: [m[K‘[01m[KVehicle[m[K’ was not declared in this scope
+                              std::vector<[01;31m[KVehicle[m[K> vehicles,
+                                          [01;31m[K^~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:25:42:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kmodf[m[K’
+   SimulatedAnnealingSolution(std::vector<[01;36m[KNode[m[K> nodes,
+                                          [01;36m[K^~~~[m[K
+                                          [32m[Kmodf[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:25:46:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   SimulatedAnnealingSolution(std::vector<Node[01;31m[K>[m[K nodes,
+                                              [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:25:46:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:26:42:[m[K [01;31m[Kerror: [m[K‘[01m[KVehicle[m[K’ was not declared in this scope
+                              std::vector<[01;31m[KVehicle[m[K> vehicles,
+                                          [01;31m[K^~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:22:30:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kmodf[m[K’
+   GreedySolution(std::vector<[01;36m[KNode[m[K> nodes,
+                              [01;36m[K^~~~[m[K
+                              [32m[Kmodf[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:22:34:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   GreedySolution(std::vector<Node[01;31m[K>[m[K nodes,
+                                  [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:22:34:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:23:30:[m[K [01;31m[Kerror: [m[K‘[01m[KVehicle[m[K’ was not declared in this scope
+                  std::vector<[01;31m[KVehicle[m[K> vehicles,
+                              [01;31m[K^~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:45:34:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kexecle[m[K’
+                      std::vector<[01;36m[KVehicle[m[K> vehicles,
+                                  [01;36m[K^~~~~~~[m[K
+                                  [32m[Kexecle[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:45:41:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+                      std::vector<Vehicle[01;31m[K>[m[K vehicles,
+                                         [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:45:41:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:55:30:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kp[m[K’
+   TabuSearchSolution(Problem [01;31m[Kp[m[K,
+                              [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:65:31:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Ks[m[K’
+   TabuSearchSolution(Solution [01;31m[Ks[m[K,
+                               [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:23:45:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kexecle[m[K’
+                                 std::vector<[01;36m[KVehicle[m[K> vehicles,
+                                             [01;36m[K^~~~~~~[m[K
+                                             [32m[Kexecle[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:23:52:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+                                 std::vector<Vehicle[01;31m[K>[m[K vehicles,
+                                                    [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:23:52:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:32:41:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kp[m[K’
+   LocalSearchInterIntraSolution(Problem [01;31m[Kp[m[K);
+                                         [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:40:42:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Ks[m[K’
+   LocalSearchInterIntraSolution(Solution [01;31m[Ks[m[K);
+                                          [01;31m[K^[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:34:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:10[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/tabu_search.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:12:51:[m[K [01;31m[Kerror: [m[Kexpected class-name before ‘[01m[K{[m[K’ token
+ class SimulatedAnnealingSolution : public Solution[01;31m[K{[m[K
+                                                   [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:25:42:[m[K [01;31m[Kerror: [m[K‘[01m[KNode[m[K’ was not declared in this scope
+   SimulatedAnnealingSolution(std::vector<[01;31m[KNode[m[K> nodes,
+                                          [01;31m[K^~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:26:42:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kexecle[m[K’
+                              std::vector<[01;36m[KVehicle[m[K> vehicles,
+                                          [01;36m[K^~~~~~~[m[K
+                                          [32m[Kexecle[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:26:49:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+                              std::vector<Vehicle[01;31m[K>[m[K vehicles,
+                                                 [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:26:49:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:41:38:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kp[m[K’
+   SimulatedAnnealingSolution(Problem [01;31m[Kp[m[K,
+                                      [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:26:42:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kexecle[m[K’
+                              std::vector<[01;36m[KVehicle[m[K> vehicles,
+                                          [01;36m[K^~~~~~~[m[K
+                                          [32m[Kexecle[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:55:39:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Ks[m[K’
+   SimulatedAnnealingSolution(Solution [01;31m[Ks[m[K,
+                                       [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:26:49:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+                              std::vector<Vehicle[01;31m[K>[m[K vehicles,
+                                                 [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:26:49:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:41:38:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kp[m[K’
+   SimulatedAnnealingSolution(Problem [01;31m[Kp[m[K,
+                                      [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:55:39:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Ks[m[K’
+   SimulatedAnnealingSolution(Solution [01;31m[Ks[m[K,
+                                       [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:23:30:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kexecle[m[K’
+                  std::vector<[01;36m[KVehicle[m[K> vehicles,
+                              [01;36m[K^~~~~~~[m[K
+                              [32m[Kexecle[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:23:37:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+                  std::vector<Vehicle[01;31m[K>[m[K vehicles,
+                                     [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:23:37:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:32:26:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kp[m[K’
+   GreedySolution(Problem [01;31m[Kp[m[K);
+                          [01;31m[K^[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:31:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:10[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/main.hpp:7[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/main.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:12:49:[m[K [01;31m[Kerror: [m[Kexpected class-name before ‘[01m[K{[m[K’ token
+ class LocalSearchIntraSolution : public Solution[01;31m[K{[m[K
+                                                 [01;31m[K^[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:31:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:10[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/main.hpp:7[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/main.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:22:40:[m[K [01;31m[Kerror: [m[K‘[01m[KNode[m[K’ was not declared in this scope
+   LocalSearchIntraSolution(std::vector<[01;31m[KNode[m[K> nodes,
+                                        [01;31m[K^~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:25:42:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kmodf[m[K’
+   SimulatedAnnealingSolution(std::vector<[01;36m[KNode[m[K> nodes,
+                                          [01;36m[K^~~~[m[K
+                                          [32m[Kmodf[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:25:46:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   SimulatedAnnealingSolution(std::vector<Node[01;31m[K>[m[K nodes,
+                                              [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:25:46:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:26:42:[m[K [01;31m[Kerror: [m[K‘[01m[KVehicle[m[K’ was not declared in this scope
+                              std::vector<[01;31m[KVehicle[m[K> vehicles,
+                                          [01;31m[K^~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:22:40:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kmodf[m[K’
+   LocalSearchIntraSolution(std::vector<[01;36m[KNode[m[K> nodes,
+                                        [01;36m[K^~~~[m[K
+                                        [32m[Kmodf[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:22:44:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   LocalSearchIntraSolution(std::vector<Node[01;31m[K>[m[K nodes,
+                                            [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:22:44:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:23:40:[m[K [01;31m[Kerror: [m[K‘[01m[KVehicle[m[K’ was not declared in this scope
+                            std::vector<[01;31m[KVehicle[m[K> vehicles,
+                                        [01;31m[K^~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:26:42:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kexecle[m[K’
+                              std::vector<[01;36m[KVehicle[m[K> vehicles,
+                                          [01;36m[K^~~~~~~[m[K
+                                          [32m[Kexecle[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:26:49:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+                              std::vector<Vehicle[01;31m[K>[m[K vehicles,
+                                                 [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:26:49:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:41:38:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kp[m[K’
+   SimulatedAnnealingSolution(Problem [01;31m[Kp[m[K,
+                                      [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:55:39:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Ks[m[K’
+   SimulatedAnnealingSolution(Solution [01;31m[Ks[m[K,
+                                       [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:23:40:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kexecle[m[K’
+                            std::vector<[01;36m[KVehicle[m[K> vehicles,
+                                        [01;36m[K^~~~~~~[m[K
+                                        [32m[Kexecle[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:23:47:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+                            std::vector<Vehicle[01;31m[K>[m[K vehicles,
+                                               [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:23:47:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:32:36:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kp[m[K’
+   LocalSearchIntraSolution(Problem [01;31m[Kp[m[K);
+                                    [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:40:37:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Ks[m[K’
+   LocalSearchIntraSolution(Solution [01;31m[Ks[m[K);
+                                     [01;31m[K^[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:32:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:10[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/main.hpp:7[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/main.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:12:54:[m[K [01;31m[Kerror: [m[Kexpected class-name before ‘[01m[K{[m[K’ token
+ class LocalSearchInterIntraSolution : public Solution[01;31m[K{[m[K
+                                                      [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:22:45:[m[K [01;31m[Kerror: [m[K‘[01m[KNode[m[K’ was not declared in this scope
+   LocalSearchInterIntraSolution(std::vector<[01;31m[KNode[m[K> nodes,
+                                             [01;31m[K^~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:22:45:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kmodf[m[K’
+   LocalSearchInterIntraSolution(std::vector<[01;36m[KNode[m[K> nodes,
+                                             [01;36m[K^~~~[m[K
+                                             [32m[Kmodf[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:22:49:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   LocalSearchInterIntraSolution(std::vector<Node[01;31m[K>[m[K nodes,
+                                                 [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:22:49:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:23:45:[m[K [01;31m[Kerror: [m[K‘[01m[KVehicle[m[K’ was not declared in this scope
+                                 std::vector<[01;31m[KVehicle[m[K> vehicles,
+                                             [01;31m[K^~~~~~~[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:29:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:10[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/local_search_inter_intra.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:13:35:[m[K [01;31m[Kerror: [m[Kexpected class-name before ‘[01m[K{[m[K’ token
+ class GASolution : public Solution[01;31m[K{[m[K
+                                   [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:25:26:[m[K [01;31m[Kerror: [m[K‘[01m[KNode[m[K’ was not declared in this scope
+   GASolution(std::vector<[01;31m[KNode[m[K> nodes,
+                          [01;31m[K^~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:25:26:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kmodf[m[K’
+   GASolution(std::vector<[01;36m[KNode[m[K> nodes,
+                          [01;36m[K^~~~[m[K
+                          [32m[Kmodf[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:25:30:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   GASolution(std::vector<Node[01;31m[K>[m[K nodes,
+                              [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:25:30:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:26:26:[m[K [01;31m[Kerror: [m[K‘[01m[KVehicle[m[K’ was not declared in this scope
+              std::vector<[01;31m[KVehicle[m[K> vehicles,
+                          [01;31m[K^~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:23:45:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kexecle[m[K’
+                                 std::vector<[01;36m[KVehicle[m[K> vehicles,
+                                             [01;36m[K^~~~~~~[m[K
+                                             [32m[Kexecle[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:23:52:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+                                 std::vector<Vehicle[01;31m[K>[m[K vehicles,
+                                                    [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:23:52:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:32:41:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kp[m[K’
+   LocalSearchInterIntraSolution(Problem [01;31m[Kp[m[K);
+                                         [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:40:42:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Ks[m[K’
+   LocalSearchInterIntraSolution(Solution [01;31m[Ks[m[K);
+                                          [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:26:26:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kexecle[m[K’
+              std::vector<[01;36m[KVehicle[m[K> vehicles,
+                          [01;36m[K^~~~~~~[m[K
+                          [32m[Kexecle[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:26:33:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+              std::vector<Vehicle[01;31m[K>[m[K vehicles,
+                                 [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:26:33:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:38:23:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kp[m[K’
+    GASolution(Problem [01;31m[Kp[m[K,
+                       [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:50:24:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Ks[m[K’
+    GASolution(Solution [01;31m[Ks[m[K,
+                        [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:45:34:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kexecle[m[K’
+                      std::vector<[01;36m[KVehicle[m[K> vehicles,
+                                  [01;36m[K^~~~~~~[m[K
+                                  [32m[Kexecle[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:45:41:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+                      std::vector<Vehicle[01;31m[K>[m[K vehicles,
+                                         [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:45:41:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:55:30:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kp[m[K’
+   TabuSearchSolution(Problem [01;31m[Kp[m[K,
+                              [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:65:31:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Ks[m[K’
+   TabuSearchSolution(Solution [01;31m[Ks[m[K,
+                               [01;31m[K^[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:34:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:10[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/local_search_intra.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:12:51:[m[K [01;31m[Kerror: [m[Kexpected class-name before ‘[01m[K{[m[K’ token
+ class SimulatedAnnealingSolution : public Solution[01;31m[K{[m[K
+                                                   [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:25:42:[m[K [01;31m[Kerror: [m[K‘[01m[KNode[m[K’ was not declared in this scope
+   SimulatedAnnealingSolution(std::vector<[01;31m[KNode[m[K> nodes,
+                                          [01;31m[K^~~~[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:33:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:10[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/main.hpp:7[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/main.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:33:43:[m[K [01;31m[Kerror: [m[Kexpected class-name before ‘[01m[K{[m[K’ token
+ class TabuSearchSolution : public Solution[01;31m[K{[m[K
+                                           [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:44:34:[m[K [01;31m[Kerror: [m[K‘[01m[KNode[m[K’ was not declared in this scope
+   TabuSearchSolution(std::vector<[01;31m[KNode[m[K> nodes,
+                                  [01;31m[K^~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:25:42:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kmodf[m[K’
+   SimulatedAnnealingSolution(std::vector<[01;36m[KNode[m[K> nodes,
+                                          [01;36m[K^~~~[m[K
+                                          [32m[Kmodf[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:25:46:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   SimulatedAnnealingSolution(std::vector<Node[01;31m[K>[m[K nodes,
+                                              [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:25:46:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:26:42:[m[K [01;31m[Kerror: [m[K‘[01m[KVehicle[m[K’ was not declared in this scope
+                              std::vector<[01;31m[KVehicle[m[K> vehicles,
+                                          [01;31m[K^~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:44:34:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kmodf[m[K’
+   TabuSearchSolution(std::vector<[01;36m[KNode[m[K> nodes,
+                                  [01;36m[K^~~~[m[K
+                                  [32m[Kmodf[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:44:38:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   TabuSearchSolution(std::vector<Node[01;31m[K>[m[K nodes,
+                                      [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:44:38:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:45:34:[m[K [01;31m[Kerror: [m[K‘[01m[KVehicle[m[K’ was not declared in this scope
+                      std::vector<[01;31m[KVehicle[m[K> vehicles,
+                                  [01;31m[K^~~~~~~[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:30:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:10[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/local_search_inter_intra.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:12:37:[m[K [01;31m[Kerror: [m[Kexpected class-name before ‘[01m[K{[m[K’ token
+ class GreedySolution:public Solution[01;31m[K{[m[K
+                                     [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:22:30:[m[K [01;31m[Kerror: [m[K‘[01m[KNode[m[K’ was not declared in this scope
+   GreedySolution(std::vector<[01;31m[KNode[m[K> nodes,
+                              [01;31m[K^~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:26:42:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kexecle[m[K’
+                              std::vector<[01;36m[KVehicle[m[K> vehicles,
+                                          [01;36m[K^~~~~~~[m[K
+                                          [32m[Kexecle[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:26:49:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+                              std::vector<Vehicle[01;31m[K>[m[K vehicles,
+                                                 [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:26:49:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:41:38:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kp[m[K’
+   SimulatedAnnealingSolution(Problem [01;31m[Kp[m[K,
+                                      [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:55:39:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Ks[m[K’
+   SimulatedAnnealingSolution(Solution [01;31m[Ks[m[K,
+                                       [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:45:34:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kexecle[m[K’
+                      std::vector<[01;36m[KVehicle[m[K> vehicles,
+                                  [01;36m[K^~~~~~~[m[K
+                                  [32m[Kexecle[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:45:41:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+                      std::vector<Vehicle[01;31m[K>[m[K vehicles,
+                                         [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:45:41:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:55:30:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kp[m[K’
+   TabuSearchSolution(Problem [01;31m[Kp[m[K,
+                              [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:65:31:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Ks[m[K’
+   TabuSearchSolution(Solution [01;31m[Ks[m[K,
+                               [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:22:30:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kmodf[m[K’
+   GreedySolution(std::vector<[01;36m[KNode[m[K> nodes,
+                              [01;36m[K^~~~[m[K
+                              [32m[Kmodf[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:22:34:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   GreedySolution(std::vector<Node[01;31m[K>[m[K nodes,
+                                  [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:22:34:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:23:30:[m[K [01;31m[Kerror: [m[K‘[01m[KVehicle[m[K’ was not declared in this scope
+                  std::vector<[01;31m[KVehicle[m[K> vehicles,
+                              [01;31m[K^~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:23:30:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kexecle[m[K’
+                  std::vector<[01;36m[KVehicle[m[K> vehicles,
+                              [01;36m[K^~~~~~~[m[K
+                              [32m[Kexecle[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:23:37:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+                  std::vector<Vehicle[01;31m[K>[m[K vehicles,
+                                     [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:23:37:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:32:26:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kp[m[K’
+   GreedySolution(Problem [01;31m[Kp[m[K);
+                          [01;31m[K^[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:31:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:10[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/local_search_inter_intra.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:12:49:[m[K [01;31m[Kerror: [m[Kexpected class-name before ‘[01m[K{[m[K’ token
+ class LocalSearchIntraSolution : public Solution[01;31m[K{[m[K
+                                                 [01;31m[K^[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:31:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:10[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/local_search_inter_intra.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:22:40:[m[K [01;31m[Kerror: [m[K‘[01m[KNode[m[K’ was not declared in this scope
+   LocalSearchIntraSolution(std::vector<[01;31m[KNode[m[K> nodes,
+                                        [01;31m[K^~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:22:40:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kmodf[m[K’
+   LocalSearchIntraSolution(std::vector<[01;36m[KNode[m[K> nodes,
+                                        [01;36m[K^~~~[m[K
+                                        [32m[Kmodf[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:22:44:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   LocalSearchIntraSolution(std::vector<Node[01;31m[K>[m[K nodes,
+                                            [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:22:44:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:23:40:[m[K [01;31m[Kerror: [m[K‘[01m[KVehicle[m[K’ was not declared in this scope
+                            std::vector<[01;31m[KVehicle[m[K> vehicles,
+                                        [01;31m[K^~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:23:40:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kexecle[m[K’
+                            std::vector<[01;36m[KVehicle[m[K> vehicles,
+                                        [01;36m[K^~~~~~~[m[K
+                                        [32m[Kexecle[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:23:47:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+                            std::vector<Vehicle[01;31m[K>[m[K vehicles,
+                                               [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:23:47:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:32:36:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kp[m[K’
+   LocalSearchIntraSolution(Problem [01;31m[Kp[m[K);
+                                    [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:40:37:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Ks[m[K’
+   LocalSearchIntraSolution(Solution [01;31m[Ks[m[K);
+                                     [01;31m[K^[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:33:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:10[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/local_search_inter_intra.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:33:43:[m[K [01;31m[Kerror: [m[Kexpected class-name before ‘[01m[K{[m[K’ token
+ class TabuSearchSolution : public Solution[01;31m[K{[m[K
+                                           [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:44:34:[m[K [01;31m[Kerror: [m[K‘[01m[KNode[m[K’ was not declared in this scope
+   TabuSearchSolution(std::vector<[01;31m[KNode[m[K> nodes,
+                                  [01;31m[K^~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:44:34:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kmodf[m[K’
+   TabuSearchSolution(std::vector<[01;36m[KNode[m[K> nodes,
+                                  [01;36m[K^~~~[m[K
+                                  [32m[Kmodf[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:44:38:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   TabuSearchSolution(std::vector<Node[01;31m[K>[m[K nodes,
+                                      [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:44:38:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:45:34:[m[K [01;31m[Kerror: [m[K‘[01m[KVehicle[m[K’ was not declared in this scope
+                      std::vector<[01;31m[KVehicle[m[K> vehicles,
+                                  [01;31m[K^~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:45:34:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kexecle[m[K’
+                      std::vector<[01;36m[KVehicle[m[K> vehicles,
+                                  [01;36m[K^~~~~~~[m[K
+                                  [32m[Kexecle[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:45:41:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+                      std::vector<Vehicle[01;31m[K>[m[K vehicles,
+                                         [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:45:41:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:55:30:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kp[m[K’
+   TabuSearchSolution(Problem [01;31m[Kp[m[K,
+                              [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:65:31:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Ks[m[K’
+   TabuSearchSolution(Solution [01;31m[Ks[m[K,
+                               [01;31m[K^[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:34:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/genetic_algorithm.hpp:10[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/main.hpp:7[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/main.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:12:51:[m[K [01;31m[Kerror: [m[Kexpected class-name before ‘[01m[K{[m[K’ token
+ class SimulatedAnnealingSolution : public Solution[01;31m[K{[m[K
+                                                   [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:25:42:[m[K [01;31m[Kerror: [m[K‘[01m[KNode[m[K’ was not declared in this scope
+   SimulatedAnnealingSolution(std::vector<[01;31m[KNode[m[K> nodes,
+                                          [01;31m[K^~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:25:42:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kmodf[m[K’
+   SimulatedAnnealingSolution(std::vector<[01;36m[KNode[m[K> nodes,
+                                          [01;36m[K^~~~[m[K
+                                          [32m[Kmodf[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:25:46:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   SimulatedAnnealingSolution(std::vector<Node[01;31m[K>[m[K nodes,
+                                              [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:25:46:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:26:42:[m[K [01;31m[Kerror: [m[K‘[01m[KVehicle[m[K’ was not declared in this scope
+                              std::vector<[01;31m[KVehicle[m[K> vehicles,
+                                          [01;31m[K^~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:26:42:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kexecle[m[K’
+                              std::vector<[01;36m[KVehicle[m[K> vehicles,
+                                          [01;36m[K^~~~~~~[m[K
+                                          [32m[Kexecle[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:26:49:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+                              std::vector<Vehicle[01;31m[K>[m[K vehicles,
+                                                 [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:26:49:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:41:38:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kp[m[K’
+   SimulatedAnnealingSolution(Problem [01;31m[Kp[m[K,
+                                      [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:55:39:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Ks[m[K’
+   SimulatedAnnealingSolution(Solution [01;31m[Ks[m[K,
+                                       [01;31m[K^[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:34:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:10[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/local_search_inter_intra.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:12:51:[m[K [01;31m[Kerror: [m[Kexpected class-name before ‘[01m[K{[m[K’ token
+ class SimulatedAnnealingSolution : public Solution[01;31m[K{[m[K
+                                                   [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:25:42:[m[K [01;31m[Kerror: [m[K‘[01m[KNode[m[K’ was not declared in this scope
+   SimulatedAnnealingSolution(std::vector<[01;31m[KNode[m[K> nodes,
+                                          [01;31m[K^~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:25:42:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kmodf[m[K’
+   SimulatedAnnealingSolution(std::vector<[01;36m[KNode[m[K> nodes,
+                                          [01;36m[K^~~~[m[K
+                                          [32m[Kmodf[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:25:46:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   SimulatedAnnealingSolution(std::vector<Node[01;31m[K>[m[K nodes,
+                                              [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:25:46:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:26:42:[m[K [01;31m[Kerror: [m[K‘[01m[KVehicle[m[K’ was not declared in this scope
+                              std::vector<[01;31m[KVehicle[m[K> vehicles,
+                                          [01;31m[K^~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:26:42:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kexecle[m[K’
+                              std::vector<[01;36m[KVehicle[m[K> vehicles,
+                                          [01;36m[K^~~~~~~[m[K
+                                          [32m[Kexecle[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:26:49:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+                              std::vector<Vehicle[01;31m[K>[m[K vehicles,
+                                                 [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:26:49:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:41:38:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kp[m[K’
+   SimulatedAnnealingSolution(Problem [01;31m[Kp[m[K,
+                                      [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:55:39:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Ks[m[K’
+   SimulatedAnnealingSolution(Solution [01;31m[Ks[m[K,
+                                       [01;31m[K^[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:[m[K In function ‘[01m[Kstd::vector<Vehicle> run_instance(PRP, std::__cxx11::string)[m[K’:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:246:27:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KGreedySolution::GreedySolution(Problem&)[m[K’
+       GreedySolution vrp(p[01;31m[K)[m[K;
+                           [01;31m[K^[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:30:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:22:3:[m[K [01;36m[Knote: [m[Kcandidate: GreedySolution::GreedySolution(int, int, std::vector<std::vector<double> >)
+   [01;36m[KGreedySolution[m[K(std::vector<Node> nodes,
+   [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:22:3:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 1 provided
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:12:7:[m[K [01;36m[Knote: [m[Kcandidate: constexpr GreedySolution::GreedySolution(const GreedySolution&)
+ class [01;36m[KGreedySolution[m[K:public Solution{
+       [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:12:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KProblem[m[K’ to ‘[01m[Kconst GreedySolution&[m[K’
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:12:7:[m[K [01;36m[Knote: [m[Kcandidate: constexpr GreedySolution::GreedySolution(GreedySolution&&)
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/greedy.hpp:12:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KProblem[m[K’ to ‘[01m[KGreedySolution&&[m[K’
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:249:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass GreedySolution[m[K’ has no member named ‘[01m[Kvehicles_[m[K’
+       return vrp.[01;31m[Kvehicles_[m[K;
+                  [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:252:37:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KLocalSearchIntraSolution::LocalSearchIntraSolution(Problem&)[m[K’
+       LocalSearchIntraSolution vrp(p[01;31m[K)[m[K;
+                                     [01;31m[K^[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:31:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:22:3:[m[K [01;36m[Knote: [m[Kcandidate: LocalSearchIntraSolution::LocalSearchIntraSolution(int, int, std::vector<std::vector<double> >)
+   [01;36m[KLocalSearchIntraSolution[m[K(std::vector<Node> nodes,
+   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:22:3:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 1 provided
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:31:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:12:7:[m[K [01;36m[Knote: [m[Kcandidate: constexpr LocalSearchIntraSolution::LocalSearchIntraSolution(const LocalSearchIntraSolution&)
+ class [01;36m[KLocalSearchIntraSolution[m[K : public Solution{
+       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:12:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KProblem[m[K’ to ‘[01m[Kconst LocalSearchIntraSolution&[m[K’
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:12:7:[m[K [01;36m[Knote: [m[Kcandidate: constexpr LocalSearchIntraSolution::LocalSearchIntraSolution(LocalSearchIntraSolution&&)
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_intra.hpp:12:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KProblem[m[K’ to ‘[01m[KLocalSearchIntraSolution&&[m[K’
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:255:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass LocalSearchIntraSolution[m[K’ has no member named ‘[01m[Kvehicles_[m[K’
+       return vrp.[01;31m[Kvehicles_[m[K;
+                  [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:258:42:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KLocalSearchInterIntraSolution::LocalSearchInterIntraSolution(Problem&)[m[K’
+       LocalSearchInterIntraSolution vrp(p[01;31m[K)[m[K;
+                                          [01;31m[K^[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:32:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:22:3:[m[K [01;36m[Knote: [m[Kcandidate: LocalSearchInterIntraSolution::LocalSearchInterIntraSolution(int, int, std::vector<std::vector<double> >)
+   [01;36m[KLocalSearchInterIntraSolution[m[K(std::vector<Node> nodes,
+   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:22:3:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 1 provided
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:12:7:[m[K [01;36m[Knote: [m[Kcandidate: constexpr LocalSearchInterIntraSolution::LocalSearchInterIntraSolution(const LocalSearchInterIntraSolution&)
+ class [01;36m[KLocalSearchInterIntraSolution[m[K : public Solution{
+       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:12:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KProblem[m[K’ to ‘[01m[Kconst LocalSearchInterIntraSolution&[m[K’
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:12:7:[m[K [01;36m[Knote: [m[Kcandidate: constexpr LocalSearchInterIntraSolution::LocalSearchInterIntraSolution(LocalSearchInterIntraSolution&&)
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/local_search_inter_intra.hpp:12:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KProblem[m[K’ to ‘[01m[KLocalSearchInterIntraSolution&&[m[K’
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:261:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass LocalSearchInterIntraSolution[m[K’ has no member named ‘[01m[Kvehicles_[m[K’
+       return vrp.[01;31m[Kvehicles_[m[K;
+                  [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:264:35:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KTabuSearchSolution::TabuSearchSolution(Problem&, int)[m[K’
+       TabuSearchSolution vrp(p, 10[01;31m[K)[m[K;
+                                   [01;31m[K^[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:33:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:44:3:[m[K [01;36m[Knote: [m[Kcandidate: TabuSearchSolution::TabuSearchSolution(int, int, std::vector<std::vector<double> >, int)
+   [01;36m[KTabuSearchSolution[m[K(std::vector<Node> nodes,
+   [01;36m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:44:3:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 2 provided
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:33:7:[m[K [01;36m[Knote: [m[Kcandidate: TabuSearchSolution::TabuSearchSolution(const TabuSearchSolution&)
+ class [01;36m[KTabuSearchSolution[m[K : public Solution{
+       [01;36m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:33:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:33:7:[m[K [01;36m[Knote: [m[Kcandidate: TabuSearchSolution::TabuSearchSolution(TabuSearchSolution&&)
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/tabu_search.hpp:33:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:267:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass TabuSearchSolution[m[K’ has no member named ‘[01m[Kvehicles_[m[K’
+       return vrp.[01;31m[Kvehicles_[m[K;
+                  [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:270:62:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KSimulatedAnnealingSolution::SimulatedAnnealingSolution(Problem&, int, int, double)[m[K’
+       SimulatedAnnealingSolution vrp(p, 5000000, 5000, 0.9999[01;31m[K)[m[K;
+                                                              [01;31m[K^[m[K
+In file included from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/utils.hpp:34:0[m[K,
+                 from [01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:7[m[K:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:25:3:[m[K [01;36m[Knote: [m[Kcandidate: SimulatedAnnealingSolution::SimulatedAnnealingSolution(int, int, std::vector<std::vector<double> >, int, double, double)
+   [01;36m[KSimulatedAnnealingSolution[m[K(std::vector<Node> nodes,
+   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:25:3:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KProblem[m[K’ to ‘[01m[Kint[m[K’
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:12:7:[m[K [01;36m[Knote: [m[Kcandidate: constexpr SimulatedAnnealingSolution::SimulatedAnnealingSolution(const SimulatedAnnealingSolution&)
+ class [01;36m[KSimulatedAnnealingSolution[m[K : public Solution{
+       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:12:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 4 provided
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:12:7:[m[K [01;36m[Knote: [m[Kcandidate: constexpr SimulatedAnnealingSolution::SimulatedAnnealingSolution(SimulatedAnnealingSolution&&)
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc/simulated_annealing.hpp:12:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 4 provided
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:273:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass SimulatedAnnealingSolution[m[K’ has no member named ‘[01m[Kvehicles_[m[K’
+       return vrp.[01;31m[Kvehicles_[m[K;
+                  [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:[m[K At global scope:
+[01m[K/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/src/utils.cpp:284:1:[m[K [01;31m[Kerror: [m[Kexpected declaration before ‘[01m[K}[m[K’ token
+ [01;31m[K}[m[K
+ [01;31m[K^[m[K
+CMakeFiles/cvrp.dir/build.make:140: recipe for target 'CMakeFiles/cvrp.dir/src/simulated_annealing.cpp.o' failed
+make[2]: *** [CMakeFiles/cvrp.dir/src/simulated_annealing.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+CMakeFiles/cvrp.dir/build.make:127: recipe for target 'CMakeFiles/cvrp.dir/src/local_search_intra.cpp.o' failed
+make[2]: *** [CMakeFiles/cvrp.dir/src/local_search_intra.cpp.o] Error 1
+CMakeFiles/cvrp.dir/build.make:101: recipe for target 'CMakeFiles/cvrp.dir/src/greedy.cpp.o' failed
+make[2]: *** [CMakeFiles/cvrp.dir/src/greedy.cpp.o] Error 1
+CMakeFiles/cvrp.dir/build.make:114: recipe for target 'CMakeFiles/cvrp.dir/src/local_search_inter_intra.cpp.o' failed
+make[2]: *** [CMakeFiles/cvrp.dir/src/local_search_inter_intra.cpp.o] Error 1
+make[2]: *** [CMakeFiles/cvrp.dir/src/tabu_search.cpp.o] Error 1
+CMakeFiles/cvrp.dir/build.make:153: recipe for target 'CMakeFiles/cvrp.dir/src/tabu_search.cpp.o' failed
+CMakeFiles/cvrp.dir/build.make:62: recipe for target 'CMakeFiles/cvrp.dir/src/main.cpp.o' failed
+make[2]: *** [CMakeFiles/cvrp.dir/src/main.cpp.o] Error 1
+CMakeFiles/cvrp.dir/build.make:166: recipe for target 'CMakeFiles/cvrp.dir/src/utils.cpp.o' failed
+make[2]: *** [CMakeFiles/cvrp.dir/src/utils.cpp.o] Error 1
+make[2]: *** [CMakeFiles/cvrp.dir/src/genetic_algorithm.cpp.o] Error 1
+CMakeFiles/cvrp.dir/build.make:88: recipe for target 'CMakeFiles/cvrp.dir/src/genetic_algorithm.cpp.o' failed
+CMakeFiles/Makefile2:131: recipe for target 'CMakeFiles/cvrp.dir/all' failed
+make[1]: *** [CMakeFiles/cvrp.dir/all] Error 2
+Makefile:140: recipe for target 'all' failed
+make: *** [all] Error 2

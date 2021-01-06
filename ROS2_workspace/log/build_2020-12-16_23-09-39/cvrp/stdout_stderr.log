@@ -1,0 +1,62 @@
+-- VISUALIZE set to ON. Please run rviz2 in another terminal
+-- Found ament_cmake: 0.8.3 (/home/steags/ros2_eloquent/install/ament_cmake/share/ament_cmake/cmake)
+-- Found PythonInterp: /home/steags/anaconda3/envs/py36/bin/python3 (found suitable version "3.6.6", minimum required is "3") 
+-- Using PYTHON_EXECUTABLE: /home/steags/anaconda3/envs/py36/bin/python3
+-- Found rclcpp: 0.8.5 (/home/steags/ros2_eloquent/install/rclcpp/share/rclcpp/cmake)
+-- Found rosidl_adapter: 0.8.3 (/home/steags/ros2_eloquent/install/rosidl_adapter/share/rosidl_adapter/cmake)
+-- Found rmw_implementation_cmake: 0.8.1 (/home/steags/ros2_eloquent/install/rmw_implementation_cmake/share/rmw_implementation_cmake/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Found std_msgs: 0.8.1 (/home/steags/ros2_eloquent/install/std_msgs/share/std_msgs/cmake)
+-- Found visualization_msgs: 0.8.1 (/home/steags/ros2_eloquent/install/visualization_msgs/share/visualization_msgs/cmake)
+-- Found ament_lint_auto: 0.8.2 (/home/steags/ros2_eloquent/install/ament_lint_auto/share/ament_lint_auto/cmake)
+-- Added test 'copyright' to check for copyright in CMake / C / C++ / Python code
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: /home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/inc;$<BUILD_INTERFACE:/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/src/cvrp/include>
+-- Added test 'cpplint' to check C / C++ code against the Google style
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+-- Added test 'uncrustify' to check C / C++ code style
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/build/cvrp
+[35m[1mScanning dependencies of target cvrp[0m
+[ 10%] [32mBuilding CXX object CMakeFiles/cvrp.dir/src/PRP.cpp.o[0m
+[ 30%] [32mBuilding CXX object CMakeFiles/cvrp.dir/src/genetic_algorithm.cpp.o[0m
+[ 20%] [32mBuilding CXX object CMakeFiles/cvrp.dir/src/main.cpp.o[0m
+[ 40%] [32mBuilding CXX object CMakeFiles/cvrp.dir/src/greedy.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/cvrp.dir/src/local_search_inter_intra.cpp.o[0m
+[ 60%] [32mBuilding CXX object CMakeFiles/cvrp.dir/src/local_search_intra.cpp.o[0m
+[ 70%] [32mBuilding CXX object CMakeFiles/cvrp.dir/src/simulated_annealing.cpp.o[0m
+[ 80%] [32mBuilding CXX object CMakeFiles/cvrp.dir/src/tabu_search.cpp.o[0m
+[ 90%] [32mBuilding CXX object CMakeFiles/cvrp.dir/src/utils.cpp.o[0m
+[100%] [32m[1mLinking CXX executable cvrp[0m
+[100%] Built target cvrp
+-- Install configuration: "Release"
+-- Installing: /home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/install/cvrp/lib/cvrp/cvrp
+-- Set runtime path of "/home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/install/cvrp/lib/cvrp/cvrp" to ""
+-- Installing: /home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/install/cvrp/share/ament_index/resource_index/package_run_dependencies/cvrp
+-- Installing: /home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/install/cvrp/share/ament_index/resource_index/parent_prefix_path/cvrp
+-- Installing: /home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/install/cvrp/share/cvrp/environment/ament_prefix_path.sh
+-- Installing: /home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/install/cvrp/share/cvrp/environment/ament_prefix_path.dsv
+-- Installing: /home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/install/cvrp/share/cvrp/environment/path.sh
+-- Installing: /home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/install/cvrp/share/cvrp/environment/path.dsv
+-- Installing: /home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/install/cvrp/share/cvrp/local_setup.bash
+-- Installing: /home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/install/cvrp/share/cvrp/local_setup.sh
+-- Installing: /home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/install/cvrp/share/cvrp/local_setup.zsh
+-- Installing: /home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/install/cvrp/share/cvrp/local_setup.dsv
+-- Installing: /home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/install/cvrp/share/cvrp/package.dsv
+-- Installing: /home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/install/cvrp/share/ament_index/resource_index/packages/cvrp
+-- Installing: /home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/install/cvrp/share/cvrp/cmake/cvrpConfig.cmake
+-- Installing: /home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/install/cvrp/share/cvrp/cmake/cvrpConfig-version.cmake
+-- Installing: /home/steags/Documents/Jussieu/M2/MAOA/PDI_Project/ROS2_workspace/install/cvrp/share/cvrp/package.xml
