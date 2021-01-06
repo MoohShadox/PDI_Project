@@ -7,6 +7,7 @@ endif()
 
 option(VISUALIZE "VISUALIZE" OFF)
 
+
 if(VISUALIZE)
     # NOTICE requires higher cmake
     message(STATUS "VISUALIZE set to ON. Please run rviz2 in another terminal")
@@ -22,8 +23,31 @@ set( CMAKE_BUILD_TYPE "Release" )
 
 include_directories( ${CMAKE_SOURCE_DIR}/inc )
 
+
+include($(PATHTUTOMIP)/cplex-12.7.1/cplex )
+include($(PATHTUTOMIP)/cplex-12.7.1/concert)
+include($(PATHTUTOMIP)/lemon-1.3.1)
+
+
+file( GLOB LIB_SOURCES $(PATHTUTOMIP)/cplex-12.7.1/cplex/*.hpp )
+file( GLOB LIB_HEADERS $(PATHTUTOMIP)/cplex-12.7.1/cplex/*.cpp )
+
+file( GLOB LIB_SOURCES $(PATHTUTOMIP)/cplex-12.7.1/concert/*.cpp)
+file( GLOB LIB_HEADERS $(PATHTUTOMIP)/cplex-12.7.1/concert/*.hpp)
+
+file( GLOB LIB_SOURCES $(PATHTUTOMIP)/lemon-1.3.1/*.cpp )
+file( GLOB LIB_HEADERS $(PATHTUTOMIP)/lemon-1.3.1/*.hpp )
+
+
+
+
 file( GLOB LIB_SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp )
 file( GLOB LIB_HEADERS ${CMAKE_CURRENT_SOURCE_DIR}/inc/*.hpp )
+
+
+file( GLOB LIB_HEADERS ${CMAKE_CURRENT_SOURCE_DIR}/../LSP/*.hpp )
+file( GLOB LIB_HEADERS ${CMAKE_CURRENT_SOURCE_DIR}/../LSP/*.cpp )
+
 
 list( REMOVE_ITEM LIB_SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/src/main.cpp )
 
