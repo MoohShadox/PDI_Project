@@ -25,12 +25,7 @@ void printForEveryClient(IloArray<IloNumVarArray> &v){
 
 
 
-LSP_Resolution::LSP_Resolution(PRP &p1, IloEnv &env1){
-    prp = &p1;
-    env = &env1;
-    model = new IloModel(*env);
-    obj= IloAdd(*model, IloMinimize(*env, 0.0));
-    contraintes = new IloRangeArray(*env);
+LSP_Resolution::LSP_Resolution(PRP &p1, IloEnv &env1):Resolution(p1,env1){
     p = new IloNumVarArray(*env, prp->l,0.0,prp->C);
     y = new IloIntVarArray(*env, prp->l,0,1);
     q = new IloArray<IloNumVarArray>(*env,prp->n);
@@ -41,7 +36,6 @@ LSP_Resolution::LSP_Resolution(PRP &p1, IloEnv &env1){
 
     for (unsigned i=0; i<prp->n; i++){
         IloNumVarArray QR(*env, prp->l,0.0,prp->C);
-        //Les quantités initiales sont fixes ! 
         qr[i] = QR;
     }
 
@@ -94,12 +88,12 @@ void LSP_Resolution::generateConstraints(){
     for (unsigned t=1; t<prp->l;t++){
         IloExpr e(*env);
         varname.str("");
-        varname<<"A[t="<<t<<"]";
+        varname<<"Concervation[t="<<t<<"]";
         std::cout << "added : " << varname.str() << std::endl;
-        IloRange cst(*env, 0, I0[t-1] + pr[t] - e - I0[t], 0, varname.str().c_str() );
         for (unsigned i=0; i<prp->n; i++){
             e = e + qr[i][t];
         }
+        IloRange cst(*env, 0, I0[t-1] + pr[t] - e - I0[t], 0, varname.str().c_str() );
         CC.add(cst);
     }
     /*
@@ -110,7 +104,7 @@ void LSP_Resolution::generateConstraints(){
             IloNumVarArray &In =  I->operator[](i);
             IloNum var(prp->d[i][t]);
             varname.str("");
-            varname<<"B[I="<<i<<";t="<<t<<"]";
+            varname<<"Demande[I:"<<i<<"t:"<<t<<"]";
             std::cout << "added : " << varname.str() << std::endl;
             IloRange cst(*env, 0, In[t-1] + q->operator[](i)[t]-var-In[t], 0, varname.str().c_str() );
             CC.add(cst);
@@ -122,14 +116,18 @@ void LSP_Resolution::generateConstraints(){
     IloNum C_var(prp->C);
    for(unsigned t=1;t<prp->l;t++){
         varname.str("");
-        varname<<"C[t="<<t<<"]";
+        varname<<"Lancement[t:"<<t<<"]";
         std::cout << "added : " << varname.str() << std::endl;
-        IloRange cst(*env, -IloInfinity, p->operator[](t)- C_var*y->operator[](t) , 0, varname.str().c_str() );
-        CC.add(cst);
+        std::cout << "added : " << y->operator[](t) << " " << p->operator[](t) << std::endl;
+        IloIfThen ift = IloIfThen(*env, (p->operator[](t) != 0), (y->operator[](t) == 1),varname.str().c_str());
+        //IloRange cst(*env, -IloInfinity, p->operator[](t)- C_var*y->operator[](t) , 0, varname.str().c_str() );
+        //CC.add(cst);
+        model->add(ift);
     }
+
     for(unsigned t=1;t<prp->l;t++){
         varname.str("");
-        varname<<"D[t="<<t<<"]";
+        varname<<"CapaciteFournisseur[t:"<<t<<"]";
         std::cout << "added : " << varname.str() << std::endl;
         IloRange cst(*env, -IloInfinity,I->operator[](0)[t-1]- prp->L[0], 0, varname.str().c_str() );
         CC.add(cst);
@@ -139,9 +137,9 @@ void LSP_Resolution::generateConstraints(){
         for(unsigned t=1;t<prp->l;t++){
             IloNum var(prp->d[t][i]);
             varname.str("");
-            varname<<"D[I="<<i<<";t="<<t<<"]";
+            varname<<"CapaciteClient[I:"<<i<<";t:"<<t<<"]";
             std::cout << "added : " << varname.str() << std::endl;
-            IloRange cst(*env, -IloInfinity,In[t-1] + q->operator[](i)[t]-prp->L[i], 0, varname.str().c_str() );
+            IloRange cst(*env, -IloInfinity,In[t-1] + q->operator[](i)[t] - prp->L[i], 0, varname.str().c_str() );
             CC.add(cst);
         }
     }
@@ -209,19 +207,7 @@ void LSP_Resolution::addDistanceToObjectif()
 }
 
 
-void LSP_Resolution::solve(){
-    IloRangeArray &cstr = *contraintes; 
-    IloCplex cplex(*model);
-    cplex.exportModel("sortie.lp");
-    if ( !cplex.solve() ) {
-        env->error() << "Failed to optimize LP" << endl;
-        exit(1);
-    }
-    env->out() << "Solution status = " << cplex.getStatus() << endl;
-    env->out() << "Solution value  = " << cplex.getObjValue() << endl;
-    cplex.exportModel("sortie.lp");
-    cplx = &cplex;
-}
+
 
 
 void LSP_Resolution::printDecisionVariables(){
@@ -238,7 +224,6 @@ void LSP_Resolution::printDecisionVariables(){
     prp->write_screen_txt();
     std::cout << "======================" << std::endl;
 }
-
 
 
 void LSP_Resolution::printVariables(){

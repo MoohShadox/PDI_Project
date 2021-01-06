@@ -5,7 +5,11 @@
 #include <sstream>
 #include "PRP.h"
 #include <vector>
-class LSP_Resolution{
+#include "Resolution.h"
+
+#pragma once
+
+class LSP_Resolution : public Resolution{
     private:
     //Variables allouées dynamiquement qui contiendrons la résolution du probléme
         IloNumVarArray *p;
@@ -13,15 +17,8 @@ class LSP_Resolution{
         IloArray<IloNumVarArray> *q;
         IloArray<IloNumVarArray> *I;
         IloArray<IloIntVarArray> *z; 
-    public:
-    //Références vers des dépendances de la résolution
-        IloEnv* env;
-        PRP* prp;
-        IloModel* model;
-        IloObjective obj;
-        IloRangeArray *contraintes; 
-        IloCplex *cplx; 
     //Constructeur principal
+    public:
         LSP_Resolution(PRP &p, IloEnv &env);
     //For testing
         void addConstraint(IloExpr& c);
@@ -30,7 +27,4 @@ class LSP_Resolution{
         void addDistanceToObjectif();
         void printDecisionVariables();
         void printVariables();
-        void solve();
-
-
 };
