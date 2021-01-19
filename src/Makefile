@@ -18,14 +18,14 @@ LIBFORMAT  = static_pic
 
 
 # ---------------------------------------------------------------------
-# Compiler selection 
+# Compiler selection
 # ---------------------------------------------------------------------
 
 CCC = g++ -O0
 
 
 # ---------------------------------------------------------------------
-# Compiler options 
+# Compiler options
 # ---------------------------------------------------------------------
 
 CCOPT = -m64 -O -fPIC -fno-strict-aliasing -fexceptions -DNDEBUG -DIL_STD -Wno-ignored-attributes
@@ -54,7 +54,7 @@ SRC= $(wildcard *.cpp)
 OBJ= $(SRC:.cpp=.o)
 HDRS = $(SRC:.cpp=.h)
 
-all: LSP CVRP
+all: LSP CVRP PRP
 
 %.o: %.cpp %.h
 	$(CCC) -o $@ -c $(CCFLAGS) $(CCLNDIRS) $<
@@ -73,9 +73,15 @@ LSP.o : LSP_Solver.cpp $(HDRS) $(OBJ)
 LSP: $(OBJ)
 	$(CCC) $(CCFLAGS) $(CCLNDIRS) $(OBJ) -o LSP $(CCLNFLAGS)
 
+
+PRP.o : PRP_1-16_CPLEX.cpp $(HDRS) $(OBJ)
+	$(CCC) -o PRP.o -c $(CCFLAGS) $(CCLNDIRS) PRP_1-16_CPLEX.cpp
+
+PRP: $(OBJ)
+	$(CCC) $(CCFLAGS) $(CCLNDIRS) $(OBJ) -o PRP $(CCLNFLAGS)
+
 clean:
 	rm -rf *.o *.dot *.lp sol.txt *.pdf
 
 mrproper: clean
 	rm -rf $(EXEC)
-

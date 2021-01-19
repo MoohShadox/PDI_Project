@@ -2,6 +2,7 @@
 #include<iomanip>
 #include<fstream>
 #include<sstream>
+#include <math.h>
 #include "PRP.hpp"
 
 using namespace std;
@@ -134,6 +135,17 @@ PRP::PRP(istream &fic){
     fic>>r;
     for(t=0;t<l;t++)
       fic>>d[i][t];
+  }
+
+}
+
+float PRP::getDistance(int i, int j){
+
+  if(prp.dist==1){
+    return (int)(sqrt((xy[i].first-xy[j].first)**2+(xy[i].second-xy[j].second)**2)+0.5)
+  }
+  else{
+    return (prp.mc*sqrt((xy[i].first-xy[j].first)**2+(xy[i].second-xy[j].second)**2))
   }
 
 }
