@@ -13,18 +13,22 @@ class LSP_Resolution : public Resolution{
     private:
     //Variables allouées dynamiquement qui contiendrons la résolution du probléme
         IloNumVarArray *p;
-        IloIntVarArray *y;
-        IloArray<IloNumVarArray> *q;
-        IloArray<IloNumVarArray> *I;
+        IloBoolVarArray *y;
+        vector<IloNumVarArray> *I;
         IloArray<IloIntVarArray> *z; 
     //Constructeur principal
     public:
         LSP_Resolution(PRP &p, IloEnv &env);
     //For testing
+        vector<IloNumVarArray> *q;
         void addConstraint(IloExpr& c);
         void generateConstraints();
         void createObjectif();
         void addDistanceToObjectif();
         void printDecisionVariables();
         void printVariables();
+        vector<float> getDelivryAt(int step,IloCplex &cplx);
+        //Cette fonction modifie les coefficients des contraintes liés aux tournées de distribution
+        void modifyObjCoeffs(vector<vector<float>> SC);
+
 };

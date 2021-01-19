@@ -37,7 +37,7 @@
 
 }*/
 
-std::vector<Vehicle> run_instance(PRP prp, std::string type){
+Solution run_instance(PRP prp, std::string type){
 
   Problem p(prp);
 
@@ -46,31 +46,31 @@ std::vector<Vehicle> run_instance(PRP prp, std::string type){
       GreedySolution vrp(p);
       vrp.Solve();
       std::cout << std::endl;
-      return vrp.vehicles_;
+      return vrp;
   }else if("Local Search"){
       std::cout << "Local Search (Within each vehicle separately): " << std::endl;
       LocalSearchIntraSolution vrp(p);
       vrp.Solve();
       std::cout << std::endl;
-      return vrp.vehicles_;
+      return vrp;
   }else if("Local Search AV"){
       std::cout << "Local Search (Within all vehicles): " << std::endl;
       LocalSearchInterIntraSolution vrp(p);
       vrp.Solve();
       std::cout << std::endl;
-      return vrp.vehicles_;
+      return vrp;
   }else if("Tabu"){
       std::cout << "Tabu Search: " << std::endl;
       TabuSearchSolution vrp(p, 10);
       vrp.Solve();
       std::cout << std::endl;
-      return vrp.vehicles_;
+      return vrp;
   }else if("Annealing"){
       std::cout << "Simulated Annealing: " << std::endl;
       SimulatedAnnealingSolution vrp(p, 5000000, 5000, 0.9999);
       vrp.Solve();
       std::cout << std::endl;
-      return vrp.vehicles_;
+      return vrp;
   }
 
     /*

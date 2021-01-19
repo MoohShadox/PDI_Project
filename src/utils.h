@@ -156,6 +156,8 @@ public:
           int cluster_range = 10);
 
   Problem(PRP prp);
+  Problem(PRP prp, vector<float> q);
+
 };
 
 // Solution class should not call problems's constructor so not inheriting.
@@ -187,7 +189,6 @@ public:
   * @details Constructor for solution class
   */
   Solution(Problem p);
-
   /**
   * @brief Creates initial solution
   * @return void
@@ -202,6 +203,8 @@ public:
   */
   bool CheckSolutionValid();
 
+
+  vector<float> getSC(PRP p,const std::string& option="");
   /**
   * @brief Virtual function overloaded by solution classes to solve the given problem.
   * @return void
