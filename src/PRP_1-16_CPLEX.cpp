@@ -4,8 +4,6 @@
 #include <string>
 #include <sstream>
 #include <algorithm>    // std::min
-
-
 #include"PRP.h"
 
 #define epsilon 0.00001

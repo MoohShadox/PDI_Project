@@ -79,8 +79,9 @@ int test_cvrp(){
 
 }
 
+/*
 
-int main(){
+int main (int argc, char**argv){
     ifstream fic("/home/mohamed/Bureau/MAOA_Project/PRP_instances/1Test_instance.prp");
     if (!fic){
         cerr<<"file "<<"/home/mohamed/Bureau/MAOA_Project/PRP_instances/A_014_ABS1_15_1.prp"<<" not found"<<endl;
@@ -93,3 +94,5 @@ int main(){
     graph.write_dot_G("random_name");
     test_cvrp();
 }
+
+*/
