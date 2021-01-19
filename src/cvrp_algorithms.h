@@ -10,6 +10,7 @@
 #include "local_search_inter_intra.h"
 #include "tabu_search.h"
 #include "simulated_annealing.h"
+#include "utils.h"
 
 /**
 * @brief Main function
@@ -17,5 +18,4 @@
 * @details Main function that creates the problem and calls the various solve functions for each of the solution algorithms
 */
 int main(int argc, char * argv[]);
-
-std::vector<Vehicle> run_instance(PRP prp, std::string type);
+Solution run_instance(PRP prp, std::string type);

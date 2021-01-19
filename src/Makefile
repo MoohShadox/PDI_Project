@@ -55,6 +55,17 @@ OBJ= $(SRC:.cpp=.o)
 HDRS = $(SRC:.cpp=.h)
 
 all: LSP CVRP PRP
+	 #rm -f *.o
+	 echo "Compilation terminée : ./LSP pour lancer"
+
+
+Unit_Tests/test.o : Unit_Tests/Test_LSP.cpp $(HDRS) $(OBJ)
+	$(CCC) -o Unit_Tests/test.o -c Unit_Tests/Test_LSP.cpp $(CCFLAGS) $(CCLNDIRS)
+
+Unit_Tests/test : $(OBJ) Unit_Tests/test.o
+	$(CCC) $(CCFLAGS) $(CCLNDIRS) -o Unit_Tests/test Unit_Tests/test.o $(CCLNFLAGS)
+	"Compilation des tests terminées : Unit_Tests/test pour lancer"
+
 
 %.o: %.cpp %.h
 	$(CCC) -o $@ -c $(CCFLAGS) $(CCLNDIRS) $<
@@ -65,7 +76,6 @@ CVRP.o : cvrp_algorithms.cpp $(HDRS) $(OBJ)
 
 CVRP: $(OBJ)
 	$(CCC) $(CCFLAGS) $(CCLNDIRS) $(OBJ) -o CVRP $(CCLNFLAGS)
-
 
 LSP.o : LSP_Solver.cpp $(HDRS) $(OBJ)
 	$(CCC) -o LSP.o -c $(CCFLAGS) $(CCLNDIRS) LSP_Solver.cpp

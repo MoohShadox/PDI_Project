@@ -62,6 +62,7 @@
         "unordered_set": "cpp",
         "cfenv": "cpp",
         "typeindex": "cpp",
-        "variant": "cpp"
+        "variant": "cpp",
+        "strstream": "cpp"
     }
 }

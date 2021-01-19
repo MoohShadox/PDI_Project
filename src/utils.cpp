@@ -177,6 +177,41 @@ Problem::Problem(int noc, int demand_range, int nov, int capacity, int grid_rang
 }
 
 
+
+Problem::Problem(PRP prp, vector<float> q){
+
+  Node depot(prp.xy[0].first, prp.xy[0].second, 0, 0, true);
+  this->capacity_ = prp.C;
+
+  nodes_.push_back(depot);
+
+  for(int i = 1; i <=prp.n; ++i) nodes_.emplace_back(prp.xy[i].first, prp.xy[i].second, i, q[i], false);
+
+  // for(auto& n:nodes) n.PrintStatus();
+  std::vector<double> tmp(nodes_.size());
+  for(size_t i=0; i<nodes_.size(); ++i) distanceMatrix_.push_back(tmp);
+  for(size_t i=0; i<nodes_.size(); ++i){
+    for(size_t j=i; j < nodes_.size(); ++j){
+      if(prp.dist==1){
+        distanceMatrix_[i][j] = sqrt(double(pow((nodes_[i].x_ - nodes_[j].x_),2)
+                                         + pow((nodes_[i].  y_ - nodes_[j].y_),2)))+0.5;
+      }else if(prp.dist==2){
+        distanceMatrix_[i][j] = sqrt(double(pow((nodes_[i].x_ - nodes_[j].x_),2)
+                                         + pow((nodes_[i].  y_ - nodes_[j].y_),2)))*prp.mc;
+      }
+
+      distanceMatrix_[j][i] = distanceMatrix_[i][j];
+    }
+  }
+
+  for(int i=0; i<prp.k; ++i){
+    vehicles_.emplace_back(i, prp.Q, prp.Q);
+    vehicles_[i].nodes_.push_back(0);
+  }
+}
+
+
+
 Problem::Problem(PRP prp){
 
   Node depot(prp.xy[0].first, prp.xy[0].second, 0, 0, true);
@@ -208,6 +243,30 @@ Problem::Problem(PRP prp){
     vehicles_[i].nodes_.push_back(0);
   }
 }
+
+ vector<float> Solution::getSC(PRP p, const std::string& option){
+  int status;
+  char * demangled = abi::__cxa_demangle(typeid(*this).name(),0,0,&status);
+  std::cout << demangled << ":" << std::endl;
+  vector<float> SC;
+  SC.resize(p.n);
+  double total_cost = 0;
+  for(auto& v:vehicles_){
+    total_cost+=v.cost_;
+    for(size_t i = 1; i < v.nodes_.size()-1; ++i) 
+    {
+      SC[v.nodes_[i]-1] = distanceMatrix_[i][i-1] + distanceMatrix_[i-1][i];
+    }
+  }
+  for (unsigned i=0; i<SC.size(); i++)
+    std::cout << i+1 << " - " <<  SC[i] << " - ";
+  std::cout << std::endl;
+
+  bool valid = CheckSolutionValid();
+  std::cout << "Total solution cost: " << total_cost << std::endl;
+  std::cout << "Solution validity  : " << valid << std::endl;
+  return SC;
+ }
 
 void Solution::PrintSolution(const std::string& option){
   int status;

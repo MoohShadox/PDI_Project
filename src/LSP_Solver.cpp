@@ -8,6 +8,7 @@
 #include "VRP_Resolution.h"
 #include "Graph.h"
 #include "cvrp_algorithms.h"
+#include <typeinfo>
 
 #define epsilon 0.00001
 
@@ -15,9 +16,9 @@ using namespace std;
 
 
 int LSP_Test(){
-    ifstream fic("/home/mohamed/Bureau/MAOA_Project/PRP_instances/1Test_instance.prp");
+    ifstream fic("/home/mohamed/Bureau/MAOA_Project/PRP_instances/1LSP_Instance.prp");
     if (!fic){
-        cerr<<"file "<<"/home/mohamed/Bureau/MAOA_Project/PRP_instances/1Test_instance.prp"<<" not found"<<endl;
+        cerr<<"file "<<"/home/mohamed/Bureau/MAOA_Project/PRP_instances/1LSP_Instance.prp"<<" not found"<<endl;
         return 1;
     }
     PRP I(fic);
@@ -33,9 +34,9 @@ int LSP_Test(){
 }
 
 int VRP_MTZ_Test(){
-     ifstream fic("/home/mohamed/Bureau/MAOA_Project/PRP_instances/1Test_instance.prp");
+    ifstream fic("/home/mohamed/Bureau/MAOA_Project/PRP_instances/1LSP_Instance.prp");
     if (!fic){
-        cerr<<"file "<<"/home/mohamed/Bureau/MAOA_Project/PRP_instances/A_014_ABS1_15_1.prp"<<" not found"<<endl;
+        cerr<<"file "<<"/home/mohamed/Bureau/MAOA_Project/PRP_instances/1LSP_Instance.prp"<<" not found"<<endl;
         return 1;
     }
     PRP I(fic);
@@ -52,31 +53,45 @@ int VRP_MTZ_Test(){
 }
 
 int test_cvrp(){
+    string file = "../PRP_instances/1CVRP_Instance.prp";
+    ifstream fic(file);
+    if (!fic){
+        cerr<<"file "<<file<<" not found"<<endl;
+        return 1;
+    }
+    PRP prp(fic);
+    prp.write_screen_txt();
+    Solution V = run_instance(prp,"Tabu");
+    V.PrintSolution("route");
+}
 
-    string file = "../PRP_instances/A_014_ABS1_15_1.prp";
-
-  ifstream fic(file);
-
-  if (!fic){
-  cerr<<"file "<<file<<" not found"<<endl;
-  return 1;
-  }
-
-  PRP prp(fic);
-
-  #ifdef VISUALIZE
-    rclcpp::init(argc, argv);
-    mpp = std::make_shared<MinimalPublisher>();
-    std::thread thread_ros = std::thread([&]{rclcpp::spin(mpp);rclcpp::shutdown();});
-    thread_ros.detach();
-  #endif // VISUALIZE
-
-  run_instance(prp,"greedy");
-
-  #ifdef VISUALIZE
-    rclcpp::shutdown();
-  #endif //VISUALIZE
-
+void reoptimise(LSP_Resolution LRSP, PRP I){
+    vector<IloNumVarArray> &qr = *(LRSP.q);
+    vector<vector<float>> SC;
+    SC.resize(I.l);
+    for (unsigned i = 0; i<qr[0].getSize(); i++ ){
+        vector<float> v = LRSP.getDelivryAt(i,cplx);
+        Problem p = Problem(I,v);
+        TabuSearchSolution vrp(p, 3);
+        vrp.Solve();
+        vector<float> sc_t = vrp.getSC(I);
+        SC[i]=sc_t;
+        std::cout << "Return of the function ! i = " << i << std::endl;
+    }
+    std::cout << "Analyse of the constructed result : " << std::endl;
+    std::cout << "Size of SC : "<< SC.size() << std::endl;
+    for(int i=0; i< SC.size(); i++)
+    {
+        std::cout << "Size of SC["<< i <<"]: "<< SC[i].size() << std::endl;
+        for(int j=0; j<SC[i].size(); j++)
+        {
+            std::cout << SC[i][j] << " - ";
+        }
+        std::cout << std::endl;
+    }
+    LRSP.modifyObjCoeffs(SC);
+    LRSP.solve();
+    LRSP.printVariables();
 }
 
 /*
@@ -84,7 +99,7 @@ int test_cvrp(){
 int main (int argc, char**argv){
     ifstream fic("/home/mohamed/Bureau/MAOA_Project/PRP_instances/1Test_instance.prp");
     if (!fic){
-        cerr<<"file "<<"/home/mohamed/Bureau/MAOA_Project/PRP_instances/A_014_ABS1_15_1.prp"<<" not found"<<endl;
+        cerr<<"file "<<"/home/mohamed/Bureau/MAOA_Project/PRP_instances/1LSP_Instance.prp"<<" not found"<<endl;
         return 1;
     }
     PRP I(fic);

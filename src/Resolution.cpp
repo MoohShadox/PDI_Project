@@ -9,7 +9,7 @@ Resolution::Resolution(PRP &p1, IloEnv &env1){
     contraintes = new IloRangeArray(*env);
 }
 
-void Resolution::solve(){
+IloCplex Resolution::solve(){
     IloRangeArray &cstr = *contraintes; 
     IloCplex cplex(*model);
     if ( !cplex.solve() ) {
@@ -19,5 +19,12 @@ void Resolution::solve(){
     env->out() << "Solution status = " << cplex.getStatus() << endl;
     env->out() << "Solution value  = " << cplex.getObjValue() << endl;
     cplex.exportModel("sortie.lp");
-    cplx = &cplex;
+    this->cplx = &cplex;
+    return cplex;
+}
+
+void Resolution::addConstraintName(ostringstream &varname,IloConstraint &constraint){
+    std::cout << "adding : " << varname.str().c_str() << " : " << constraint << std::endl;
+    constraint.setName(varname.str().c_str());
+    model->add(constraint);
 }

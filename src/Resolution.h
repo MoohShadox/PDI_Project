@@ -19,5 +19,6 @@ class Resolution{
         IloCplex *cplx; 
     //Constructeur principal
         Resolution(PRP &p, IloEnv &env);
-        void solve();
+        IloCplex solve();
+        void addConstraintName(ostringstream &varname,IloConstraint &constraint);
 };
