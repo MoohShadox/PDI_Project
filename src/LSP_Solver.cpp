@@ -64,7 +64,7 @@ int test_cvrp(){
     Solution V = run_instance(prp,"Tabu");
     V.PrintSolution("route");
 }
-
+/*
 void reoptimise(LSP_Resolution LRSP, PRP I){
     vector<IloNumVarArray> &qr = *(LRSP.q);
     vector<vector<float>> SC;
@@ -94,20 +94,23 @@ void reoptimise(LSP_Resolution LRSP, PRP I){
     LRSP.printVariables();
 }
 
-/*
 
-int main (int argc, char**argv){
-    ifstream fic("/home/mohamed/Bureau/MAOA_Project/PRP_instances/1Test_instance.prp");
+int main(int argc, char * argv[]){
+    ifstream fic("/home/mohamed/Bureau/MAOA_Project/PRP_instances/1LSP_Instance.prp");
     if (!fic){
         cerr<<"file "<<"/home/mohamed/Bureau/MAOA_Project/PRP_instances/1LSP_Instance.prp"<<" not found"<<endl;
         return 1;
     }
     PRP I(fic);
     I.write_screen_txt();
-    C_Graph graph;
-    graph.construct_from_prp(I);
-    graph.write_dot_G("random_name");
-    test_cvrp();
-}
+    IloEnv   env;
+    LSP_Resolution LRSP(I,env);
+    LRSP.generateConstraints();
+    LRSP.createObjectif();
+    LRSP.addDistanceToObjectif();
+    IloCplex cplx = LRSP.solve();
+    LRSP.printVariables();
 
-*/
+   // Solution V = run_instance(prp,"Tabu");
+   // std::cout << "" << std::endl;
+}*/

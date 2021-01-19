@@ -27,13 +27,19 @@ int main (int argc, char**argv){
   name=argv[1];
   nameextsol=name+".prp";
 
-
   ifstream fic(nameextsol.c_str());
+
+  if (!fic){
+      cerr<<"file "<<nameextsol<<" not found"<<endl;
+      return 1;
+  }
 
   PRP prp(fic);
 
   fic.close();
 
+  printf("prp created\n");
+  std::cout << "n = " << prp.n << std::endl;
 
   //////////////
   //////  CPLEX INITIALIZATION
@@ -86,9 +92,7 @@ int main (int argc, char**argv){
     q.add(qi);
     w.add(wi);
   }
-
   IloArray<IloArray<IloNumVarArray>> x(env); //if a vehicle travels directly from node i to node j in period t,0 otherwise;
-
   for(int i = 0; i < prp.n; i++){
     IloArray<IloNumVarArray> xi(env);
     for(int j = 0; j < prp.n; j++){
@@ -106,12 +110,14 @@ int main (int argc, char**argv){
   for(int t = 0; t < prp.l; t++){
     float sum = 0;
     for(int j = t; j < prp.l; j++){
-      for(int i = 0; i < prp.n; i++){
+      for(int i = 1; i < prp.n; i++){
         sum=sum+prp.d[i][t];
       }
     }
     Mt.push_back(min(prp.C,sum));
   }
+
+
 
   vector<vector<float>> Mit;
 
@@ -120,7 +126,7 @@ int main (int argc, char**argv){
     for(int t = 0; t < prp.l; t++){
       float sum = 0;
       for(int j = t; j < prp.l; j++){
-        sum=sum+prp.d[i][j];
+        if(i!=0)  sum=sum+prp.d[i][j];
       }
       Mi.push_back(std::min({prp.L[i],prp.Q,sum}));
     }
@@ -130,6 +136,9 @@ int main (int argc, char**argv){
   ///////////
   //// constraints
   //////////
+
+
+  std::cout << "constraints" << std::endl;
 
   IloExpr objective(env);
 
@@ -234,8 +243,10 @@ int main (int argc, char**argv){
 
   for(int i = 0; i < prp.n; i++){
     for(int j = 0; j < prp.n; j++){
-      for(int t = 0; t < prp.l; t++){
-        model.add(w[i][t]-w[j][t]>=q[i][t]-Mit[i][t]*(1-x[i][j][t]));
+      if(i!=j){
+        for(int t = 0; t < prp.l; t++){
+          model.add(w[i][t]-w[j][t]>=q[i][t]-Mit[i][t]*(1-x[i][j][t]));
+        }
       }
     }
   }
@@ -247,6 +258,8 @@ int main (int argc, char**argv){
       model.add(w[i][t]<=prp.Q*z[i][t]);
     }
   }
+
+  printf("model created\n");
 
   //(13) -(16) borne initialisation variable
 

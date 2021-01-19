@@ -54,7 +54,7 @@ SRC= $(wildcard *.cpp)
 OBJ= $(SRC:.cpp=.o)
 HDRS = $(SRC:.cpp=.h)
 
-all: LSP CVRP PRP
+all: LSP CVRP PRP16
 	 #rm -f *.o
 	 echo "Compilation terminée : ./LSP pour lancer"
 
@@ -84,11 +84,11 @@ LSP: $(OBJ)
 	$(CCC) $(CCFLAGS) $(CCLNDIRS) $(OBJ) -o LSP $(CCLNFLAGS)
 
 
-PRP.o : PRP_1-16_CPLEX.cpp $(HDRS) $(OBJ)
-	$(CCC) -o PRP.o -c $(CCFLAGS) $(CCLNDIRS) PRP_1-16_CPLEX.cpp
+PRP16.o : PRP_1-16_CPLEX.cpp $(HDRS) $(OBJ)
+	$(CCC) -o PRP16.o -c $(CCFLAGS) $(CCLNDIRS) PRP_1-16_CPLEX.cpp
 
-PRP: $(OBJ)
-	$(CCC) $(CCFLAGS) $(CCLNDIRS) $(OBJ) -o PRP $(CCLNFLAGS)
+PRP16: $(OBJ)
+	$(CCC) $(CCFLAGS) $(CCLNDIRS) $(OBJ) -o PRP16 $(CCLNFLAGS)
 
 clean:
 	rm -rf *.o *.dot *.lp sol.txt *.pdf
