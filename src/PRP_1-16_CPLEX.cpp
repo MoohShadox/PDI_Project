@@ -9,7 +9,7 @@
 #define epsilon 0.00001
 
 using namespace std;
-
+/*
 int main (int argc, char**argv){
 
   string name,nameext, nameextsol;
@@ -286,9 +286,6 @@ int main (int argc, char**argv){
   // cplex.setParam(IloCplex::RINSHeur,-1);
 
 
-    cplex.exportModel("sortie.lp");
-
-
   if ( !cplex.solve() ) {
     env.error() << "Failed to optimize LP" << endl;
     exit(1);
@@ -305,3 +302,4 @@ int main (int argc, char**argv){
 
   return 0;
 }
+*/
