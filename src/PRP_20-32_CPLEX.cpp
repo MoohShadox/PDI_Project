@@ -39,7 +39,10 @@ int main2 (int argc, char**argv){
   fic.close();
 
   printf("prp created\n");
-  std::cout << "n = " << prp.n << std::endl;
+
+  int node_number = prp.n+1;
+
+  std::cout << "n = " << node_number << std::endl;
 
   //////////////
   //////  CPLEX INITIALIZATION
@@ -65,7 +68,7 @@ int main2 (int argc, char**argv){
   IloArray<IloArray<IloNumVarArray>> z(env); //number of vehicule at node i at period t
   IloArray<IloArray<IloNumVarArray>> q(env); //quantity delivered at client i at period t
 
-  for(int i = 0; i < prp.n; i++){
+  for(int i = 0; i < node_number; i++){
     IloNumVarArray Ii(env);
     IloArray<IloNumVarArray> zi(env);
     IloArray<IloNumVarArray> qi(env);
@@ -92,9 +95,9 @@ int main2 (int argc, char**argv){
     q.add(qi);
   }
   IloArray<IloArray<IloArray<IloNumVarArray>>> x(env); //if a vehicle travels directly from node i to node j in period t,0 otherwise;
-  for(int i = 0; i < prp.n; i++){
+  for(int i = 0; i < node_number; i++){
     IloArray<IloArray<IloNumVarArray>> xi(env);
-    for(int j = 0; j < prp.n; j++){
+    for(int j = 0; j < node_number; j++){
       IloArray<IloNumVarArray> xij(env);
       for(int k=0; k<prp.k;k++){
         IloNumVarArray xijk(env);
@@ -113,7 +116,7 @@ int main2 (int argc, char**argv){
   for(int t = 0; t < prp.l; t++){
     float sum = 0;
     for(int j = t; j < prp.l; j++){
-      for(int i = 1; i < prp.n; i++){
+      for(int i = 1; i < node_number; i++){
         sum=sum+prp.d[i][t];
       }
     }
@@ -122,7 +125,7 @@ int main2 (int argc, char**argv){
 
   vector<vector<float>> Mit;
 
-  for(int i = 0; i < prp.n; i++){
+  for(int i = 0; i < node_number; i++){
     vector<float> Mi;
     for(int t = 0; t < prp.l; t++){
       float sum = 0;
@@ -145,11 +148,11 @@ int main2 (int argc, char**argv){
 
   for(int t = 0; t < prp.l; t++){
     objective+=prp.u*p[t]+prp.f*y[t];
-    for(int i = 0; i < prp.n; i++){
+    for(int i = 0; i < node_number; i++){
       objective+=prp.h[i]*I[i][t];
     }
-    for(int i = 0; i < prp.n; i++){
-      for(int j = 0; j < prp.n; j++){
+    for(int i = 0; i < node_number; i++){
+      for(int j = 0; j < node_number; j++){
         IloExpr sum(env);
         for(int k=0; k<prp.k;k++){
           sum+=x[i][j][k][t];
@@ -167,7 +170,7 @@ int main2 (int argc, char**argv){
 
   for(int t = 1; t < prp.l; t++){
     IloExpr sum(env);
-    for(int i = 1; i < prp.n; i++){
+    for(int i = 1; i < node_number; i++){
       for(int k=0; k<prp.k;k++){
         sum+=q[i][k][t];
       }
@@ -177,7 +180,7 @@ int main2 (int argc, char**argv){
 
   //(22)
 
-  for(int i = 1; i < prp.n; i++){
+  for(int i = 1; i < node_number; i++){
     for(int t = 1; t < prp.l; t++){
       IloExpr sum(env);
       for(int k=0; k<prp.k;k++){
@@ -201,7 +204,7 @@ int main2 (int argc, char**argv){
 
   //(25)
 
-  for(int i = 1; i < prp.n; i++){
+  for(int i = 1; i < node_number; i++){
     for(int t = 1; t < prp.l; t++){
       IloExpr sum(env);
       for(int k=0; k<prp.k;k++){
@@ -213,7 +216,7 @@ int main2 (int argc, char**argv){
 
   //(26)
 
-  for(int i = 1; i < prp.n; i++){
+  for(int i = 1; i < node_number; i++){
     for(int t = 0; t < prp.l; t++){
       for(int k=0; k<prp.k;k++){
         model.add(q[i][k][t]<=Mit[i][t]*z[i][k][t]);
@@ -223,7 +226,7 @@ int main2 (int argc, char**argv){
 
   //(27)
 
-  for(int i = 1; i < prp.n; i++){
+  for(int i = 1; i < node_number; i++){
     for(int t = 0; t < prp.l; t++){
       IloExpr sum(env);
       for(int k=0; k<prp.k;k++){
@@ -235,15 +238,15 @@ int main2 (int argc, char**argv){
 
   //(28)
 
-  for(int i = 1; i < prp.n; i++){
+  for(int i = 1; i < node_number; i++){
     for(int t = 0; t < prp.l; t++){
       for(int k=0; k<prp.k;k++){
         IloExpr sum1(env);
-        for(int j = 0; j < prp.n; j++){
+        for(int j = 0; j < node_number; j++){
           sum1+=x[j][i][k][t];
         }
         IloExpr sum2(env);
-        for(int j = 0; j < prp.n; j++){
+        for(int j = 0; j < node_number; j++){
 
           sum2+=x[i][j][k][t];
         }
@@ -254,14 +257,14 @@ int main2 (int argc, char**argv){
 
   //(29)
 
-  for(int s = 0; s<prp.n-1;s++){
+  for(int s = 0; s<node_number-1;s++){
     for(int k=0; k<prp.k;k++){
       for(int t = 0; t < prp.l; t++){
         IloExpr sum(env);
-        for(int i = s; i<prp.n;i++){
-          for(int j = s; j<prp.n;j++){
+        for(int i = s; i<node_number;i++){
+          for(int j = s; j<node_number;j++){
             if(i!=j){
-              model.add(sum<=prp.n-s-1);
+              model.add(sum<=node_number-s-1);
             }
           }
         }
@@ -269,7 +272,7 @@ int main2 (int argc, char**argv){
     }
   }
 
-  for(int s = prp.n; s>1;s--){
+  for(int s = node_number; s>1;s--){
     for(int k=0; k<prp.k;k++){
       for(int t = 0; t < prp.l; t++){
         IloExpr sum(env);
@@ -289,7 +292,7 @@ int main2 (int argc, char**argv){
   for(int k=0; k<prp.k;k++){
     for(int t = 0; t < prp.l; t++){
       IloExpr sum(env);
-      for(int i = 1; i<prp.n;i++){
+      for(int i = 1; i<node_number;i++){
         sum+=q[i][k][t];
       }
       model.add(sum<=prp.Q*z[0][k][t]);

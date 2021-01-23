@@ -41,7 +41,10 @@ int main (int argc, char**argv){
   fic.close();
 
   printf("prp created\n");
-  std::cout << "n = " << prp.n << std::endl;
+
+  int node_number = prp.n+1;
+
+  std::cout << "n = " << node_number << std::endl;
 
   //////////////
   //////  CPLEX INITIALIZATION
@@ -78,7 +81,7 @@ int main (int argc, char**argv){
   IloArray<IloNumVarArray> q(env); //quantity delivered at client i at period t
   IloArray<IloNumVarArray> w(env); //load of vehicule before delivery at client i at period t
 
-  for(int i = 0; i < prp.n+1; i++){
+  for(int i = 0; i < node_number+1; i++){
     IloNumVarArray Ii(env);
     IloNumVarArray zi(env);
     IloNumVarArray qi(env);
@@ -135,9 +138,9 @@ int main (int argc, char**argv){
 
   IloArray<IloArray<IloNumVarArray>> x(env); //if a vehicle travels directly from node i to node j in period t,0 otherwise;
   IloNumVar v;
-  for(int i = 0; i < prp.n; i++){
+  for(int i = 0; i < node_number; i++){
     IloArray<IloNumVarArray> xi(env);
-    for(int j = 0; j < prp.n; j++){
+    for(int j = 0; j < node_number; j++){
       IloNumVarArray xij(env);
       for(int t = 0; t < prp.l; t++){
         v = IloNumVar(env,0,1, ILOINT);
@@ -156,7 +159,7 @@ int main (int argc, char**argv){
   for(int t = 0; t < prp.l; t++){
     float sum = 0;
     for(int j = t; j < prp.l; j++){
-      for(int i = 1; i < prp.n; i++){
+      for(int i = 1; i < node_number; i++){
         sum=sum+prp.d[i][t];
       }
     }
@@ -167,7 +170,7 @@ int main (int argc, char**argv){
 
   vector<vector<float>> Mit;
 
-  for(int i = 0; i < prp.n; i++){
+  for(int i = 0; i < node_number; i++){
     vector<float> Mi;
     for(int t = 0; t < prp.l; t++){
       float sum = 0;
@@ -190,11 +193,11 @@ int main (int argc, char**argv){
 
   for(int t = 0; t < prp.l; t++){
     objective+=prp.u*p[t]+prp.f*y[t];
-    for(int i = 0; i < prp.n; i++){
+    for(int i = 0; i < node_number; i++){
       objective+=prp.h[i]*I[i][t];
     }
-    for(int i = 0; i < prp.n; i++){
-      for(int j = 0; j < prp.n; j++){
+    for(int i = 0; i < node_number; i++){
+      for(int j = 0; j < node_number; j++){
         objective+=prp.getDistance(i,j)*x[i][j][t];
       }
     }
@@ -205,13 +208,13 @@ int main (int argc, char**argv){
   model.add(IloMinimize(env,objective));
 
   //(2)
-  
+
   //constraint.setName(varname.str().c_str());
   //model->add(constraint);
 
   for(int t = 1; t < prp.l; t++){
     IloExpr sum(env);
-    for(int i = 1; i < prp.n; i++){
+    for(int i = 1; i < node_number; i++){
       sum+=q[i][t];
     }
     IloConstraint constraint = (I[0][t-1]+p[t]==sum+I[0][t]);
@@ -222,7 +225,7 @@ int main (int argc, char**argv){
   }
   //(3)
 
-  for(int i = 1; i < prp.n; i++){
+  for(int i = 1; i < node_number; i++){
     for(int t = 1; t < prp.l; t++){
       IloConstraint constraint = (I[i][t-1]+q[i][t]==prp.d[i][t]+I[i][t]);
       varname.str("");
@@ -254,7 +257,7 @@ int main (int argc, char**argv){
 
   //(6)
 
-  for(int i = 1; i < prp.n; i++){
+  for(int i = 1; i < node_number; i++){
     for(int t = 1; t < prp.l; t++){
       IloConstraint constraint = (I[i][t-1]+q[i][t]<=prp.L[i]);
       varname.str("");
@@ -266,7 +269,7 @@ int main (int argc, char**argv){
 
   //(7)
 
-  for(int i = 1; i < prp.n; i++){
+  for(int i = 1; i < node_number; i++){
     for(int t = 0; t < prp.l; t++){
       IloConstraint constraint = (q[i][t]<=Mit[i][t]*z[i][t]);
       varname.str("");
@@ -278,10 +281,10 @@ int main (int argc, char**argv){
 
   //(8)
 
-  for(int i = 1; i < prp.n; i++){
+  for(int i = 1; i < node_number; i++){
     for(int t = 0; t < prp.l; t++){
       IloExpr sum(env);
-      for(int j = 0; j < prp.n; j++){
+      for(int j = 0; j < node_number; j++){
         sum+=x[j][i][t];
       }
       IloConstraint constraint = (sum==z[i][t]);
@@ -294,14 +297,14 @@ int main (int argc, char**argv){
 
   //(9)
 
-  for(int i = 1; i < prp.n; i++){
+  for(int i = 1; i < node_number; i++){
     for(int t = 0; t < prp.l; t++){
       IloExpr sum1(env);
-      for(int j = 0; j < prp.n; j++){
+      for(int j = 0; j < node_number; j++){
         sum1+=x[j][i][t];
       }
       IloExpr sum2(env);
-      for(int j = 0; j < prp.n; j++){
+      for(int j = 0; j < node_number; j++){
 
         sum2+=x[i][j][t];
       }
@@ -325,8 +328,8 @@ int main (int argc, char**argv){
 
   //(11)
 
-  for(int i = 0; i < prp.n; i++){
-    for(int j = 0; j < prp.n; j++){
+  for(int i = 0; i < node_number; i++){
+    for(int j = 0; j < node_number; j++){
       if(i!=j){
         for(int t = 0; t < prp.l; t++){
           IloConstraint constraint = (w[i][t]-w[j][t]>=q[i][t]-Mit[i][t]*(1-x[i][j][t]));
@@ -342,7 +345,7 @@ int main (int argc, char**argv){
 
   //(12)
 
-  for(int i = 1; i < prp.n; i++){
+  for(int i = 1; i < node_number; i++){
     for(int t = 0; t < prp.l; t++){
       IloConstraint constraint = (w[i][t]<=prp.Q*z[i][t]);
       varname.str("");
