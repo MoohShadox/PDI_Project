@@ -14,7 +14,7 @@
 
 using namespace std;
 
-
+/*
 int LSP_Test(){
     ifstream fic("/home/mohamed/Bureau/MAOA_Project/PRP_instances/1LSP_Instance.prp");
     if (!fic){
@@ -64,8 +64,8 @@ int test_cvrp(){
     Solution V = run_instance(prp,"Tabu");
     V.PrintSolution("route");
 }
-/*
-void reoptimise(LSP_Resolution LRSP, PRP I){
+
+void reoptimise(LSP_Resolution LRSP, PRP I, IloCplex cplx){
     vector<IloNumVarArray> &qr = *(LRSP.q);
     vector<vector<float>> SC;
     SC.resize(I.l);
