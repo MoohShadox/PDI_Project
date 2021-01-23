@@ -417,3 +417,10 @@ void LSP_Resolution::printDecisionVariables(){
 void LSP_Resolution::printVariables(){
      cplx->writeSolution("sol.txt");
 }
+
+
+
+
+
+
+
