@@ -253,7 +253,7 @@ int main (int argc, char**argv){
   }
 
   //(29)
-  /*
+
   for(int s = 0; s<prp.n-1;s++){
     for(int k=0; k<prp.k;k++){
       for(int t = 0; t < prp.l; t++){
@@ -283,7 +283,7 @@ int main (int argc, char**argv){
       }
     }
   }
-  */
+
   //(11)
 
   for(int k=0; k<prp.k;k++){
