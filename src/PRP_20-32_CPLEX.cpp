@@ -10,7 +10,7 @@
 
 using namespace std;
 
-int main (int argc, char**argv){
+int main2 (int argc, char**argv){
 
   string name,nameext, nameextsol;
 
@@ -334,6 +334,7 @@ int main (int argc, char**argv){
   //////////////
   //////  CPLEX's ENDING
   //////////////
+  cplex.writeSolution("sol.txt");
 
   env.end();
 

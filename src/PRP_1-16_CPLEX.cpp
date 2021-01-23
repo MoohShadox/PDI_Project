@@ -36,6 +36,7 @@ int main (int argc, char**argv){
   }
 
   PRP prp(fic);
+  prp.write_screen_txt();
 
   fic.close();
 
@@ -60,13 +61,13 @@ int main (int argc, char**argv){
 
   for(int t = 0; t < prp.l; t++){
     varname.str("");
-    varname <<"p_"<< t ;
+    varname <<"p_"<< t+1 ;
     IloNumVar v = IloNumVar(env, 0, prp.C);
     v.setName(varname.str().c_str());
     p.add(v);
 
     varname.str("");
-    varname <<"y_"<< t ;
+    varname <<"y_"<< t+1 ;
     v = IloNumVar(env, 0, 1, ILOINT);
     v.setName(varname.str().c_str());
     y.add(v);
@@ -77,25 +78,24 @@ int main (int argc, char**argv){
   IloArray<IloNumVarArray> q(env); //quantity delivered at client i at period t
   IloArray<IloNumVarArray> w(env); //load of vehicule before delivery at client i at period t
 
-  for(int i = 0; i < prp.n; i++){
+  for(int i = 0; i < prp.n+1; i++){
     IloNumVarArray Ii(env);
     IloNumVarArray zi(env);
     IloNumVarArray qi(env);
     IloNumVarArray wi(env);
-    ///REPRENDRE ICI !!!!!!
     for(int t = 0; t < prp.l; t++){
       IloNumVar v = IloNumVar(env,0,0);
       if(t==0){
         v = IloNumVar(env,0,0);
         varname.str("");
-        varname <<"I_"<< i << "_" << t ;
+        varname <<"I_"<< i << "_" << t+1 ;
         v.setName(varname.str().c_str());
         Ii.add(v);
       }
       else{
         v = IloNumVar(env,0,prp.L[i]);
         varname.str("");
-        varname <<"I_"<< i << "_" << t ;
+        varname <<"I_"<< i << "_" << t+1 ;
         v.setName(varname.str().c_str());
         Ii.add(v);
       }
@@ -103,27 +103,27 @@ int main (int argc, char**argv){
       if(i==0){
         v = IloNumVar(env,0,prp.k);
         varname.str("");
-        varname <<"Z_"<< i << "_" << t ;
+        varname <<"Z_"<< i << "_" << t+1 ;
         v.setName(varname.str().c_str());
         zi.add(v);
       }
       else{
         v = IloNumVar(env,0,1, ILOINT);
         varname.str("");
-        varname <<"Z_"<< i << "_" << t ;
+        varname <<"Z_"<< i << "_" << t+1 ;
         v.setName(varname.str().c_str());
         zi.add(v);
       }
       v = IloNumVar(env,0,prp.Q);
       varname.str("");
-      varname <<"Q_"<< i << "_" << t ;
+      varname <<"Q_"<< i << "_" << t+1 ;
       v.setName(varname.str().c_str());
       qi.add(v);
 
 
       v = IloNumVar(env,0,prp.Q);
       varname.str("");
-      varname <<"W_"<< i << "_" << t ;
+      varname <<"W_"<< i << "_" << t+1 ;
       v.setName(varname.str().c_str());
       wi.add(v);
     }
@@ -132,6 +132,7 @@ int main (int argc, char**argv){
     q.add(qi);
     w.add(wi);
   }
+
   IloArray<IloArray<IloNumVarArray>> x(env); //if a vehicle travels directly from node i to node j in period t,0 otherwise;
   IloNumVar v;
   for(int i = 0; i < prp.n; i++){
@@ -141,7 +142,7 @@ int main (int argc, char**argv){
       for(int t = 0; t < prp.l; t++){
         v = IloNumVar(env,0,1, ILOINT);
         varname.str("");
-        varname <<"X_"<< i << "_" << j << "_" << t ;
+        varname <<"X_"<< i << "_" << j << "_" << t+1 ;
         v.setName(varname.str().c_str());
         xij.add(v);
       }
@@ -390,6 +391,8 @@ int main (int argc, char**argv){
   //////  CPLEX's ENDING
   //////////////
   cplex.writeSolution("sol.txt");
+  cplex.exportModel("sortie.lp");
+
   env.end();
 
   return 0;

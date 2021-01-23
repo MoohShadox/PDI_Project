@@ -6,6 +6,7 @@
 #include "PRP.h"
 #include "LSP_Resolution.h"
 #include "VRP_Resolution.h"
+#include "PDI16.h"
 #include "Graph.h"
 #include "cvrp_algorithms.h"
 #include <typeinfo>
@@ -14,7 +15,7 @@
 
 using namespace std;
 
-/*
+
 int LSP_Test(){
     ifstream fic("/home/mohamed/Bureau/MAOA_Project/PRP_instances/1LSP_Instance.prp");
     if (!fic){
@@ -94,12 +95,10 @@ void reoptimise(LSP_Resolution LRSP, PRP I, IloCplex cplx){
     LRSP.printVariables();
 }
 
-
-int main(int argc, char * argv[]){
+void testing_reoptimze(){
     ifstream fic("/home/mohamed/Bureau/MAOA_Project/PRP_instances/1LSP_Instance.prp");
     if (!fic){
         cerr<<"file "<<"/home/mohamed/Bureau/MAOA_Project/PRP_instances/1LSP_Instance.prp"<<" not found"<<endl;
-        return 1;
     }
     PRP I(fic);
     I.write_screen_txt();
@@ -110,7 +109,18 @@ int main(int argc, char * argv[]){
     LRSP.addDistanceToObjectif();
     IloCplex cplx = LRSP.solve();
     LRSP.printVariables();
+}
 
+int main3(int argc, char * argv[]){
+    ifstream fic("/home/mohamed/Bureau/MAOA_Project/PRP_instances/1LSP_Instance.prp");
+    if (!fic){
+        cerr<<"file "<<"/home/mohamed/Bureau/MAOA_Project/PRP_instances/1LSP_Instance.prp"<<" not found"<<endl;
+        return 1;
+    }
+    PRP I(fic);
+    I.write_screen_txt();
+    IloEnv   env;
+    PDI16 PDI(I,env);
    // Solution V = run_instance(prp,"Tabu");
    // std::cout << "" << std::endl;
-}*/
+}
