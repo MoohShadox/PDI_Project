@@ -111,7 +111,7 @@ void testing_reoptimze(){
     LRSP.printVariables();
 }
 
-int main3(int argc, char * argv[]){
+int main5(int argc, char * argv[]){
     ifstream fic("/home/mohamed/Bureau/MAOA_Project/PRP_instances/1LSP_Instance.prp");
     if (!fic){
         cerr<<"file "<<"/home/mohamed/Bureau/MAOA_Project/PRP_instances/1LSP_Instance.prp"<<" not found"<<endl;

@@ -14,8 +14,8 @@ class PDI16 : public Resolution{
         IloNumVarArray p; //Production quantity at period t
         IloBoolVarArray y; //Production launched at period t
         IloArray<IloNumVarArray> I; //Inventory at node i at period t
-
-
+        IloArray<IloNumVarArray> q;
+        IloArray<IloNumVarArray> z;
         PDI16(PRP &p, IloEnv &env);
         //void addConstraint(IloExpr& c);
         //void generateConstraints();

@@ -82,27 +82,11 @@ int main (int argc, char**argv){
   IloArray<IloNumVarArray> w(env); //load of vehicule before delivery at client i at period t
 
   for(int i = 0; i < node_number+1; i++){
-    IloNumVarArray Ii(env);
     IloNumVarArray zi(env);
     IloNumVarArray qi(env);
     IloNumVarArray wi(env);
     for(int t = 0; t < prp.l; t++){
       IloNumVar v = IloNumVar(env,0,0);
-      if(t==0){
-        v = IloNumVar(env,0,0);
-        varname.str("");
-        varname <<"I_"<< i << "_" << t+1 ;
-        v.setName(varname.str().c_str());
-        Ii.add(v);
-      }
-      else{
-        v = IloNumVar(env,0,prp.L[i]);
-        varname.str("");
-        varname <<"I_"<< i << "_" << t+1 ;
-        v.setName(varname.str().c_str());
-        Ii.add(v);
-      }
-
       if(i==0){
         v = IloNumVar(env,0,prp.k);
         varname.str("");
@@ -130,11 +114,32 @@ int main (int argc, char**argv){
       v.setName(varname.str().c_str());
       wi.add(v);
     }
-    I.add(Ii);
     z.add(zi);
     q.add(qi);
     w.add(wi);
   }
+
+    for (int i=0; i<prp.n+1; i++){
+        IloNumVarArray Ii(env);
+        for (int t=0; t<prp.l+1;t++){
+            varname.str("");
+            varname <<"I_"<< i << "_" << t ;
+            IloNumVar v;
+            if(t == 0){
+                //Inventaire initial == L0[i]
+                v = IloNumVar(env, prp.L0[i],  prp.L0[i]);
+            }
+            else{
+                //Inventaire le reste du temps entre 0 et L[i]
+                v = IloNumVar(env, 0, prp.L[i]);
+            }
+            v.setName(varname.str().c_str());
+            Ii.add(v);
+            std::cout << "added : " << v << std::endl;
+        }
+        I.add(Ii);
+    }
+
 
   IloArray<IloArray<IloNumVarArray>> x(env); //if a vehicle travels directly from node i to node j in period t,0 otherwise;
   IloNumVar v;
@@ -159,10 +164,13 @@ int main (int argc, char**argv){
   for(int t = 0; t < prp.l; t++){
     float sum = 0;
     for(int j = t; j < prp.l; j++){
-      for(int i = 1; i < node_number; i++){
-        sum=sum+prp.d[i][t];
+      for(int i = 1; i < prp.n+1; i++){
+        //sum=sum+prp.d[i][t]; //C'est J pas t
+        sum=sum+prp.d[i][j];
+        //std::cout << "Adding : " << prp.d[i][j] << " at " << i << " " << j << std::endl;
       }
     }
+    //std::cout << "finally sum = " << sum << std::endl;
     Mt.push_back(min(prp.C,sum));
   }
 
@@ -191,11 +199,17 @@ int main (int argc, char**argv){
 
   IloExpr objective(env);
 
-  for(int t = 0; t < prp.l; t++){
+  for(int t = 1; t < prp.l+1; t++){
+      for(int i = 0; i < node_number; i++){
+        objective+=prp.h[i]*I[i][t];
+      }
+  }
+
+  for(int t=0; t< prp.l ; t++){
     objective+=prp.u*p[t]+prp.f*y[t];
-    for(int i = 0; i < node_number; i++){
-      objective+=prp.h[i]*I[i][t];
-    }
+  }
+
+  for(int t = 0; t < prp.l; t++){
     for(int i = 0; i < node_number; i++){
       for(int j = 0; j < node_number; j++){
         objective+=prp.getDistance(i,j)*x[i][j][t];
@@ -212,12 +226,12 @@ int main (int argc, char**argv){
   //constraint.setName(varname.str().c_str());
   //model->add(constraint);
 
-  for(int t = 1; t < prp.l; t++){
+  for(int t = 1; t < prp.l+1; t++){
     IloExpr sum(env);
     for(int i = 1; i < node_number; i++){
-      sum+=q[i][t];
+      sum+=q[i][t-1];
     }
-    IloConstraint constraint = (I[0][t-1]+p[t]==sum+I[0][t]);
+    IloConstraint constraint = (I[0][t-1]+p[t-1]==sum+I[0][t]);
     varname.str("");
     varname <<"C2_t" << t ;
     constraint.setName(varname.str().c_str());
@@ -226,8 +240,8 @@ int main (int argc, char**argv){
   //(3)
 
   for(int i = 1; i < node_number; i++){
-    for(int t = 1; t < prp.l; t++){
-      IloConstraint constraint = (I[i][t-1]+q[i][t]==prp.d[i][t]+I[i][t]);
+    for(int t = 1; t < prp.l+1; t++){
+      IloConstraint constraint = (I[i][t-1]+q[i][t-1]==prp.d[i][t-1]+I[i][t]);
       varname.str("");
       varname <<"C3_i" << i << ";t" << t;
       constraint.setName(varname.str().c_str());
@@ -240,14 +254,14 @@ int main (int argc, char**argv){
   for(int t = 0; t < prp.l; t++){
     IloConstraint constraint = (p[t]<=Mt[t]*y[t]);
     varname.str("");
-    varname <<"C4_t"<< t;
+    varname <<"C4_t"<< t+1;
     constraint.setName(varname.str().c_str());
     model.add(constraint);
   }
 
   //(5)
 
-  for(int t = 0; t < prp.l; t++){
+  for(int t = 0; t < prp.l+1; t++){
     IloConstraint constraint = (I[0][t]<=prp.L[0]);
     varname.str("");
     varname <<"C5_t"<< t;
@@ -258,8 +272,8 @@ int main (int argc, char**argv){
   //(6)
 
   for(int i = 1; i < node_number; i++){
-    for(int t = 1; t < prp.l; t++){
-      IloConstraint constraint = (I[i][t-1]+q[i][t]<=prp.L[i]);
+    for(int t = 1; t < prp.l+1; t++){
+      IloConstraint constraint = (I[i][t-1]+q[i][t-1]<=prp.L[i]);
       varname.str("");
       varname <<"C6_i" << i << ";t" << t;
       constraint.setName(varname.str().c_str());
@@ -273,7 +287,7 @@ int main (int argc, char**argv){
     for(int t = 0; t < prp.l; t++){
       IloConstraint constraint = (q[i][t]<=Mit[i][t]*z[i][t]);
       varname.str("");
-      varname <<"C7_i" << i << ";t" << t;
+      varname <<"C7_i" << i << ";t" << t+1;
       constraint.setName(varname.str().c_str());
       model.add(constraint);
     }
@@ -285,11 +299,13 @@ int main (int argc, char**argv){
     for(int t = 0; t < prp.l; t++){
       IloExpr sum(env);
       for(int j = 0; j < node_number; j++){
+        if(i == j)
+          continue;
         sum+=x[j][i][t];
       }
       IloConstraint constraint = (sum==z[i][t]);
       varname.str("");
-      varname <<"C8_i" << i << ";t" << t;
+      varname <<"C8_i" << i << ";t" << t+1;
       constraint.setName(varname.str().c_str());
       model.add(constraint);
     }
@@ -301,16 +317,19 @@ int main (int argc, char**argv){
     for(int t = 0; t < prp.l; t++){
       IloExpr sum1(env);
       for(int j = 0; j < node_number; j++){
+        if(i == j)
+          continue;
         sum1+=x[j][i][t];
       }
       IloExpr sum2(env);
       for(int j = 0; j < node_number; j++){
-
+        if(i == j)
+          continue;
         sum2+=x[i][j][t];
       }
       IloConstraint constraint = (sum1+sum2==2*z[i][t]);
       varname.str("");
-      varname <<"C9_i" << i << ";t" << t;
+      varname <<"C9_i" << i << ";t" << t+1;
       constraint.setName(varname.str().c_str());
       model.add(constraint);
     }
@@ -328,15 +347,14 @@ int main (int argc, char**argv){
 
   //(11)
 
-  for(int i = 0; i < node_number; i++){
-    for(int j = 0; j < node_number; j++){
+  for(int i = 1; i < node_number; i++){
+    for(int j = 1; j < node_number; j++){
       if(i!=j){
         for(int t = 0; t < prp.l; t++){
           IloConstraint constraint = (w[i][t]-w[j][t]>=q[i][t]-Mit[i][t]*(1-x[i][j][t]));
           varname.str("");
-          varname <<"C11_x("<< i << ";" << j << ");t" << t << "";
+          varname <<"C11_("<< i << ";" << j << ");t" << t+1 << "";
           constraint.setName(varname.str().c_str());
-
           model.add(constraint);
         }
       }
@@ -364,6 +382,7 @@ int main (int argc, char**argv){
   //////////
 
   IloCplex cplex(model);
+  cplex.exportModel("sortie.lp");
 
   // cplex.setParam(IloCplex::Cliques,-1);
   // cplex.setParam(IloCplex::Covers,-1);
@@ -394,7 +413,6 @@ int main (int argc, char**argv){
   //////  CPLEX's ENDING
   //////////////
   cplex.writeSolution("sol.txt");
-  cplex.exportModel("sortie.lp");
 
   env.end();
 
