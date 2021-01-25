@@ -4,13 +4,64 @@
 #include <string>
 #include <sstream>
 #include <algorithm>    // std::min
+#include <unordered_set>
 #include"PRP.h"
 
 #define epsilon 0.00001
 
 using namespace std;
 
-int main2 (int argc, char**argv){
+ILOLAZYCONSTRAINTCALLBACK5(constraint29, int, n, int, l, int, K,
+   IloArray<IloArray<IloArray<IloNumVarArray>>>, x,
+    IloArray<IloArray<IloNumVarArray>>, z)
+{
+for (int t = 0; t < l; t++) {
+  for (int k = 0; k < K; k++) {
+    unordered_set<int> S;
+    // On initialise S avec tous les sommets qui doivent être visités
+    for (int i = 1; i <= n; i++) {
+      if (getValue(z[i][k][t]) > 0.5) {
+        S.insert(i);
+      }
+    }
+
+    if (S.size() == 0) {
+      continue;
+    }
+
+    // On parcourt l'unique cycle contenant l'usine et on les supprime de S
+    int u;
+    for (u = 1; (u <= n) && (getValue(x[0][u][k][t]) < 0.5); u++);
+    if (u == n + 1) {
+      // Dans ce cas, rien ne sort de l'usine, on veut rajouter la contrainte avec S entier
+      // pour sauteur la prochaine boucle, on met u = 0
+      u = 0;
+    }
+    // Parcours du cycle de l'usine
+    while (u) {
+      S.erase(u);
+      int v;
+      for (v = 0; (v==u) || (getValue(x[u][v][k][t]) < 0.5); v++);
+      u = v;
+    }
+
+    // S'il reste des éléments dans S après ce parcours, alors forcément S viole la contrainte
+    if (S.size() > 0) {
+      IloExpr cst(getEnv());
+      for (int i : S) {
+        for (int j : S) {
+          if (i != j) {
+            cst += x[i][j][k][t];
+          }
+        }
+      }
+      add(cst <= (int) S.size() - 1).end();
+    }
+  }
+}
+}
+
+int main (int argc, char**argv){
 
   string name,nameext, nameextsol;
 
@@ -74,7 +125,7 @@ int main2 (int argc, char**argv){
     IloArray<IloNumVarArray> qi(env);
     for(int t = 0; t < prp.l; t++){
       if(t==0){
-        Ii.add(IloNumVar(env,0,0));
+        Ii.add(IloNumVar(env,prp.L0[i],prp.L0[i]));
       }
       else{
         Ii.add(IloNumVar(env,0,prp.L[i]));
@@ -102,7 +153,7 @@ int main2 (int argc, char**argv){
       for(int k=0; k<prp.k;k++){
         IloNumVarArray xijk(env);
         for(int t = 0; t < prp.l; t++){
-          xijk.add(IloNumVar(env,0,1, ILOINT));
+          if(i!=j) xijk.add(IloNumVar(env,0,1, ILOINT));
         }
         xij.add(xijk);
       }
@@ -155,7 +206,7 @@ int main2 (int argc, char**argv){
       for(int j = 0; j < node_number; j++){
         IloExpr sum(env);
         for(int k=0; k<prp.k;k++){
-          sum+=x[i][j][k][t];
+          if(i!=j) sum+=x[i][j][k][t];
         }
         objective+=prp.getDistance(i,j)*sum;
       }
@@ -167,7 +218,7 @@ int main2 (int argc, char**argv){
   model.add(IloMinimize(env,objective));
 
   //(21)
-
+  /*
   for(int t = 1; t < prp.l; t++){
     IloExpr sum(env);
     for(int i = 1; i < node_number; i++){
@@ -243,46 +294,14 @@ int main2 (int argc, char**argv){
       for(int k=0; k<prp.k;k++){
         IloExpr sum1(env);
         for(int j = 0; j < node_number; j++){
-          sum1+=x[j][i][k][t];
+          if(i!=j) sum1+=x[j][i][k][t];
         }
         IloExpr sum2(env);
         for(int j = 0; j < node_number; j++){
 
-          sum2+=x[i][j][k][t];
+          if(i!=j) sum2+=x[i][j][k][t];
         }
         model.add(sum1+sum2==2*z[i][k][t]);
-      }
-    }
-  }
-
-  //(29)
-
-  for(int s = 0; s<node_number-1;s++){
-    for(int k=0; k<prp.k;k++){
-      for(int t = 0; t < prp.l; t++){
-        IloExpr sum(env);
-        for(int i = s; i<node_number;i++){
-          for(int j = s; j<node_number;j++){
-            if(i!=j){
-              model.add(sum<=node_number-s-1);
-            }
-          }
-        }
-      }
-    }
-  }
-
-  for(int s = node_number; s>1;s--){
-    for(int k=0; k<prp.k;k++){
-      for(int t = 0; t < prp.l; t++){
-        IloExpr sum(env);
-        for(int i = 0; i<s;i++){
-          for(int j = 0; j<s;j++){
-            if(i!=j){
-              model.add(sum<=s-1);
-            }
-          }
-        }
       }
     }
   }
@@ -297,7 +316,7 @@ int main2 (int argc, char**argv){
       }
       model.add(sum<=prp.Q*z[0][k][t]);
     }
-  }
+  }*/
 
   printf("model created\n");
 
@@ -308,6 +327,8 @@ int main2 (int argc, char**argv){
   //////////
 
   IloCplex cplex(model);
+
+  //cplex.use(constraint29(env, prp.n, prp.l, prp.k, x, z));
 
   // cplex.setParam(IloCplex::Cliques,-1);
   // cplex.setParam(IloCplex::Covers,-1);

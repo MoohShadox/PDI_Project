@@ -10,7 +10,7 @@
 
 using namespace std;
 
-int main (int argc, char**argv){
+int main2 (int argc, char**argv){
 
   string name,nameext, nameextsol;
   ostringstream varname;
@@ -89,7 +89,7 @@ int main (int argc, char**argv){
     for(int t = 0; t < prp.l; t++){
       IloNumVar v = IloNumVar(env,0,0);
       if(t==0){
-        v = IloNumVar(env,0,0);
+        v = IloNumVar(env,prp.L0[i],prp.L0[i]);
         varname.str("");
         varname <<"I_"<< i << "_" << t+1 ;
         v.setName(varname.str().c_str());
