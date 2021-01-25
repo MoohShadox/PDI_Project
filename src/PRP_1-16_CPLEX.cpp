@@ -87,20 +87,6 @@ int main2 (int argc, char**argv){
     IloNumVarArray wi(env);
     for(int t = 0; t < prp.l; t++){
       IloNumVar v = IloNumVar(env,0,0);
-      if(t==0){
-        v = IloNumVar(env,prp.L0[i],prp.L0[i]);
-        varname.str("");
-        varname <<"I_"<< i << "_" << t+1 ;
-        v.setName(varname.str().c_str());
-        Ii.add(v);
-      }
-      else{
-        v = IloNumVar(env,0,prp.L[i]);
-        varname.str("");
-        varname <<"I_"<< i << "_" << t+1 ;
-        v.setName(varname.str().c_str());
-        Ii.add(v);
-      }
       if(i==0){
         v = IloNumVar(env,0,prp.k);
         varname.str("");
@@ -330,15 +316,11 @@ int main2 (int argc, char**argv){
   for(int i = 1; i < node_number; i++){
     for(int t = 0; t < prp.l; t++){
       IloExpr sum1(env);
-      for(int j = 0; j < node_number; j++){
-        if(i == j)
-          continue;
-        sum1+=x[j][i][t];
-      }
       IloExpr sum2(env);
       for(int j = 0; j < node_number; j++){
         if(i == j)
           continue;
+        sum1+=x[j][i][t];
         sum2+=x[i][j][t];
       }
       IloConstraint constraint = (sum1+sum2==2*z[i][t]);
