@@ -10,7 +10,7 @@
 
 using namespace std;
 
-int main2 (int argc, char**argv){
+int main_1_16 (int argc, char**argv){
 
   string name,nameext, nameextsol;
   ostringstream varname;

@@ -61,7 +61,7 @@ for (int t = 0; t < l; t++) {
 }
 }
 
-int main (int argc, char**argv){
+int main_20_32 (int argc, char**argv){
 
   string name,nameext, nameextsol;
   ostringstream varname;
