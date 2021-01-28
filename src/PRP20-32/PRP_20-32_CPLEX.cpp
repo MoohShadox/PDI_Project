@@ -11,10 +11,11 @@
 
 using namespace std;
 
-ILOLAZYCONSTRAINTCALLBACK5(constraint29, int, n, int, l, int, K,
+ILOUSERCUTCALLBACK5(constraint29, int, n, int, l, int, K,
    IloArray<IloArray<IloArray<IloNumVarArray>>>, x,
     IloArray<IloArray<IloNumVarArray>>, z)
 {
+  std::cout << "Separation call !! "<< std::endl;
 for (int t = 0; t < l; t++) {
   for (int k = 0; k < K; k++) {
     unordered_set<int> S;

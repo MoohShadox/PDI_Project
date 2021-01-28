@@ -7,25 +7,28 @@
 #include <vector>
 #include <lemon/list_graph.h>
 #include <lemon/concepts/digraph.h>
+#include <set>
 using namespace lemon;
 
 class Tabu_Cutter{
     
     public:
         IloArray<IloNumVarArray> *X;
-        vector<vector<int>> values;
+        vector<vector<float>> values;
         PRP *prp;
         IloEnv env;
         ListDigraph support_graph;
         int dt;
+        int C;
+        ListDigraph::NodeMap<float>* id;
+        ListDigraph::NodeMap<float>* d;
+        ListDigraph::ArcMap<float>* val;
 
-        ListDigraph::NodeMap<int>* id;
-        ListDigraph::NodeMap<int>* d;
-        ListDigraph::ArcMap<int>* val;
+        std::set<vector<int>> checked_ensembles;
+        vector<pair<int,int>> violated_constraint;
+        int borne;
 
-        set<vector<int>> checked_ensembles; 
-
-        Tabu_Cutter(IloArray<IloNumVarArray> x2, vector<vector<int>> x1, PRP prp1, int t, IloEnv env);
+        Tabu_Cutter( vector<vector<float>> x1, PRP prp1, int t);
 
         bool inNodeVect(vector<ListDigraph::Node> nodes, ListDigraph::Node node);
 
@@ -34,13 +37,15 @@ class Tabu_Cutter{
 
         int getVal(ListDigraph::Node i,ListDigraph::Node j);
         int getVal(ListDigraph::Arc a);
+        int getVals(vector<ListDigraph::Arc> as);
 
-        IloNumVar getVar(ListDigraph::Node i,ListDigraph::Node j);
-        IloNumVar getVar(ListDigraph::Arc a);
-        IloNumVarArray getVars(vector<ListDigraph::Arc> arcs);
+        //IloNumVar getVar(ListDigraph::Node i,ListDigraph::Node j);
+        //IloNumVar getVar(ListDigraph::Arc a);
+        //IloNumVarArray getVars(vector<ListDigraph::Arc> arcs);
 
         vector<ListDigraph::Arc> delta(vector<ListDigraph::Node> nodes);
         int d_S(vector<ListDigraph::Node> S);
+        bool checkEnsemble(vector<int> nodes_indexes);
 
 
 };
