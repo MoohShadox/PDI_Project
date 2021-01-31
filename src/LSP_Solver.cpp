@@ -111,16 +111,32 @@ void testing_reoptimze(){
     LRSP.printVariables();
 }
 
-int main5(int argc, char * argv[]){
-    ifstream fic("/home/mohamed/Bureau/MAOA_Project/PRP_instances/1LSP_Instance.prp");
-    if (!fic){
-        cerr<<"file "<<"/home/mohamed/Bureau/MAOA_Project/PRP_instances/1LSP_Instance.prp"<<" not found"<<endl;
-        return 1;
+
+
+
+int main_lsp_solver(int argc, char * argv[]){
+    string name,nameext, nameextsol;
+    if(argc!=2){
+    cerr<<"usage: "<<argv[0]<<" <PRP file name>   (without .prp)"<<endl;
+    return 1;
     }
+
+
+    name=argv[1];
+    nameextsol=name+".prp";
+
+    ifstream fic(nameextsol.c_str());
+
+    if (!fic){
+      cerr<<"file "<<nameextsol<<" not found"<<endl;
+      return 1;
+    }
+
     PRP I(fic);
     I.write_screen_txt();
+    fic.close();
+    printf("prp created\n");
     IloEnv   env;
-    PDI16 PDI(I,env);
    // Solution V = run_instance(prp,"Tabu");
    // std::cout << "" << std::endl;
 }

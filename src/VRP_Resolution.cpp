@@ -1,6 +1,9 @@
 #include "VRP_Resolution.h"
 
+
+
 VRP_Resolution::VRP_Resolution(PRP &p1, IloEnv &env1):Resolution(p1,env1){
+
     
     w = new IloNumVarArray(*env, prp->n,0.0,prp->Q);
     x = new IloArray<IloIntVarArray>(*env,prp->n+1);
