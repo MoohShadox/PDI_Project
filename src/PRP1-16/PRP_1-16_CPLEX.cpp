@@ -341,7 +341,7 @@ int main (int argc, char**argv){
     model.add(constraint);
   }
 
-  //(11)
+  //(11) //ça me fait galérer sa race
 
   for(int i = 1; i < node_number; i++){
     for(int j = 1; j < node_number; j++){

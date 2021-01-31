@@ -15,50 +15,61 @@ ILOLAZYCONSTRAINTCALLBACK5(constraint29, int, n, int, l, int, K,
    IloArray<IloArray<IloArray<IloNumVarArray>>>, x,
     IloArray<IloArray<IloNumVarArray>>, z)
 {
-for (int t = 0; t < l; t++) {
-  for (int k = 0; k < K; k++) {
-    unordered_set<int> S;
-    // On initialise S avec tous les sommets qui doivent être visités
-    for (int i = 1; i <= n; i++) {
-      if (getValue(z[i][k][t]) > 0.5) {
-        S.insert(i);
-      }
-    }
 
-    if (S.size() == 0) {
-      continue;
-    }
-
-    // On parcourt l'unique cycle contenant l'usine et on les supprime de S
-    int u;
-    for (u = 1; (u <= n) && (getValue(x[0][u][k][t]) < 0.5); u++);
-    if (u == n + 1) {
-      // Dans ce cas, rien ne sort de l'usine, on veut rajouter la contrainte avec S entier
-      // pour sauteur la prochaine boucle, on met u = 0
-      u = 0;
-    }
-    // Parcours du cycle de l'usine
-    while (u) {
-      S.erase(u);
-      int v;
-      for (v = 0; (v==u) || (getValue(x[u][v][k][t]) < 0.5); v++);
-      u = v;
-    }
-
-    // S'il reste des éléments dans S après ce parcours, alors forcément S viole la contrainte
-    if (S.size() > 0) {
-      IloExpr cst(getEnv());
-      for (int i : S) {
-        for (int j : S) {
-          if (i != j) {
-            cst += x[i][j][k][t];
-          }
+  for (int t = 0; t < l; t++) {
+    for (int k = 0; k < K; k++) {
+      unordered_set<int> S;
+      // On initialise S avec tous les sommets qui doivent être visités
+      for (int i = 1; i <= n; i++) {
+        if (getValue(z[i][k][t]) > 0.5) {
+          S.insert(i);
         }
       }
-      add(cst <= (int) S.size() - 1).end();
+
+      if (S.size() < 2) {
+        continue;
+      }
+
+      // On parcourt l'unique cycle contenant l'usine et on les supprime de S
+      int u;
+      for (u = 1; (u <= n) && (getValue(x[0][u][k][t]) < 0.5); u++);
+      if (u == n + 1) {
+        // Dans ce cas, rien ne sort de l'usine, on veut rajouter la contrainte avec S entier
+        // pour sauteur la prochaine boucle, on met u = 0
+        u = 0;
+      }
+      // Parcours du cycle de l'usine
+      while (u) {
+        S.erase(u);
+        int v = 0;
+        int flag = 0;
+        while ( (v==u) || (getValue(x[u][v][k][t]) < 0.5)) {
+          v++;
+          if(v>n){
+            flag =1;
+            break;
+          };
+        }
+        if(flag==1)break;
+        u = v;
+      }
+
+      // S'il reste des éléments dans S après ce parcours, alors forcément S viole la contrainte
+      if (S.size() > 0) {
+        IloExpr cst(getEnv());
+        for (int i : S) {
+          for (int j : S) {
+            if (i != j) {
+              cst += x[i][j][k][t];
+            }
+          }
+        }
+        add(cst <= (int) S.size() - 1).end();
+        //std::cout << "cuted" << std::endl;
+      }
     }
   }
-}
+  return;
 }
 
 int main (int argc, char**argv){
@@ -236,11 +247,17 @@ int main (int argc, char**argv){
 
   IloExpr objective(env);
 
-  for(int t = 0; t < prp.l; t++){
+  for(int t=0; t< prp.l ; t++){
     objective+=prp.u*p[t]+prp.f*y[t];
-    for(int i = 0; i < node_number; i++){
-      objective+=prp.h[i]*I[i][t];
-    }
+  }
+
+  for(int t = 1; t < prp.l+1; t++){
+      for(int i = 0; i < node_number; i++){
+        objective+=prp.h[i]*I[i][t];
+      }
+  }
+
+  for(int t = 0; t < prp.l; t++){
     for(int i = 0; i < node_number; i++){
       for(int j = 0; j < node_number; j++){
         IloExpr sum(env);
@@ -258,7 +275,7 @@ int main (int argc, char**argv){
 
   //(21)
 
-  for(int t = 1; t < prp.l; t++){
+  for(int t = 1; t < prp.l+1; t++){
     IloExpr sum(env);
     for(int i = 1; i < node_number; i++){
       for(int k=0; k<prp.k;k++){
@@ -275,7 +292,7 @@ int main (int argc, char**argv){
   //(22)
 
   for(int i = 1; i < node_number; i++){
-    for(int t = 1; t < prp.l; t++){
+    for(int t = 1; t < prp.l+1; t++){
       IloExpr sum(env);
       for(int k=0; k<prp.k;k++){
         sum+=q[i][k][t-1];
@@ -311,10 +328,10 @@ int main (int argc, char**argv){
   //(25)
 
   for(int i = 1; i < node_number; i++){
-    for(int t = 1; t < prp.l; t++){
+    for(int t = 1; t < prp.l+1; t++){
       IloExpr sum(env);
       for(int k=0; k<prp.k;k++){
-        sum+=q[i][k][t];
+        sum+=q[i][k][t-1];
       }
       IloConstraint constraint = (I[i][t-1]+sum<=prp.L[i]);
       varname.str("");
@@ -355,7 +372,7 @@ int main (int argc, char**argv){
   }
 
   //(28)
-  /*
+
   for(int i = 1; i < node_number; i++){
     for(int t = 0; t < prp.l; t++){
       for(int k=0; k<prp.k;k++){
@@ -375,7 +392,7 @@ int main (int argc, char**argv){
       }
     }
   }
-  */
+
   //(30)
 
   for(int k=0; k<prp.k;k++){
@@ -402,6 +419,9 @@ int main (int argc, char**argv){
 
   IloCplex cplex(model);
 
+  cplex.setParam(IloCplex::Param::MIP::Limits::Solutions,1);
+
+  printf("use 29\n");
   cplex.use(constraint29(env, prp.n, prp.l, prp.k, x, z));
 
   // cplex.setParam(IloCplex::Cliques,-1);
@@ -432,7 +452,7 @@ int main (int argc, char**argv){
   //////////////
   //////  CPLEX's ENDING
   //////////////
-  cplex.writeSolution("sol.txt");
+  //cplex.writeSolution("sol.txt");
 
   env.end();
 

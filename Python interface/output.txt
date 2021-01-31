@@ -1,0 +1,121 @@
+Instance A
+n=4 l=6
+u=30
+f=3000
+C=1e+10
+Q=322
+k=90
+Depot 0 (143,99) : h[0]=3  L[0]=1e+10  L0[0]=0
+Client 1 (89,159) :  h[1]=6  L[1]=20  L0[1]=10
+d1= [10, 10, 10, 10, 10, 10 ]
+Client 2 (76,314) :  h[2]=9  L[2]=45  L0[2]=30
+d2= [15, 15, 15, 15, 15, 15 ]
+Client 3 (285,63) :  h[3]=7  L[3]=45  L0[3]=30
+d3= [15, 15, 15, 15, 15, 15 ]
+Client 4 (401,325) :  h[4]=8  L[4]=14  L0[4]=7
+d4= [7, 7, 7, 7, 7, 7 ]
+prp created
+n = 5
+added : I_0_0[0..0] 
+added : I_0_1[0..1e+10] 
+added : I_0_2[0..1e+10] 
+added : I_0_3[0..1e+10] 
+added : I_0_4[0..1e+10] 
+added : I_0_5[0..1e+10] 
+added : I_0_6[0..1e+10] 
+added : I_1_0[10..10] 
+added : I_1_1[0..20] 
+added : I_1_2[0..20] 
+added : I_1_3[0..20] 
+added : I_1_4[0..20] 
+added : I_1_5[0..20] 
+added : I_1_6[0..20] 
+added : I_2_0[30..30] 
+added : I_2_1[0..45] 
+added : I_2_2[0..45] 
+added : I_2_3[0..45] 
+added : I_2_4[0..45] 
+added : I_2_5[0..45] 
+added : I_2_6[0..45] 
+added : I_3_0[30..30] 
+added : I_3_1[0..45] 
+added : I_3_2[0..45] 
+added : I_3_3[0..45] 
+added : I_3_4[0..45] 
+added : I_3_5[0..45] 
+added : I_3_6[0..45] 
+added : I_4_0[7..7] 
+added : I_4_1[0..14] 
+added : I_4_2[0..14] 
+added : I_4_3[0..14] 
+added : I_4_4[0..14] 
+added : I_4_5[0..14] 
+added : I_4_6[0..14] 
+constraints
+model created
+CPXPARAM_MIP_Strategy_CallbackReducedLP          0
+Tried aggregator 2 times.
+MIP Presolve eliminated 37 rows and 11 columns.
+MIP Presolve modified 126 coefficients.
+Aggregator did 5 substitutions.
+Reduced MIP has 199 rows, 229 columns, and 735 nonzeros.
+Reduced MIP has 150 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.58 ticks)
+Found incumbent of value 68711.000000 after 0.00 sec. (1.01 ticks)
+Probing time = 0.00 sec. (0.16 ticks)
+Tried aggregator 1 time.
+Reduced MIP has 199 rows, 229 columns, and 735 nonzeros.
+Reduced MIP has 150 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Presolve time = 0.00 sec. (0.45 ticks)
+Probing time = 0.00 sec. (0.16 ticks)
+Clique table members: 61.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 8 threads.
+Root relaxation solution time = 0.00 sec. (0.93 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                        68711.0000      240.0000            99.65%
+*     0+    0                        30032.0000      240.0000            99.20%
+      0     0    12828.6438    44    30032.0000    12828.6438       71   57.28%
+*     0+    0                        17125.0000    12828.6438            25.09%
+      0     0    13679.8792    50    17125.0000      Cuts: 92      128   20.12%
+      0     0    13920.9866    53    17125.0000      Cuts: 42      183   18.71%
+      0     0    13944.5073    51    17125.0000      Cuts: 15      205   18.57%
+      0     0    13954.3807    53    17125.0000      Cuts: 13      217   18.51%
+      0     0    14010.8844    57    17125.0000       Cuts: 6      230   18.18%
+      0     0    14012.7565    56    17125.0000      Cuts: 11      238   18.17%
+      0     0    14013.4415    57    17125.0000       Cuts: 7      245   18.17%
+      0     0    14016.8222    59    17125.0000       Cuts: 2      253   18.15%
+      0     0    14050.2424    57    17125.0000   ZeroHalf: 2      273   17.95%
+      0     0    14050.2424    57    17125.0000      Cuts: 10      274   17.95%
+*     0+    0                        15004.0000    14050.2424             6.36%
+*     0+    0                        14971.0000    14082.2866             5.94%
+      0     2    14050.2424    57    14971.0000    14082.2866      274    5.94%
+Elapsed time = 0.21 sec. (53.76 ticks, tree = 0.01 MB, solutions = 5)
+*   309   134      integral     0    14868.0000    14323.8232     5116    3.66%
+*  1053   226      integral     0    14854.0000    14735.0423    14745    0.80%
+
+Clique cuts applied:  5
+Cover cuts applied:  3
+Implied bound cuts applied:  24
+Flow cuts applied:  22
+Mixed integer rounding cuts applied:  16
+Flow path cuts applied:  2
+Zero-half cuts applied:  2
+Multi commodity flow cuts applied:  6
+Lift and project cuts applied:  35
+Gomory fractional cuts applied:  14
+
+Root node processing (before b&c):
+  Real time             =    0.18 sec. (53.62 ticks)
+Parallel b&c, 8 threads:
+  Real time             =    0.21 sec. (52.50 ticks)
+  Sync time (average)   =    0.10 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.40 sec. (106.12 ticks)
+Solution status = Optimal
+Solution value  = 14854
