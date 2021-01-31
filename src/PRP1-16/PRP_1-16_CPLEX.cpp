@@ -339,6 +339,7 @@ int main (int argc, char**argv){
     }
   }
 
+<<<<<<< HEAD
   ////(10)
 //
   //for(int t = 0; t < prp.l; t++){
