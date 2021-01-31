@@ -13,7 +13,6 @@ using namespace lemon;
 class Tabu_Cutter{
     
     public:
-        IloArray<IloNumVarArray> *X;
         vector<vector<float>> values;
         PRP *prp;
         IloEnv env;
@@ -30,6 +29,8 @@ class Tabu_Cutter{
 
         Tabu_Cutter( vector<vector<float>> x1, PRP prp1, int t);
 
+        Tabu_Cutter( IloArray<IloIntVarArray>& x,PRP prp1, int t);
+
         bool inNodeVect(vector<ListDigraph::Node> nodes, ListDigraph::Node node);
 
         ListDigraph::Node* findVal(int val);
@@ -38,10 +39,6 @@ class Tabu_Cutter{
         int getVal(ListDigraph::Node i,ListDigraph::Node j);
         int getVal(ListDigraph::Arc a);
         int getVals(vector<ListDigraph::Arc> as);
-
-        //IloNumVar getVar(ListDigraph::Node i,ListDigraph::Node j);
-        //IloNumVar getVar(ListDigraph::Arc a);
-        //IloNumVarArray getVars(vector<ListDigraph::Arc> arcs);
 
         vector<ListDigraph::Arc> delta(vector<ListDigraph::Node> nodes);
         int d_S(vector<ListDigraph::Node> S);

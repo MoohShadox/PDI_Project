@@ -66,55 +66,14 @@ int test_cvrp(){
     V.PrintSolution("route");
 }
 
-void reoptimise(LSP_Resolution LRSP, PRP I, IloCplex cplx){
-    vector<IloNumVarArray> &qr = *(LRSP.q);
-    vector<vector<float>> SC;
-    SC.resize(I.l);
-    for (unsigned i = 0; i<qr[0].getSize(); i++ ){
-        vector<float> v = LRSP.getDelivryAt(i,cplx);
-        Problem p = Problem(I,v);
-        TabuSearchSolution vrp(p, 3);
-        vrp.Solve();
-        vector<float> sc_t = vrp.getSC(I);
-        SC[i]=sc_t;
-        std::cout << "Return of the function ! i = " << i << std::endl;
-    }
-    std::cout << "Analyse of the constructed result : " << std::endl;
-    std::cout << "Size of SC : "<< SC.size() << std::endl;
-    for(int i=0; i< SC.size(); i++)
-    {
-        std::cout << "Size of SC["<< i <<"]: "<< SC[i].size() << std::endl;
-        for(int j=0; j<SC[i].size(); j++)
-        {
-            std::cout << SC[i][j] << " - ";
-        }
-        std::cout << std::endl;
-    }
-    LRSP.modifyObjCoeffs(SC);
-    LRSP.solve();
-    LRSP.printVariables();
-}
-
-void testing_reoptimze(){
-    ifstream fic("/home/mohamed/Bureau/MAOA_Project/PRP_instances/1LSP_Instance.prp");
-    if (!fic){
-        cerr<<"file "<<"/home/mohamed/Bureau/MAOA_Project/PRP_instances/1LSP_Instance.prp"<<" not found"<<endl;
-    }
-    PRP I(fic);
-    I.write_screen_txt();
-    IloEnv   env;
-    LSP_Resolution LRSP(I,env);
-    LRSP.generateConstraints();
-    LRSP.createObjectif();
-    LRSP.addDistanceToObjectif();
-    IloCplex cplx = LRSP.solve();
-    LRSP.printVariables();
-}
 
 
 
 
-int main_lsp_solver(int argc, char * argv[]){
+
+
+
+int main(int argc, char * argv[]){
     string name,nameext, nameextsol;
     if(argc!=2){
     cerr<<"usage: "<<argv[0]<<" <PRP file name>   (without .prp)"<<endl;
@@ -131,12 +90,53 @@ int main_lsp_solver(int argc, char * argv[]){
       cerr<<"file "<<nameextsol<<" not found"<<endl;
       return 1;
     }
-
     PRP I(fic);
     I.write_screen_txt();
-    fic.close();
-    printf("prp created\n");
     IloEnv   env;
-   // Solution V = run_instance(prp,"Tabu");
-   // std::cout << "" << std::endl;
+    vector<vector<float>> SC;
+    SC.resize(1);
+    vector<float> optim_val;
+    float pred_cost = 0;
+    for(int j=0; j<20; j++){
+        LSP_Resolution LRSP(I,env);
+        LRSP.generateConstraints();
+        LRSP.createObjectif();
+        //LRSP.addDistanceToObjectif();
+        if(SC.size() == 1){
+            LRSP.addDistanceToObjectif();
+        }
+        else{
+            LRSP.modifyObjCoeffs(SC);
+        }
+        IloCplex cplx = LRSP.solve();
+        LRSP.printVariables();
+        vector<IloNumVarArray> &qr = *(LRSP.q);
+        SC.resize(I.l);
+        float tour_cost = 0;
+        bool validity = 1;
+        for (unsigned i = 0; i<qr[0].getSize(); i++ ){
+            vector<float> v = LRSP.getDelivryAt(i,cplx);
+            Problem p = Problem(I,v);
+            LocalSearchIntraSolution vrp(p);
+            vrp.Solve();
+            vrp.PrintSolution("route");
+            vector<float> sc_t = vrp.getSC(I);
+            SC[i]=sc_t;
+            validity = validity && vrp.CheckSolutionValid();
+        }
+        float obj_val = cplx.getObjValue();
+        pred_cost = obj_val;
+        optim_val.push_back(pred_cost);
+        for(int a=0; a<SC.size(); a++){
+            std::cout << "i = " << a  << " SC size = " << SC[a].size() << std::endl;
+            for (int b=0; b<SC[a].size(); b++)
+            {
+                std::cout << SC[a][b] << " - ";
+            }
+            std::cout << std::endl;
+        }
+    }
+    for(int i=0; i<optim_val.size(); i++){
+        std::cout << i << " : " << optim_val[i] << std::endl;
+    }
 }

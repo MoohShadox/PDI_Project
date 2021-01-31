@@ -37,22 +37,22 @@ LSP_Resolution::LSP_Resolution(PRP &p1, IloEnv &env1):Resolution(p1,env1){
     vector<IloNumVarArray> &qr = *q;
     vector<IloNumVarArray> &Ir = *I;
 
-    std::cout << "Created y : " << y->getSize()  << std::endl;
-    std::cout << "Created p : " << p->getSize()  << std::endl;
-    std::cout << "Created Q : " << qr.size()  << std::endl;
-    std::cout << "Created I : " << Ir.size()  << std::endl;
-
+    //std::cout << "Created y : " << y->getSize()  << std::endl;
+    //std::cout << "Created p : " << p->getSize()  << std::endl;
+    //std::cout << "Created Q : " << qr.size()  << std::endl;
+    //std::cout << "Created I : " << Ir.size()  << std::endl;
+//
 
     for (unsigned i=0; i<prp->n; i++){
         IloNumVarArray QR(*env, prp->l,0.0,prp->C);
         qr[i] = QR;
-        std::cout << "Created Q[" << i << "] : " << qr[i].getSize() << std::endl;
+        //std::cout << "Created Q[" << i << "] : " << qr[i].getSize() << std::endl;
     }
 
     for (unsigned i=0; i<prp->n+1; i++){
         IloNumVarArray IR(*env,prp->l+1,0.0,prp->L[i]);
         Ir[i] = IR;
-        std::cout << "Created I[" << i << "] : " << Ir[i].getSize() << std::endl;
+        //std::cout << "Created I[" << i << "] : " << Ir[i].getSize() << std::endl;
     }
 
     //Les quantités initiales sont fixes ! 
@@ -84,7 +84,7 @@ LSP_Resolution::LSP_Resolution(PRP &p1, IloEnv &env1):Resolution(p1,env1){
     for (int i=0; i < prp->l+1 ; i++){
             for (int t=0; t< prp->n+1; t++){
                 varname.str("");
-                varname<<"I_"<<t<<"_"<<i;
+                varname<<"I_"<<t+1<<"_"<<i;
                 Ir[t][i].setName(varname.str().c_str());
             }
     }
@@ -192,11 +192,41 @@ void LSP_Resolution::createObjectif(){
         }
     }
 
-    std::cout << "Objectif : " << obj << std::endl;
+    //std::cout << "Objectif : " << obj << std::endl;
 }
 
 void LSP_Resolution::modifyObjCoeffs(vector<vector<float>> SC){
+    IloRangeArray CC(*env);
+    ostringstream varname;
+    z = new IloArray<IloIntVarArray>(*env,prp->n);
     IloArray<IloIntVarArray> &zr = *z;
+    //Ajout de variables 
+    for (unsigned i=0; i<prp->n; i++){
+        IloIntVarArray QR(*env, prp->l,0,1);
+        zr[i] = QR;
+    }
+
+    //Et on nomme la variable 
+    for(int i = 0; i < prp->n; i++) {
+        for (int t=0; t< prp->l; t++){
+            varname.str("");
+            varname<<"z_"<<i+1<<"_"<<t+1;
+            zr[i][t].setName(varname.str().c_str());
+        }
+  }
+
+    //Contraintes couplantes : 
+    for(unsigned i=0;i<prp->n;i++){
+        for(unsigned t=0;t<prp->l;t++){
+            varname.str("");
+            varname<<"Z[I="<<i<<";t="<<t<<"]";
+            std::cout << "added : " << varname.str() << std::endl;
+            IloNum var(INT16_MAX);
+            IloRange cst(*env, -IloInfinity, q->operator[](i)[t]-zr[i][t]*var, 0, varname.str().c_str() );
+            CC.add(cst);
+        }
+    }
+    model->add(CC);
     //On modfie les coefficients 
     float dist;
     for(int i = 0; i < prp->n; i++) {
@@ -220,16 +250,15 @@ void LSP_Resolution::addDistanceToObjectif()
     //Ajout de variables 
     for (unsigned i=0; i<prp->n; i++){
         IloIntVarArray QR(*env, prp->l,0,1);
-        //Les quantités initiales sont fixes ! 
         zr[i] = QR;
     }
 
     //Et on nomme la variable 
-    for(int i = 0; i < prp->l; i++) {
-        for (int t=0; t< prp->n; t++){
+    for(int i = 0; i < prp->n; i++) {
+        for (int t=0; t< prp->l; t++){
             varname.str("");
-            varname<<"z_"<<t<<"_"<<i;
-            zr[t][i].setName(varname.str().c_str());
+            varname<<"z_"<<i+1<<"_"<<t+1;
+            zr[i][t].setName(varname.str().c_str());
         }
   }
 

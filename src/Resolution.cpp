@@ -17,14 +17,14 @@ IloCplex Resolution::solve(){
         exit(1);
     }
     env->out() << "Solution status = " << cplex.getStatus() << endl;
-    env->out() << "Solution value  = " << cplex.getObjValue() << endl;
+    env->out() << "-------------------------------------------------------------------> Solution value  = " << cplex.getObjValue() << endl;
     cplex.exportModel("sortie.lp");
     this->cplx = &cplex;
     return cplex;
 }
 
 void Resolution::addConstraintName(ostringstream &varname,IloConstraint &constraint){
-    std::cout << "adding : " << varname.str().c_str() << " : " << constraint << std::endl;
+    //std::cout << "adding : " << varname.str().c_str() << " : " << constraint << std::endl;
     constraint.setName(varname.str().c_str());
     model->add(constraint);
 }
