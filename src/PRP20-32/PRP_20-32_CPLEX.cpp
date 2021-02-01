@@ -37,6 +37,7 @@ for (int t = 0; t < l; t++) {
         // pour sauteur la prochaine boucle, on met u = 0
         u = 0;
       }
+
       // Parcours du cycle de l'usine
       while (u) {
         S.erase(u);
@@ -53,6 +54,7 @@ for (int t = 0; t < l; t++) {
         u = v;
       }
 
+
       // S'il reste des éléments dans S après ce parcours, alors forcément S viole la contrainte
       if (S.size() > 0) {
         IloExpr cst(getEnv());
@@ -60,14 +62,18 @@ for (int t = 0; t < l; t++) {
           for (int j : S) {
             if (i != j) {
               cst += x[i][j][k][t];
+              std::cout <<"X_"<< i << "_" << j << "_" << k << "_" << t+1 << std::endl;
             }
           }
         }
-        add(cst <= (int) S.size() - 1).end();
+        add(cst <= (int) S.size() - 1).end(); //CA PU DU CUL
         //std::cout << "cuted" << std::endl;
+        }
+
       }
     }
   }
+  std::cout << "prout !! "<< std::endl;
   return;
 }
 
@@ -151,13 +157,13 @@ int main (int argc, char**argv){
         v = IloNumVar(env,0,1, ILOINT);
 
         varname.str("");
-        varname <<"Z_"<< i << "_" << t+1 << "_" << k;
+        varname <<"Z_"<< i << "_" << k << "_" << t+1 ;
         v.setName(varname.str().c_str());
         zik.add(v);
 
         v = IloNumVar(env,0,prp.Q);
         varname.str("");
-        varname <<"Q_"<< i << "_" << t+1 << "_" << k;
+        varname <<"Q_"<< i << "_" << k << "_" << t+1;
         v.setName(varname.str().c_str());
         qik.add(v);
       }
@@ -200,7 +206,7 @@ int main (int argc, char**argv){
         for(int t = 0; t < prp.l; t++){
           IloNumVar v = IloNumVar(env,0,1, ILOINT);
           varname.str("");
-          varname <<"X_"<< i << "_" << j << "_" << t+1 << "_" << k;
+          varname <<"X_"<< i << "_" << j << "_" << k << "_" << t+1 ;
           v.setName(varname.str().c_str());
           xijk.add(v);
         }
@@ -372,7 +378,7 @@ int main (int argc, char**argv){
 
   //(28)
 
-  for(int i = 1; i < node_number; i++){
+  for(int i = 0; i < node_number; i++){
     for(int t = 0; t < prp.l; t++){
       for(int k=0; k<prp.k;k++){
         IloExpr sum1(env);
@@ -418,7 +424,7 @@ int main (int argc, char**argv){
 
   IloCplex cplex(model);
 
-  cplex.setParam(IloCplex::Param::MIP::Limits::Solutions,1);
+  //cplex.setParam(IloCplex::Param::MIP::Limits::Solutions,1);
 
   printf("use 29\n");
   cplex.use(constraint29(env, prp.n, prp.l, prp.k, x, z));
@@ -451,7 +457,7 @@ int main (int argc, char**argv){
   //////////////
   //////  CPLEX's ENDING
   //////////////
-  //cplex.writeSolution("sol.txt");
+  cplex.writeSolution("sol.txt");
 
   env.end();
 

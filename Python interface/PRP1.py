@@ -43,13 +43,14 @@ class PRP1Sol:
             stylesheet.append(s)
 
         for i in range(self.prp.n+1):
+            print(self.sol['Z'][i][t])
             for j in range(self.prp.n+1):
                 if(i!=j):
                     if self.sol['X'][i][j][t]>0.5 :
                         label = (str(self.sol['W'][j][t]) if self.sol['X'][i][j][t]>0.5 and self.sol['W'][j][t]>=1 else '')
-                        print(i,j,t,self.sol['X'][i][j][t],label)
+                        curved = ('segments' if self.sol['X'][i][j][t]>0.5 and self.sol['X'][j][i][t]>0.5 else '')
                         elements.append({'data': {'id':str(i)+str(j),'source': str(i), 'target': str(j)}, 'classes':"used"})
-                        stylesheet.append({'selector': "#"+str(i)+str(j),'style': {'label':label}})
+                        stylesheet.append({'selector': "#"+str(i)+str(j),'style': {'curve-style':curved,'label':label}})
 
         #stylesheet.append({'selector': '.used','style': {'background-color':'blue','line-color': 'blue'}})
 
@@ -60,6 +61,3 @@ class PRP1Sol:
             elements=elements,
             stylesheet=stylesheet
         )
-
-        print(self.sol["X"])
-        print(np.where(self.sol["X"] > 0.5 ))
