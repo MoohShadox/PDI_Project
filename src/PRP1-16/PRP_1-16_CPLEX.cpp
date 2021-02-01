@@ -88,13 +88,11 @@ int main (int argc, char**argv){
     for(int t = 0; t < prp.l; t++){
       IloNumVar v = IloNumVar(env,0,0);
       if(i==0){
-        v = IloNumVar(env,0,prp.k, ILOINT);
+        v = IloNumVar(env,0,prp.k);
         varname.str("");
         varname <<"Z_"<< i << "_" << t+1 ;
         v.setName(varname.str().c_str());
         zi.add(v);
-        std::cout << "added : " << v << std::endl;
-
       }
       else{
         v = IloNumVar(env,0,1, ILOINT);
@@ -102,9 +100,7 @@ int main (int argc, char**argv){
         varname <<"Z_"<< i << "_" << t+1 ;
         v.setName(varname.str().c_str());
         zi.add(v);
-        std::cout << "added : " << v << std::endl;
       }
-      
       v = IloNumVar(env,0,prp.Q);
       varname.str("");
       varname <<"Q_"<< i << "_" << t+1 ;
@@ -187,10 +183,7 @@ int main (int argc, char**argv){
     for(int t = 0; t < prp.l; t++){
       float sum = 0;
       for(int j = t; j < prp.l; j++){
-        if(i!=0)  
-        {
-          sum=sum+prp.d[i][j];
-        }
+        if(i!=0)  sum=sum+prp.d[i][j];
       }
       Mi.push_back(std::min({prp.L[i],prp.Q,sum}));
     }
@@ -320,7 +313,7 @@ int main (int argc, char**argv){
 
   //(9)
 
-  for(int i = 0; i < node_number; i++){
+  for(int i = 1; i < node_number; i++){
     for(int t = 0; t < prp.l; t++){
       IloExpr sum1(env);
       IloExpr sum2(env);
@@ -331,7 +324,6 @@ int main (int argc, char**argv){
         sum2+=x[i][j][t];
       }
       IloConstraint constraint = (sum1+sum2==2*z[i][t]);
-      std::cout << "Added !!! : " << constraint << std::endl;
       varname.str("");
       varname <<"C9_i" << i << ";t" << t+1;
       constraint.setName(varname.str().c_str());
@@ -339,30 +331,23 @@ int main (int argc, char**argv){
     }
   }
 
-<<<<<<< HEAD
-  ////(10)
-//
-  //for(int t = 0; t < prp.l; t++){
-  //  IloExpr sum1(env);
-  //  for(int j = 0; j < node_number; j++){
-  //      sum1+= I[j][t];
-  //  }
-  //  IloConstraint constraint = (sum1 <= z[0][t]);
-  //  varname.str("");
-  //  varname <<"C10_t"<< t;
-  //  std::cout << "Added !! : " << constraint << std::endl;
-  //  constraint.setName(varname.str().c_str());
-  //  model.add(constraint);
-  //}
-//
-  //(11)
+  //(10)
+
+  for(int t = 0; t < prp.l; t++){
+    IloConstraint constraint = (z[0][t]<=prp.k);
+    varname.str("");
+    varname <<"C10_t"<< t;
+    constraint.setName(varname.str().c_str());
+    model.add(constraint);
+  }
+
+  //(11) //ça me fait galérer sa race
 
   for(int i = 1; i < node_number; i++){
     for(int j = 1; j < node_number; j++){
       if(i!=j){
         for(int t = 0; t < prp.l; t++){
-          IloConstraint constraint;
-          constraint = (w[i][t]-w[j][t]>=q[i][t] - Mit[i][t]*(1-x[i][j][t]));
+          IloConstraint constraint = (w[i][t]-w[j][t]>=q[i][t]-Mit[i][t]*(1-x[i][j][t]));
           varname.str("");
           varname <<"C11_("<< i << ";" << j << ");t" << t+1 << "";
           constraint.setName(varname.str().c_str());

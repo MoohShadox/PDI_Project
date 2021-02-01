@@ -25,10 +25,10 @@ maxTimeStep = prp.l
 
 timeStep = dcc.Slider(
      id='timeStep',
-    min=0,
-    max=maxTimeStep-1,
+    min=1,
+    max=maxTimeStep,
     step=1,
-    value=0,
+    value=1,
     )
 
 graph = html.Div(id="graph",children=prp.toDash())
