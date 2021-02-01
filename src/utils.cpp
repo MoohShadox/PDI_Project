@@ -28,6 +28,7 @@ void Route::PrintStatus(){
 
 void Route::PrintRoute(){
   std::cout << "Path    : ";
+  std::cout << "Cost    : " << cost_ << std::endl;
   // the nodes_.size()-1 limit is only added to ensure that there isnt a --->
   // after the last node, which is always the depot, ie node 0.
   for(size_t i = 0; i < nodes_.size()-1; ++i) std::cout << nodes_[i] << " ---> ";
@@ -163,8 +164,8 @@ Problem::Problem(int noc, int demand_range, int nov, int capacity, int grid_rang
   for(size_t i=0; i<nodes_.size(); ++i) distanceMatrix_.push_back(tmp);
   for(size_t i=0; i<nodes_.size(); ++i){
     for(size_t j=i; j < nodes_.size(); ++j){
-      distanceMatrix_[i][j] = sqrt(double(pow((nodes_[i].x_ - nodes_[j].x_),2)
-                                       + pow((nodes_[i].  y_ - nodes_[j].y_),2)));
+      distanceMatrix_[i][j] = (int) (sqrt(double(pow((nodes_[i].x_ - nodes_[j].x_),2)
+                                       + pow((nodes_[i].  y_ - nodes_[j].y_),2))) + 0.5);
       distanceMatrix_[j][i] = distanceMatrix_[i][j];
     }
   }
@@ -192,9 +193,14 @@ Problem::Problem(PRP prp, vector<float> q){
   for(size_t i=0; i<nodes_.size(); ++i) distanceMatrix_.push_back(tmp);
   for(size_t i=0; i<nodes_.size(); ++i){
     for(size_t j=i; j < nodes_.size(); ++j){
+      if(i == j)
+      {
+        distanceMatrix_[i][j] = 0;
+        continue;
+      }
       if(prp.dist==1){
-        distanceMatrix_[i][j] = sqrt(double(pow((nodes_[i].x_ - nodes_[j].x_),2)
-                                         + pow((nodes_[i].  y_ - nodes_[j].y_),2)))+0.5;
+        distanceMatrix_[i][j] = (int) (sqrt(double(pow((nodes_[i].x_ - nodes_[j].x_),2)
+                                         + pow((nodes_[i].  y_ - nodes_[j].y_),2)))+0.5);
       }else if(prp.dist==2){
         distanceMatrix_[i][j] = sqrt(double(pow((nodes_[i].x_ - nodes_[j].x_),2)
                                          + pow((nodes_[i].  y_ - nodes_[j].y_),2)))*prp.mc;
@@ -227,8 +233,8 @@ Problem::Problem(PRP prp){
   for(size_t i=0; i<nodes_.size(); ++i){
     for(size_t j=i; j < nodes_.size(); ++j){
       if(prp.dist==1){
-        distanceMatrix_[i][j] = sqrt(double(pow((nodes_[i].x_ - nodes_[j].x_),2)
-                                         + pow((nodes_[i].  y_ - nodes_[j].y_),2)))+0.5;
+        distanceMatrix_[i][j] = (int) (sqrt(double(pow((nodes_[i].x_ - nodes_[j].x_),2)
+                                         + pow((nodes_[i].  y_ - nodes_[j].y_),2)))+0.5);
       }else if(prp.dist==2){
         distanceMatrix_[i][j] = sqrt(double(pow((nodes_[i].x_ - nodes_[j].x_),2)
                                          + pow((nodes_[i].  y_ - nodes_[j].y_),2)))*prp.mc;
@@ -241,6 +247,8 @@ Problem::Problem(PRP prp){
   for(int i=0; i<prp.k; ++i){
     vehicles_.emplace_back(i, prp.Q, prp.Q);
     vehicles_[i].nodes_.push_back(0);
+    vehicles_[i].cost_ = 0;
+
   }
 }
 
@@ -255,7 +263,10 @@ Problem::Problem(PRP prp){
     total_cost+=v.cost_;
     for(size_t i = 1; i < v.nodes_.size()-1; ++i) 
     {
-      SC[v.nodes_[i]-1] = distanceMatrix_[i][i-1] + distanceMatrix_[i-1][i];
+      SC[v.nodes_[i]-1] = distanceMatrix_[v.nodes_[i]][v.nodes_[i+1]] + distanceMatrix_[v.nodes_[i-1]][v.nodes_[i]];
+      //std::cout << v.nodes_[i]-1 << "-->" << v.nodes_[i] <<" : " <<   distanceMatrix_[v.nodes_[i]][v.nodes_[i-1]]  << std::endl;
+      //std::cout << "SC[" << v.nodes_[i]-1 <<"] : " <<  SC[v.nodes_[i]-1]  << std::endl;
+
     }
   }
   for (unsigned i=0; i<SC.size(); i++)
@@ -268,6 +279,14 @@ Problem::Problem(PRP prp){
   return SC;
  }
 
+ float Solution::getCost(){
+  float total_cost = 0;
+  for(auto& v:vehicles_){
+    total_cost+=v.cost_;
+  }
+  return total_cost;
+ }
+
 void Solution::PrintSolution(const std::string& option){
   int status;
   char * demangled = abi::__cxa_demangle(typeid(*this).name(),0,0,&status);
@@ -275,6 +294,8 @@ void Solution::PrintSolution(const std::string& option){
   double total_cost = 0;
   for(auto& v:vehicles_){
     total_cost+=v.cost_;
+    if(v.cost_ == 0)
+      continue;
     if(option=="status"){
       v.PrintStatus();
     }
@@ -282,6 +303,7 @@ void Solution::PrintSolution(const std::string& option){
       std::cout << "Vehicle ID: " << v.id_ << " | ";
       v.PrintRoute();
     }
+    std::cout << v.cost_ << std::endl;
   }
   bool valid = CheckSolutionValid();
   std::cout << "Total solution cost: " << total_cost << std::endl;

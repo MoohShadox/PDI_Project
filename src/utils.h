@@ -195,7 +195,7 @@ public:
   * @details Creates initial solution, currently set to greedy.
   */
   void CreateInitialSolution();
-
+  float getCost();
   /**
   * @brief Check whether the solution is valid
   * @return bool True is solution is valid
