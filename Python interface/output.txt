@@ -94,7 +94,7 @@ Root relaxation solution time = 0.00 sec. (0.93 ticks)
 *     0+    0                        15004.0000    14050.2424             6.36%
 *     0+    0                        14971.0000    14082.2866             5.94%
       0     2    14050.2424    57    14971.0000    14082.2866      274    5.94%
-Elapsed time = 0.21 sec. (53.76 ticks, tree = 0.01 MB, solutions = 5)
+Elapsed time = 0.15 sec. (53.76 ticks, tree = 0.01 MB, solutions = 5)
 *   309   134      integral     0    14868.0000    14323.8232     5116    3.66%
 *  1053   226      integral     0    14854.0000    14735.0423    14745    0.80%
 
@@ -110,12 +110,12 @@ Lift and project cuts applied:  35
 Gomory fractional cuts applied:  14
 
 Root node processing (before b&c):
-  Real time             =    0.18 sec. (53.62 ticks)
+  Real time             =    0.15 sec. (53.62 ticks)
 Parallel b&c, 8 threads:
-  Real time             =    0.21 sec. (52.50 ticks)
-  Sync time (average)   =    0.10 sec.
+  Real time             =    0.11 sec. (52.50 ticks)
+  Sync time (average)   =    0.04 sec.
   Wait time (average)   =    0.00 sec.
                           ------------
-Total (root+branch&cut) =    0.40 sec. (106.12 ticks)
+Total (root+branch&cut) =    0.26 sec. (106.12 ticks)
 Solution status = Optimal
 Solution value  = 14854

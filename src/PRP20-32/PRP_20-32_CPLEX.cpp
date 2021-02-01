@@ -15,17 +15,6 @@ ILOUSERCUTCALLBACK5(constraint29, int, n, int, l, int, K,
    IloArray<IloArray<IloArray<IloNumVarArray>>>, x,
     IloArray<IloArray<IloNumVarArray>>, z)
 {
-<<<<<<< HEAD
-
-  for (int t = 0; t < l; t++) {
-    for (int k = 0; k < K; k++) {
-      unordered_set<int> S;
-      // On initialise S avec tous les sommets qui doivent être visités
-      for (int i = 1; i <= n; i++) {
-        if (getValue(z[i][k][t]) > 0.5) {
-          S.insert(i);
-        }
-=======
   std::cout << "Separation call !! "<< std::endl;
 for (int t = 0; t < l; t++) {
   for (int k = 0; k < K; k++) {
@@ -34,7 +23,6 @@ for (int t = 0; t < l; t++) {
     for (int i = 1; i <= n; i++) {
       if (getValue(z[i][k][t]) > 0.5) {
         S.insert(i);
->>>>>>> 78fc03f380d33a8c92c5dd90e3799e1c628ba4eb
       }
 
       if (S.size() < 2) {
