@@ -187,7 +187,7 @@ void LSP_Resolution::createObjectif(){
 
     for (unsigned t=1; t<prp->l+1; t++)
     {
-        for (unsigned i=1; i<prp->n+1; i++){
+        for (unsigned i=0; i<prp->n+1; i++){
             obj.setLinearCoef(Ir[i][t],prp->h[i]);
         }
     }
@@ -200,7 +200,8 @@ void LSP_Resolution::modifyObjCoeffs(vector<vector<float>> SC){
     ostringstream varname;
     z = new IloArray<IloIntVarArray>(*env,prp->n);
     IloArray<IloIntVarArray> &zr = *z;
-    //Ajout de variables 
+    //Ajout de variables
+    
     for (unsigned i=0; i<prp->n; i++){
         IloIntVarArray QR(*env, prp->l,0,1);
         zr[i] = QR;
@@ -233,10 +234,10 @@ void LSP_Resolution::modifyObjCoeffs(vector<vector<float>> SC){
         //Distance entre l'entrepot et le client i
         dist = 2*prp->getCost(i);
         for (int t=0; t< prp->l; t++){
-            std::cout << "Modifying coef of " << i << ", "<< t << std::endl;
             obj.setLinearCoef(zr[i][t],SC[t][i]);
         }
     }
+    std::cout << "Nouveau objectif : " << obj << std::endl;
 }
 
 

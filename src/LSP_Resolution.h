@@ -12,12 +12,13 @@
 class LSP_Resolution : public Resolution{
     private:
     //Variables allouées dynamiquement qui contiendrons la résolution du probléme
-        IloNumVarArray *p;
-        IloBoolVarArray *y;
-        vector<IloNumVarArray> *I;
+
         IloArray<IloIntVarArray> *z; 
     //Constructeur principal
     public:
+        IloNumVarArray *p;
+        IloBoolVarArray *y;
+        vector<IloNumVarArray> *I;
         LSP_Resolution(PRP &p, IloEnv &env);
     //For testing
         vector<IloNumVarArray> *q;

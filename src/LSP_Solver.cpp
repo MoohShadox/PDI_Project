@@ -10,7 +10,7 @@
 #include "Graph.h"
 #include "cvrp_algorithms.h"
 #include <typeinfo>
-
+#include "LSP_Solution.h"
 #define epsilon 0.00001
 
 using namespace std;
@@ -70,9 +70,6 @@ int test_cvrp(){
 
 
 
-
-
-
 int main(int argc, char * argv[]){
     string name,nameext, nameextsol;
     if(argc!=2){
@@ -97,7 +94,7 @@ int main(int argc, char * argv[]){
     SC.resize(1);
     vector<float> optim_val;
     float pred_cost = 0;
-    for(int j=0; j<20; j++){
+    for(int j=0; j<5; j++){
         LSP_Resolution LRSP(I,env);
         LRSP.generateConstraints();
         LRSP.createObjectif();
@@ -111,21 +108,29 @@ int main(int argc, char * argv[]){
         IloCplex cplx = LRSP.solve();
         LRSP.printVariables();
         vector<IloNumVarArray> &qr = *(LRSP.q);
+        IloBoolVarArray &yr = *(LRSP.y);
+        IloNumVarArray &pr = *(LRSP.p);
+        vector<IloNumVarArray> &Ir = *(LRSP.I);
+
+        LSP_Solution sol(pr,yr,Ir,cplx);
+        std::cout << "Cost computed : " << sol.computeCost(I) << std::endl;
+
         SC.resize(I.l);
         float tour_cost = 0;
         bool validity = 1;
-        for (unsigned i = 0; i<qr[0].getSize(); i++ ){
+        for (unsigned i = 0; i<I.l; i++ ){
             vector<float> v = LRSP.getDelivryAt(i,cplx);
             Problem p = Problem(I,v);
-            LocalSearchIntraSolution vrp(p);
+            SimulatedAnnealingSolution vrp(p, 5000000, 5000, 0.9999);
             vrp.Solve();
             vrp.PrintSolution("route");
             vector<float> sc_t = vrp.getSC(I);
             SC[i]=sc_t;
+            tour_cost = tour_cost + vrp.getCost();
             validity = validity && vrp.CheckSolutionValid();
         }
         float obj_val = cplx.getObjValue();
-        pred_cost = obj_val;
+        pred_cost = sol.computeCost(I) + tour_cost;
         optim_val.push_back(pred_cost);
         for(int a=0; a<SC.size(); a++){
             std::cout << "i = " << a  << " SC size = " << SC[a].size() << std::endl;

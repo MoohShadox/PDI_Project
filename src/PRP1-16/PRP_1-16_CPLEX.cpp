@@ -192,6 +192,7 @@ int main (int argc, char**argv){
           sum=sum+prp.d[i][j];
         }
       }
+      std::cout << "Mit[" << i << "][" << t << "] : " << std::min({prp.L[i],prp.Q,sum}) << std::endl;
       Mi.push_back(std::min({prp.L[i],prp.Q,sum}));
     }
     Mit.push_back(Mi);
@@ -339,7 +340,6 @@ int main (int argc, char**argv){
     }
   }
 
-<<<<<<< HEAD
   ////(10)
 //
   //for(int t = 0; t < prp.l; t++){
