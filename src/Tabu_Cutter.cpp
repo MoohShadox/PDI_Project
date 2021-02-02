@@ -9,13 +9,14 @@
 #include <algorithm>
 #include "VRP_Resolution.h"
 #include <unordered_set>
-
 #include <algorithm>    // std::min
 
 #define epsilon 0.00001
 
 using namespace std;
 using namespace lemon;
+
+
 
 bool Tabu_Cutter::checkEnsemble(vector<int> nodes_indexes){
     sort(nodes_indexes.begin(), nodes_indexes.end());
@@ -34,11 +35,13 @@ bool Tabu_Cutter::checkEnsemble(vector<int> nodes_indexes){
             //IloConstraint cst = (IloSum(getVars(delta(fromIndexes(nodes_indexes)))) >= 2*veh);
             //violated_constraint = cst;
             //std::cout << "Contrainte : " << cst <<std::endl;
+            vector<pair<int,int>> arcs;
             for (ListDigraph::Arc ar:delt){
                 pair<int,int> p((*id)[support_graph.source(ar)],(*id)[support_graph.target(ar)]);
-                violated_constraint.push_back(p);
+                arcs.push_back(p);
             }
-            borne = 2*veh;
+            violated_constraint.insert({arcs,2*veh - X_d});
+            bornes.insert({arcs,2*veh});
             return true;
         }
         else{
@@ -47,6 +50,22 @@ bool Tabu_Cutter::checkEnsemble(vector<int> nodes_indexes){
         }
     }
     return false;
+}
+
+void Tabu_Cutter::checkConnexe(){
+    ListDigraph::NodeMap<int> m(support_graph);
+    //template<ListDigraph,ListDigraph::NodeMap<int> >::connectedComponents(support_graph,m);
+}
+
+void Tabu_Cutter::checkComplementary(vector<int> nodes_indexes, int X_d , int d ){
+    vector<int> vec; 
+    for(int i=0; i<prp->n ; i++){
+        if (!(std::find(nodes_indexes.begin(), nodes_indexes.end(), i) != nodes_indexes.end() ))
+            {
+                vec.push_back(i);
+            }
+    }
+    checkEnsemble(vec);
 }
 
 int Tabu_Cutter::getVal(ListDigraph::Node i,ListDigraph::Node j){

@@ -47,7 +47,7 @@ Solution run_instance(PRP prp, std::string type){
       vrp.Solve();
       std::cout << std::endl;
       return vrp;
-  }else if("Local Search"){
+  }else if("Local Search"){ 
       std::cout << "Local Search (Within each vehicle separately): " << std::endl;
       LocalSearchIntraSolution vrp(p);
       vrp.Solve();

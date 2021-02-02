@@ -13,13 +13,24 @@
 
 #define epsilon 0.00001
 
+float best_gap = 1;
 using namespace std;
 using namespace lemon;
 
+ILOMIPINFOCALLBACK1(saving_gap_callback, string, path){
+ // append instead of overwrite
+    float gap = getMIPRelativeGap();
+    if(gap < best_gap){
+        std::ofstream outfile;
+        outfile.open(path, std::ios_base::app);
+        best_gap = gap;
+        outfile << getNiterations() << ";" <<getIncumbentObjValue() << ";" << getBestObjValue() <<";" << gap << "\n"; 
+        std::cout << "Gep : " << best_gap << std::endl;
+    }
+}
 
 
-
-ILOLAZYCONSTRAINTCALLBACK3(simple_cuts, PRP, prp,
+ILOUSERCUTCALLBACK3(simple_cuts, PRP, prp,
    IloArray<IloIntVarArray>&, x,  IloNumVarArray&, w)
 {
     vector<vector<float>> X1;
@@ -46,33 +57,39 @@ ILOLAZYCONSTRAINTCALLBACK3(simple_cuts, PRP, prp,
 
 
     Tabu_Cutter tbc(X1,prp,1);
-    vector<int> toCheck{2,3,4};
-    if(tbc.checkEnsemble(toCheck)){
-        for(int i=0; i<prp.n+1; i++){
-        for (int j=0; j<prp.n+1 ; j++){
-            if(i != j && getValue(x[i][j])>0 )
-            {
-                //std::cout << i << "," << j << ": " <<  getValue(x[i][j]) << std::endl;
-            }
-            }
+
+    srand((unsigned) time(0));
+    bool v=false;
+    for(int i=0; i<10000 ; i++){
+        int k = 1 + (rand() % prp.n);
+        vector<int> new_v;
+        for (int j=0; j<k; j++){
+            int node = (rand() % prp.n);
+            new_v.push_back(node);
         }
-        IloExpr s(getEnv());
-        for(pair<int,int> p:tbc.violated_constraint){
-            //std::cout << "Arc : " << p.first << " , " << p.second <<std::endl;
-            s = s + x[p.first][p.second];
-            //std::cout << (s==0) << std::endl;
-            //s += s + x[p.second][p.first];
+        v = v || tbc.checkEnsemble(new_v);
+    }
+
+    if(v){
+        for(auto element=tbc.violated_constraint.begin(); element != tbc.violated_constraint.end(); ++element){
+            IloExpr s(getEnv());
+            for(pair<int,int> p:element->first){
+                //std::cout << "Arc : " << p.first << " , " << p.second <<std::endl;
+                s = s + x[p.first][p.second];
+                //std::cout << (s==0) << std::endl;
+                //s += s + x[p.second][p.first];
+            }
+            //std::cout << "Fin de El bouclé ! " << s << std::endl;
+            IloConstraint cstr = (s >= tbc.bornes.at(element->first));
+            std::cout << "VIOL DE CONTRAINTE " << cstr << std::endl;
+            add(cstr).end();
         }
-        //std::cout << "Fin de El bouclé ! " << s << std::endl;
-        IloConstraint cstr = (s >= tbc.borne);
-        std::cout << "VIOL DE CONTRAINTE " << cstr << std::endl;
-        add(cstr).end();
     }
 
 }
 
 
-int main_vrp(int argc, char * argv[]){
+int main(int argc, char * argv[]){
     string name,nameext, nameextsol;
     if(argc!=2){
     cerr<<"usage: "<<argv[0]<<" <PRP file name>   (without .prp)"<<endl;
@@ -173,8 +190,10 @@ int main_vrp(int argc, char * argv[]){
     IloCplex cplex(model);
 
     cplex.exportModel("sortie2.lp");
-
+    std::ofstream outfile;
+    outfile.open("data/gap_VRP.dat");
     cplex.use(simple_cuts(*env, prp , xr, wr));
+    cplex.use(saving_gap_callback(*env, "data/gap_VRP.dat"));
 //
     if ( !cplex.solve() ) {
         env->error() << "Failed to optimize LP" << endl;

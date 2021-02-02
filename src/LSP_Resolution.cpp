@@ -221,7 +221,7 @@ void LSP_Resolution::modifyObjCoeffs(vector<vector<float>> SC){
         for(unsigned t=0;t<prp->l;t++){
             varname.str("");
             varname<<"Z[I="<<i<<";t="<<t<<"]";
-            std::cout << "added : " << varname.str() << std::endl;
+            //std::cout << "added : " << varname.str() << std::endl;
             IloNum var(INT16_MAX);
             IloRange cst(*env, -IloInfinity, q->operator[](i)[t]-zr[i][t]*var, 0, varname.str().c_str() );
             CC.add(cst);
@@ -237,7 +237,7 @@ void LSP_Resolution::modifyObjCoeffs(vector<vector<float>> SC){
             obj.setLinearCoef(zr[i][t],SC[t][i]);
         }
     }
-    std::cout << "Nouveau objectif : " << obj << std::endl;
+    //std::cout << "Nouveau objectif : " << obj << std::endl;
 }
 
 
@@ -268,7 +268,7 @@ void LSP_Resolution::addDistanceToObjectif()
         for(unsigned t=1;t<prp->l;t++){
             varname.str("");
             varname<<"Z[I="<<i<<";t="<<t<<"]";
-            std::cout << "added : " << varname.str() << std::endl;
+            //std::cout << "added : " << varname.str() << std::endl;
             IloNum var(INT16_MAX);
             IloRange cst(*env, -IloInfinity, q->operator[](i)[t]-zr[i][t]*var, 0, varname.str().c_str() );
             CC.add(cst);

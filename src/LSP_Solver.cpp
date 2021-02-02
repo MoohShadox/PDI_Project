@@ -11,6 +11,8 @@
 #include "cvrp_algorithms.h"
 #include <typeinfo>
 #include "LSP_Solution.h"
+#include <chrono>
+
 #define epsilon 0.00001
 
 using namespace std;
@@ -70,12 +72,14 @@ int test_cvrp(){
 
 
 
-int main(int argc, char * argv[]){
+int main_lsp(int argc, char * argv[]){
     string name,nameext, nameextsol;
     if(argc!=2){
     cerr<<"usage: "<<argv[0]<<" <PRP file name>   (without .prp)"<<endl;
     return 1;
     }
+
+    string algo = "Simulated_Annealing";
 
 
     name=argv[1];
@@ -94,7 +98,11 @@ int main(int argc, char * argv[]){
     SC.resize(1);
     vector<float> optim_val;
     float pred_cost = 0;
-    for(int j=0; j<5; j++){
+
+    std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
+
+
+    for(int j=0; j<10; j++){
         LSP_Resolution LRSP(I,env);
         LRSP.generateConstraints();
         LRSP.createObjectif();
@@ -113,7 +121,7 @@ int main(int argc, char * argv[]){
         vector<IloNumVarArray> &Ir = *(LRSP.I);
 
         LSP_Solution sol(pr,yr,Ir,cplx);
-        std::cout << "Cost computed : " << sol.computeCost(I) << std::endl;
+        //std::cout << "Cost computed : " << sol.computeCost(I) << std::endl;
 
         SC.resize(I.l);
         float tour_cost = 0;
@@ -121,7 +129,9 @@ int main(int argc, char * argv[]){
         for (unsigned i = 0; i<I.l; i++ ){
             vector<float> v = LRSP.getDelivryAt(i,cplx);
             Problem p = Problem(I,v);
-            SimulatedAnnealingSolution vrp(p, 5000000, 5000, 0.9999);
+
+            SimulatedAnnealingSolution vrp(p, 1000000, 100000, 0.5);
+
             vrp.Solve();
             vrp.PrintSolution("route");
             vector<float> sc_t = vrp.getSC(I);
@@ -132,16 +142,22 @@ int main(int argc, char * argv[]){
         float obj_val = cplx.getObjValue();
         pred_cost = sol.computeCost(I) + tour_cost;
         optim_val.push_back(pred_cost);
-        for(int a=0; a<SC.size(); a++){
-            std::cout << "i = " << a  << " SC size = " << SC[a].size() << std::endl;
-            for (int b=0; b<SC[a].size(); b++)
-            {
-                std::cout << SC[a][b] << " - ";
-            }
-            std::cout << std::endl;
-        }
+        //for(int a=0; a<SC.size(); a++){
+        //    std::cout << "i = " << a  << " SC size = " << SC[a].size() << std::endl;
+        //    for (int b=0; b<SC[a].size(); b++)
+        //    {
+        //        std::cout << SC[a][b] << " - ";
+        //    }
+        //    std::cout << std::endl;
+        //}
     }
+    std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
+    ofstream myfile;
+    nameextsol = "data/"+algo+"_objectif.dat";
+    myfile.open (nameextsol);
     for(int i=0; i<optim_val.size(); i++){
         std::cout << i << " : " << optim_val[i] << std::endl;
+        myfile << i << " " << optim_val[i] << "\n";
     }
+    myfile << "Time : " << std::chrono::duration_cast<std::chrono::microseconds>(end - begin).count() << "[µs]" << std::endl;
 }

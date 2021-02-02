@@ -9,6 +9,7 @@
 #include <lemon/concepts/digraph.h>
 #include <set>
 using namespace lemon;
+#include <map>
 
 class Tabu_Cutter{
     
@@ -24,8 +25,8 @@ class Tabu_Cutter{
         ListDigraph::ArcMap<float>* val;
 
         std::set<vector<int>> checked_ensembles;
-        vector<pair<int,int>> violated_constraint;
-        int borne;
+        std::map <vector<pair<int,int>>,float> violated_constraint;
+        std::map <vector<pair<int,int>>,int> bornes;
 
         Tabu_Cutter( vector<vector<float>> x1, PRP prp1, int t);
 
@@ -39,6 +40,9 @@ class Tabu_Cutter{
         int getVal(ListDigraph::Node i,ListDigraph::Node j);
         int getVal(ListDigraph::Arc a);
         int getVals(vector<ListDigraph::Arc> as);
+
+        void checkComplementary(vector<int> nodes_indexes, int X_d , int d );
+        void checkConnexe();
 
         vector<ListDigraph::Arc> delta(vector<ListDigraph::Node> nodes);
         int d_S(vector<ListDigraph::Node> S);

@@ -9,6 +9,21 @@
 #define epsilon 0.00001
 
 using namespace std;
+float best_gap = 1;
+
+ILOMIPINFOCALLBACK1(saving_gap_callback, string, path){
+ // append instead of overwrite
+    float gap = getMIPRelativeGap();
+    if(gap < best_gap){
+        std::ofstream outfile;
+        outfile.open(path, std::ios_base::app);
+        best_gap = gap;
+        outfile << getNiterations() << ";" <<getIncumbentObjValue() << ";" << getBestObjValue() <<";" << gap << "\n"; 
+        std::cout << "Gep : " << best_gap << std::endl;
+    }
+}
+
+
 
 int main (int argc, char**argv){
 
@@ -104,7 +119,7 @@ int main (int argc, char**argv){
         zi.add(v);
         std::cout << "added : " << v << std::endl;
       }
-
+      
       v = IloNumVar(env,0,prp.Q);
       varname.str("");
       varname <<"Q_"<< i << "_" << t+1 ;
@@ -187,7 +202,7 @@ int main (int argc, char**argv){
     for(int t = 0; t < prp.l; t++){
       float sum = 0;
       for(int j = t; j < prp.l; j++){
-        if(i!=0)
+        if(i!=0)  
         {
           sum=sum+prp.d[i][j];
         }
@@ -395,7 +410,10 @@ int main (int argc, char**argv){
   IloCplex cplex(model);
   cplex.exportModel("sortie.lp");
 
-  cplex.setParam(IloCplex::Param::MIP::Limits::Solutions,1);
+  std::ofstream outfile;
+  outfile.open("../data/gap_PRP_1-16.dat");
+
+  cplex.use(saving_gap_callback(env, "../data/gap_PRP_1-16.dat"));
 
   // cplex.setParam(IloCplex::Cliques,-1);
   // cplex.setParam(IloCplex::Covers,-1);
