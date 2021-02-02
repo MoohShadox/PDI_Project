@@ -33,6 +33,16 @@ class PRP1Sol:
 
             self.sol[parts[0]][tuple(idx)]=float(variable.attrib["value"])
 
+
+    def prodTable(self):
+
+        l = []
+
+        for t in range(self.prp.l+1):
+            l.append({"QuantityProduced":self.sol["p"][t],"Inventory":self.sol["I"][0][t]})
+
+        return l
+
     def toDash(self,t):
 
         elements = []
@@ -43,7 +53,6 @@ class PRP1Sol:
             stylesheet.append(s)
 
         for i in range(self.prp.n+1):
-            print(self.sol['Z'][i][t])
             for j in range(self.prp.n+1):
                 if(i!=j):
                     if self.sol['X'][i][j][t]>0.5 :
