@@ -10,13 +10,13 @@ class PRP1Sol:
     def __init__(self,path):
         self.prp=PRP(path)
         self.sol = dict()
-        self.sol["p"]=np.zeros((self.prp.l,))
+        self.sol["p"]=np.zeros((self.prp.l+1,))
         self.sol["I"]=np.zeros((self.prp.n+1,self.prp.l+1))
-        self.sol["y"]=np.zeros((self.prp.l,))
-        self.sol["Z"]=np.zeros((self.prp.n+1,self.prp.l))
-        self.sol["X"]=np.zeros((self.prp.n+1,self.prp.n+1,self.prp.l))
-        self.sol["Q"]=np.zeros((self.prp.n+1,self.prp.l))
-        self.sol["W"]=np.zeros((self.prp.n+1,self.prp.l))
+        self.sol["y"]=np.zeros((self.prp.l+1,))
+        self.sol["Z"]=np.zeros((self.prp.n+1,self.prp.l+1))
+        self.sol["X"]=np.zeros((self.prp.n+1,self.prp.n+1,self.prp.l+1))
+        self.sol["Q"]=np.zeros((self.prp.n+1,self.prp.l+1))
+        self.sol["W"]=np.zeros((self.prp.n+1,self.prp.l+1))
         os.system(str(pathPRP1)+"PRP1 "+str(path)+ ' > output.txt')
         self.parseSol()
 
@@ -29,21 +29,30 @@ class PRP1Sol:
 
             parts = variable.attrib["name"].split("_")
 
-            idx = [int(p)-1 if int(p)!=0 else int(p) for p in parts[1:]]
+            idx = [int(p) for p in parts[1:]]
 
             self.sol[parts[0]][tuple(idx)]=float(variable.attrib["value"])
 
     def toDash(self,t):
 
-        elements,stylesheet = self.prp.getDashNodes()
+        elements = []
+        stylesheet = []
+        for n in range(self.prp.n+1):
+            e,s = self.prp.nodes[n].toDash(self.sol["Z"][n][t])
+            elements.append(e)
+            stylesheet.append(s)
 
         for i in range(self.prp.n+1):
+            print(self.sol['Z'][i][t])
             for j in range(self.prp.n+1):
                 if(i!=j):
-                    classes = ('used' if self.sol['X'][i][j][t]>0.5 else '')
-                    elements.append({'data': {'source': str(i), 'target': str(j)}, 'classes':classes})
+                    if self.sol['X'][i][j][t]>0.5 :
+                        label = (str(self.sol['W'][j][t]) if self.sol['X'][i][j][t]>0.5 and self.sol['W'][j][t]>=1 else '')
+                        curved = ('segments' if self.sol['X'][i][j][t]>0.5 and self.sol['X'][j][i][t]>0.5 else '')
+                        elements.append({'data': {'id':str(i)+str(j),'source': str(i), 'target': str(j)}, 'classes':"used"})
+                        stylesheet.append({'selector': "#"+str(i)+str(j),'style': {'curve-style':curved,'label':label}})
 
-        stylesheet.append({'selector': '.used','style': {'line-color': 'blue'}},)
+        #stylesheet.append({'selector': '.used','style': {'background-color':'blue','line-color': 'blue'}})
 
         return cyto.Cytoscape(
             id='cytoscape-two-nodes',
@@ -52,8 +61,3 @@ class PRP1Sol:
             elements=elements,
             stylesheet=stylesheet
         )
-
-        print(self.sol["X"])
-        print(np.where(self.sol["X"] > 0.5 ))
-
-PRP1Sol("../PRP_instances/1PDI_Instance").toDash(1)

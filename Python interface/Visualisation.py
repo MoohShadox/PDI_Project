@@ -5,6 +5,7 @@ import dash_html_components as html
 from dash.dependencies import Input, Output
 from prp import *
 from PRP1 import *
+from PRP2 import *
 
 app = dash.Dash(__name__)
 
@@ -25,26 +26,28 @@ maxTimeStep = prp.l
 
 timeStep = dcc.Slider(
      id='timeStep',
-    min=0,
-    max=maxTimeStep-1,
+    min=1,
+    max=maxTimeStep,
     step=1,
-    value=0,
+    value=1,
     )
 
 graph = html.Div(id="graph",children=prp.toDash())
 
 fileButton = html.Button('fileButton', id='fileButton',n_clicks=0)
 prp1Button = html.Button('prp1Button', id='prp1Button',n_clicks=0)
+prp2Button = html.Button('prp2Button', id='prp2Button',n_clicks=0)
 
-app.layout = html.Div([graph,pathInput,fileButton,prp1Button,timeStep])
+app.layout = html.Div([graph,pathInput,fileButton,prp1Button,prp2Button,timeStep])
 
 @app.callback(
     dash.dependencies.Output('graph','children'),
     [dash.dependencies.Input('fileButton','n_clicks')],
     [dash.dependencies.Input('prp1Button','n_clicks')],
+    [dash.dependencies.Input('prp2Button','n_clicks')],
     [dash.dependencies.Input('timeStep', 'value')],
     [dash.dependencies.State('Path', 'value')])
-def update_output(nc1,nc2,t,path):
+def update_output(nc1,nc2,nc3,t,path):
     global pathInst
     changed_id = [p['prop_id'] for p in dash.callback_context.triggered][0]
     pathInst=path
@@ -54,6 +57,9 @@ def update_output(nc1,nc2,t,path):
         maxTimeStep = prp.l
     elif 'prp1Button' in changed_id:
         prp=PRP1Sol(path)
+        maxTimeStep = prp.prp.l
+    elif 'prp2Button' in changed_id:
+        prp=PRP2Sol(path)
         maxTimeStep = prp.prp.l
     if path != None:
         return prp.toDash(t)

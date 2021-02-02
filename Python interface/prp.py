@@ -12,8 +12,10 @@ class Node:
         self.d=d
         self.color=random.choice(COLORS)
 
-    def toDash(self):
-        return ({'data':{'id':str(self.num),'label':str(self.num)}, 'position':{'x':self.x,'y':self.y}}\
+    def toDash(self,z=0):
+        classes = ('used' if z==1 else '')
+
+        return ({'data':{'id':str(self.num),'label':str(self.num)}, 'position':{'x':self.x,'y':self.y},'classes':classes}\
                 ,{'selector':"#"+str(self.num),'style':{'background-color':self.color,'content': 'data(label)'}})
 
 class PRP:
@@ -44,17 +46,7 @@ class PRP:
                     ,node_d))
             f.close()
 
-    def getDashNodes(self):
-        elements = []
-        stylesheet = []
-        for n in self.nodes:
-            e,s = n.toDash()
-            elements.append(e)
-            stylesheet.append(s)
-
-        return elements,stylesheet
-
-    def toDash(self):
+    def toDash(self,t=0):
         elements = []
         stylesheet = []
         for n in self.nodes:
